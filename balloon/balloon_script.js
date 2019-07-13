@@ -1,10 +1,24 @@
 let balloonClicked = Array(5);
 reset();
 let breakSound = false;
+let urlpara = location.search;
+if( urlpara == "?enable_breaking_sound" ){
+  breakSound = true;
+}
 let audio = document.getElementById('sound');
 let balloons = 0;
-let b_homedir = '..';
+let b_homedir = 'https://www.trpfrog.net';
 let b_width = 50;
+
+function buildSoundButton(){
+  let html = '';
+  if(breakSound){
+    html = '<a href=\"'+b_homedir+'/balloon/index.html\" class=\"button\">音を消す</a>';
+  }else{
+    html = '<a href=\"'+b_homedir+'/balloon/index.html?enable_breaking_sound\" class=\"button\">音を鳴らす</a>';
+  }
+  document.write(html);
+}
 
 function setHomedir(newhomedir){
   b_homedir = newhomedir;

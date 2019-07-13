@@ -1,0 +1,23 @@
+.grid{
+  display: grid;
+  grid-template-areas: "c"
+                       "f";
+  grid-template-columns: 1fr;       /* ヨコ方向のセルの長さを単位[Fr](Fraction)で定める */
+  grid-template-rows: auto 3ex; /* タテ方向のセルの長さを単位[Fr](Fraction)で定める */
+}
+main{
+  grid-area: c;
+  padding: 1em;
+  margin:1em;
+  margin-top:4em;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 33px;
+  text-align: left;
+}
+
+footer{
+  grid-area: f;
+  margin: 1em;
+  text-align:center;
+  vertical-align: middle;
+}

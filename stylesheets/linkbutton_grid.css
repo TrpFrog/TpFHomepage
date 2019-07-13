@@ -1,0 +1,44 @@
+.linkButtonGrid{
+  display: grid;
+  grid-template-areas: "l d";
+  grid-template-columns: 170px; auto;
+  grid-template-rows: auto;
+  text-align: left;
+}
+
+.linkButton{
+  grid-area: l;
+  display: inline-block;
+  margin-bottom: 8px;
+  margin-right: 2em;
+  text-decoration: none; /*リンクの下線を消す*/
+  width:150px;
+  height: 14px;
+  font-size:14px;
+  font-weight:bold;
+  text-align:center;
+  padding:8px 0 10px;
+  color:rgb(0, 0, 0);
+  background-color:#90e200;
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px #555;
+  /*ボタン上のテキストの選択をさせない*/
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  /*リンク以外でもカーソルを指の形にする*/
+  cursor: pointer;
+  vertical-align: middle;
+}
+.linkButton:hover{
+  color: rgb(255, 255, 255);
+}
+.linkButton:active{
+  box-shadow: 1px 1px 3px #555;
+}
+
+.linkDescription{
+  grid-area: d;
+  vertical-align: middle;
+  text-align: left;
+}

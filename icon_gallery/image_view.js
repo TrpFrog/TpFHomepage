@@ -1,5 +1,5 @@
 let num = location.search.substring(1)-0;
-const MAX = 17-0;
+const MAX = 28-0;
 const prepreimg = fitInRange(num-2);
 const preimg = fitInRange(num-1);
 const nxtimg = fitInRange(num+1);
@@ -19,7 +19,7 @@ function fitInRange(i){
 function imageView(){
   let html = "";
   html += '  <div id=\"contents\" style=\"text-align: center; width: 100%\">'
-  html += '      <img src=\"images/'+num+'.png\" style=\"height:25em\">'
+  html += '      <img src=\"large_icons/'+num+'.png\" style=\"height:25em\">'
   html += '  </div>'
   document.write(html);
 }

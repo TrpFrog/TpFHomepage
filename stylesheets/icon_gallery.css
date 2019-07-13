@@ -1,5 +1,5 @@
 @import "basebody.css";
-@import "single_column_two_elements.css";
+@import "image_viewer.css";
 @import "button.css";
 
 .prevAndNextButton{
@@ -29,7 +29,7 @@
 }
 
 .imgButton{
-  width:9%;
+  height: 5em;
   vertical-align: middle;
   cursor: pointer;
 }

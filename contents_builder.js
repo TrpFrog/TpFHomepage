@@ -55,5 +55,6 @@ function buildNavigation(){
 
 function buildFooter() {
   let html = '© 2019 つまみ (<a href=\"https://twitter.com/TrpFrog\">@TrpFrog</a>) All Rights Reserved.';
+  html += '<br><br>';
   document.write(html);
 }

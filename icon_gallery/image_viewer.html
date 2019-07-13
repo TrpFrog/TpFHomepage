@@ -8,17 +8,17 @@
     <script type="text/javascript" src="image_view.js"></script>
     <title>Icon Gallery</title>
 </head>
-<body>
-  <div class="grid">
+<body style="padding-top: 0px;">
+  <div class="grid" style="grid-template-rows: 0fr 0ex 3ex auto 3ex;">
 
     <script>homedir = '..'</script>
 
-    <header>
-      <script>buildHeader();</script>
+    <header style="height=0px;margin:0px;">
+      <!-- <script>buildHeader();</script> -->
     </header>
 
-    <nav>
-      <script>buildNavigation();</script>
+    <nav style="height=0px;margin:0px;">
+      <!-- <script>buildNavigation();</script> -->
     </nav>
 
     <main>
@@ -27,6 +27,8 @@
 
     <footer>
       <script>controlPane();</script>
+      <br><br>
+      <script>buildFooter();</script>
     </footer>
 
   </div>

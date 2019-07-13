@@ -42,5 +42,7 @@ main{
 
 footer{
   grid-area: f;
-  padding: 1em;
+  margin: 1em;
+  text-align:center;
+  vertical-align: middle;
 }
