@@ -1,0 +1,30 @@
+h2{
+  text-shadow:2px 2px 2px rgb(5, 124, 145);
+  margin-top: 30px;
+  margin-bottom: -5px;
+}
+
+h2:before {
+  content:'';
+  display: inline-block;
+  width:40px;
+  height:40px;
+  background-image: url('../images/icons/trpfrog.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+h2.ice:before{background-image: url('../images/icons/ice.png');}
+h2.think:before{background-image: url('../images/icons/thinking.png');}
+h2.noa:before{background-image: url('../images/icons/noa.png');}
+h2.think:before{background-image: url('../images/icons/thinking.png');}
+h2.pumpkin:before{background-image: url('../images/icons/pumpkin.png');}
+h2.car:before{background-image: url('../images/icons/car.png');}
+h2.evil:before{background-image: url('../images/icons/evil.png');}
+h2.heart:before{background-image: url('../images/icons/heart.png');}
+h2.robot:before{background-image: url('../images/icons/robot.png');}
+h2.otaku:before{background-image: url('../images/icons/otaku.png');}
+h2.shark:before{background-image: url('../images/icons/shark.png');}
+h2.locked:before{background-image: url('../images/icons/locked.png');}

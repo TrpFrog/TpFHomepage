@@ -1,0 +1,49 @@
+.grid{
+  display: grid;
+  grid-template-areas: "h h"
+                       "n n"
+                       "s c"
+                       "f f";
+  grid-template-columns: 3fr 7fr;       /* ヨコ方向のセルの長さを単位[Fr](Fraction)で定める */
+  grid-template-rows: 2fr 3ex auto 3ex; /* タテ方向のセルの長さを単位[Fr](Fraction)で定める */
+}
+
+header{
+  grid-area: h;
+  padding: 1em;
+  text-align: center;
+  margin:0.1em;
+  margin-bottom: -10px;
+}
+
+nav{
+  grid-area: n;
+  text-align: center;
+  padding-top: -20px;
+  height: 5em;
+}
+
+aside{
+  grid-area: s;
+  padding: 1em;
+  margin:  1em;
+  margin-top:4em;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 33px;
+  text-align: center;
+}
+
+main{
+  grid-area: c;
+  padding: 1em;
+  margin:1em;
+  margin-top:4em;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 33px;
+  text-align: left;
+}
+
+footer{
+  grid-area: f;
+  padding: 1em;
+}

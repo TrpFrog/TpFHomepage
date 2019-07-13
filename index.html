@@ -1,90 +1,164 @@
 <html>
 <head>
-<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-<link rel="manifest" href="/favicon/site.webmanifest">
-<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
-<link rel="shortcut icon" href="/favicon/favicon.ico">
-<link rel="stylesheet" type="text/css" href="./stylesheets/main.css">
-<meta name="msapplication-TileColor" content="#da532c">
-<meta name="msapplication-config" content="/favicon/browserconfig.xml">
-<meta name="theme-color" content="#ffffff">
-<meta charset="utf-8">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@TrpFrog">
-<meta property="og:url" content="https://www.trpfrog.net">
-<meta property="og:title" content="つまみさんのHP">
-<meta property="og:description" content="さかなになりたいね">
-<meta property="og:image" content="https://www.trpfrog.net/images/TwitterCard.png">
-<title>TrpFrog's HP</title>
-<script type="text/javascript"> <!--ねぎ一世さん(@negiissei)の提供でお送りします-->
-  function gotoIconPage()
-  {
-    let		d = false;
-    d = window.confirm( "この先、通信量が約6MBかかりますがよろしいですか？" );	//	ダイアログの文章
-    if( d == true ) window.location.href = "https://www.trpfrog.net/trpfrog_icons";	//	飛ばしたいリンク先
-  }
-</script> <!--ねぎ一世さんの提供でお送りしました。ありがとう〜〜〜〜〜-->
-</head>
-<body>
-  <h1>つまみさんのHP</h1>
+  <script type="text/javascript" src="contents_builder.js"></script>
+  <script type="text/javascript" src="balloon/balloon_script.js"></script>
   <script>
-      document.write("最終更新日：" + document.lastModified);
-  </script><br>
+    setFavicon();
+    setTwitterCard();
+  </script>
+<link rel="stylesheet" type="text/css" href="./stylesheets/main.css">
+<meta charset="utf-8">
+<title>TrpFrog's HP</title>
+<script type="text/javascript">
+  function gotoIconPage(){
+    let		d = false;
+    d = window.confirm( "この先、通信量が約6MBかかりますがよろしいですか？" );
+    if( d == true ) window.location.href = "https://www.trpfrog.net/trpfrog_icons";
+  }
+</script> <!--Powered by @negiissei-->
+</head>
 
-  <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-lang="ja" data-text="令和JKの間で大流行している今大注目のサイトです！必見！" data-url="https://www.trpfrog.net" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script><br><br>
+<body>
+  <div class="grid">
 
-  <img src="images/trpfrog.png", width="180x180"> <br><br>
-  <a href="javascript:void(0);" onclick="gotoIconPage()">アイコン置き場</a>
-  : 6MBぐらいあるのでスマホの人は気をつけて<br>
-  <a href="https://github.com/TrpFrog/trpfrog.github.io/commits/master">更新履歴</a>
-  : 外部サイトに繋がります (いやGitHubだから正確には内部な気はするが......)<br>
-  <h3>自己紹介</h3>
-  大学1粘性。<br>
-  音ゲーとアニメとAppleが好き。<br>
-  最近はJavaでAtCoderに乗り込んだりしている。<br>
+    <header>
+      <script>buildHeader();</script><br>
+    </header>
 
-  <h3>主にやってる音ゲー</h3>
-  チュウニズム (プラチナレート14.90↑)<br>
-  SOUND VOLTEX (後光魔騎士, Scarlet☆1)<br>
-  オンゲキ (シューター3段, 銅レート)<br>
+    <nav>
+      <script>buildNavigation();</script>
+    </nav>
 
-  <h3>わたてん情報</h3>
-  <b>私に天使が舞い降りた！</b>はとてもとてもとてもかわいいおねロリ百合コメディです！！！！<br>
-  コミック百合姫連載中で原作が5巻とアニメがあります。
-  アニメはAmazonPrimeビデオとかdアニメストアで見れます。よろしく！！！<br>
-  つまみ㊙️情報: 入試1週間前は1日2回わたてんを見ていた<br>
-  <br>
-  それと！<b>わたてん原作第６巻は６月１８日(火)発売</b>です！！！<br>
-  <a href="https://www.amazon.co.jp/dp/4758079528/ref=cm_sw_em_r_mt_dp_U_nPobDbA2CM8XC">Amazon(ノンアフィ)</a> <br>
-  原作未読の方は<a href="https://www.amazon.co.jp/dp/B07MVDGPDN?ref=cm_sw_tw_r_mng_rwt_qycV61j4R5t5X">こちら</a>からどうぞ<br>
+    <aside>
+      <div class="centering" style="width:90%">
+        <h2 class="robot"> シェア </h2>
+        <p>
+          <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-lang="ja" data-text="令和JKの間で大流行している今大注目のサイトです！必見！" data-url="https://www.trpfrog.net" data-show-count="false">Tweet</a>
+          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </p>
 
+        <h2 class="ice"> Twitter </h2>
+        <br>
+        <a class="twitter-timeline" data-lang="ja"  align="center" height="600px" href="https://twitter.com/TrpFrog?ref_src=twsrc%5Etfw">Tweets by TrpFrog</a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-  <h3>リンク集</h3>
+        <h2 class="car">大学</h2>
+        <p>
+          <div class="google-maps">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.7960278951095!2d139.5407369156406!3d35.65739673888555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f0141c587615%3A0xe510b22e7670f20b!2z6Zu75rCX6YCa5L-h5aSn5a2m!5e0!3m2!1sja!2sjp!4v1562758842876!5m2!1sja!2sjp" width="280" height="300" frameborder="0" style="border:11"></iframe>
+          </div>
+        </p>
+      </div>
+    </aside>
 
-  <a href="https://twitter.com/TrpFrog">Twitter</a>
-  : 割とうるさいので注意 (50〜150ツイート/日、許せる方はどうぞ)<br>
-  <a href="https://marshmallow-qa.com/trpfrog">マシュマロ</a>
-  : 質問箱みたいなやつです。お気軽にどうぞ<br>
-  <a href="https://line.me/S/sticker/4674940">LINEスタンプ</a>
-  : 好評発売中！(確か120円)<br>
-  <a href="https://trpfrog.hateblo.jp">はてなブログ</a>
-  : AppleWatchの記事しか書いてない<br>
-  <a href="https://github.com/TrpFrog">GitHub</a>
-  : 謎の組織ギフハブ<br>
-  <a href="http://watatentv.com">わたてん</a>
-  : 見てくれ......<br>
-  <a href="https://www.nhk.or.jp/idaten/">いだてん</a>
-  : 大河ドラマ<br><br>
+    <main>
+      <div class="centering" style="padding-left: 30px;">
+      <h2 class="think">特に意味のない鳥 </h2>
+      <p>
+          <pre class="aa" style="display: inline-block">
+  　　 ／￣￣＼　ﾑｼｬﾑｼｬ
+  　　/　 (●)/￣￣＼
+  .　 / 　 　ト、 　 ＼
+  　彳 　 　 ＼＼　　|
+  .／　　　/⌒ヽヽ　 |
+  /　 　 　 |　　| .|　 /。
+  　　　　|　　ヽ|／∴
+  　　　　　　　。゜
+          </pre>
+          <pre class="aa" style="display: inline-block">
+  オエーー !!!　＿＿_
+  　　　 ＿＿_／　　 ヽ
+  　　 ／ 　 ／　／⌒ヽ|
+  　　/　(ﾟ)/　 ／ /
+  .　 /　 　 ﾄ､ /｡⌒ヽ。
+  　彳　 　 ＼＼ﾟ｡∴｡ｏ
+  .／　　　　 ＼＼｡ﾟ｡ｏ
+  /　　　　 ／⌒＼Ｕ∴)
+  　　　 　 | 　　ﾞＵ |
+  　　　 　 | 　　　| |
+  　　　　　　　　Ｕ
+          </pre>
+      </p>
 
-  <a class="twitter-timeline" width="400px" height="500px" href="https://twitter.com/TrpFrog?ref_src=twsrc%5Etfw">Tweets by TrpFrog</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      <h2 class="noa"  style="margin-top: -30px">自己紹介</h2>
+        <p>
+          大学1年生の女子大生つまみちゃんです⭐︎<br>
+          音ゲーとAppleが好き。<br>
+          アニメは少し見ます......(わたてんを見て)
+        </p>
+      </h2>
 
-  <br><br>
-   © 2019 つまみ (<a href="https://twitter.com/TrpFrog">@TrpFrog</a>) All Rights Reserved.
+      <h2 class="pumpkin">やっている音ゲー</h2>
+        <p>
+            <ol>
+              <li>チュウニズム</li>
+                <ul>
+                  <li>クラス3帯</li>
+                  <li>クラス4エンブレム</li>
+                  <li>レーティングmax14.93</li>
+                </ul>
+              <li>オンゲキ</li>
+              <ul>
+                <li>シューター３段</li>
+                <li>銀レート</li>
+              </ul>
+              <li>SOUND VOLTEX</li>
+              <ul>
+              <li>段位：魔騎士</li>
+              <li>ボルフォース：スカーレット</li>
+              </ul>
+            </ol>
+        </p>
+      </h2>
 
-  
+      <h2 class="ice">風船コーナー</h2>
+      <p>
+          <script>
+            setWidth(100);
+            setHomedir('.');
+            prepare(5);
+            buildBalloons();
+          </script>
+          <br>
+          <a href="balloon/index.html" class="button"> もっと割る </a>
+      </p>
 
+      <h2 class="evil">作ったアイコン</h2>
+      <p>
+        <img src="images/icons/trpfrog.png" height="150px">
+        <img src="images/icons/thinking.png" height="150px">
+        <img src="images/icons/ice.png" height="150px">
+        <img src="images/icons/noa.png" height="150px">
+        <br>
+        <a href="icon_gallery/index.html" class="button"> もっと見る </a>
+      </p>
+
+      <h2 class="locked">リンク集</h2>
+      <p>
+        <a href="https://twitter.com/TrpFrog" class="button">Twitter</a>
+        　割とうるさいので注意 (50〜150ツイート/日、許せる方はどうぞ)<br>
+        <a href="https://marshmallow-qa.com/trpfrog" class="button">マシュマロ</a>
+        　質問箱みたいなやつです。お気軽にどうぞ<br>
+        <a href="https://line.me/S/sticker/4674940" class="button">LINEスタンプ</a>
+        　好評発売中！(確か120円)<br>
+        <a href="https://trpfrog.hateblo.jp" class="button">はてなブログ</a>
+        　AppleWatchの記事しか書いてない<br>
+        <a href="https://github.com/TrpFrog" class="button">GitHub</a>
+        　謎の組織ギフハブ<br>
+        <a href="http://watatentv.com" class="button">わたてん</a>
+        　見てくれ......<br>
+        <a href="https://www.nhk.or.jp/idaten/" class="button">いだてん</a>
+        　大河ドラマ<br><br>
+      </p>
+
+    </div>
+    </main>
+
+    <footer>
+      <script>buildFooter();</script>
+    </footer>
+
+  </div>
 </body>
 
 </html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/icon_gallery.css">
+    <script type="text/javascript" src="../contents_builder.js"></script>
+    <script type="text/javascript" src="image_list.js"></script>
+    <script>
+      homedir = '..';
+      setFavicon();
+      setTwitterCard();
+    </script>
+    <title>Icon Gallery</title>
+</head>
+
+<body>
+
+  <!---  ヘッダー  --->
+
+  <script>homedir = '..'</script>
+
+  <header>
+    <script>buildHeader();</script>
+  </header>
+
+  <nav>
+    <script>buildNavigation();</script>
+  </nav>
+
+  <aside style="height:1em;">
+    <div style="font-size: 150%; text-align: center;">クリックで拡大できます。</div><br>
+  </aside>
+
+  <main>
+    <script>imageList();</script>
+  </main>
+
+  <script>buildFooter();</script>
+
+</body>
+</html>
