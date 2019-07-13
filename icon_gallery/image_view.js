@@ -1,5 +1,5 @@
 let num = location.search.substring(1)-0;
-const MAX = 28-0;
+const MAX = 29-0;
 const prepreimg = fitInRange(num-2);
 const preimg = fitInRange(num-1);
 const nxtimg = fitInRange(num+1);

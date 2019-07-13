@@ -1,4 +1,4 @@
-let MAX = 28;
+let MAX = 29;
 
 function setMax(num){
   MAX = num-0;
