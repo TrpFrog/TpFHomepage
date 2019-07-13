@@ -1,4 +1,4 @@
-let homedir = ".";
+let homedir = "https://www.trpfrog.net/";
 
 function setFavicon(){
   let html = "";
