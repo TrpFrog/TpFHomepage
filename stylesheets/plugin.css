@@ -21,12 +21,3 @@
   width: 100% !important;
   height: 100% !important;
 }
-
-/* TwitterがiPhoneで見るとはみ出る対策 */
-/* https://flux-capacitor.me/twitterウィジットをios-safariに設置するとはみ出す-1277.html を参考にしました。*/
-.twitterBox {
-  width: 100%;
-}
-.twitterBox iframe {
-  width: 90% !important;
-}
