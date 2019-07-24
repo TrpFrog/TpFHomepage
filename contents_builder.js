@@ -1,5 +1,5 @@
-let homedir = "https://www.trpfrog.net/";
-// let homedir = ".";
+// let homedir = "https://www.trpfrog.net";
+let homedir = ".";
 
 function setFavicon(){
   let html = "";

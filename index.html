@@ -43,11 +43,20 @@
           <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </p>
 
-        <h2 class="ice"> Twitter </h2>
-        <br>
+        <script>
+          var userAgent = window.navigator.userAgent.toLowerCase();
+          let html = '<style> .twitterBox{';
+          if(userAgent.indexOf('iphone') != -1){
+            html += 'display:none;'
+          }
+          html += '} </style>';
+          document.write(html);
+        </script>
         <div class="twitterBox">
-            <a class="twitter-timeline" data-lang="ja"  align="center" height="600px" href="https://twitter.com/TrpFrog?ref_src=twsrc%5Etfw">Tweets by TrpFrog</a>
-            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          <h2 class="ice"> Twitter </h2>
+          <br>
+          <a class="twitter-timeline" data-lang="ja"  align="center" height="600px" href="https://twitter.com/TrpFrog?ref_src=twsrc%5Etfw">Tweets by TrpFrog</a>
+          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
 
         <h2 class="pumpkin">音ゲー</h2>
