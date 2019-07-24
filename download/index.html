@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+      @import "../stylesheets/single_column.css";
+      @import "../stylesheets/button.css";
+      @import "../stylesheets/basebody.css";
+      @import "../stylesheets/h2icon.css";
+      .centering{
+        display: inline-block;
+        text-align: left;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    </style>
+    <script type="text/javascript" src="../contents_builder.js"></script>
+    <script>
+      homedir = '..';
+      setFavicon();
+      setTwitterCard();
+    </script>
+    <title>Wallpapers</title>
+</head>
+
+<body>
+
+  <!---  ヘッダー  --->
+
+  <script>//homedir = '..'</script>
+
+  <header>
+    <script>buildHeader();</script>
+  </header>
+
+  <nav>
+    <script>buildNavigation();</script>
+  </nav>
+
+  <main>
+    <div class="centering">
+    <h1>壁紙配布</h1>
+    <h2>アイコン集合</h2>
+    <p>
+      ヘッダー用に作ったものを壁紙に作り直しました。
+    </p>
+    <img src="./wallpapers/icons/thumbnail.png" style="border-radius: 10px; width:50%">
+    <p>
+      PC用は2560×1600pxです。
+    </p>
+    <p>
+      <a href="./wallpapers/icons/desktop.png" class="button">PC</a>
+      <a href="./wallpapers/icons/background.png" class="button">PC(背景)</a>
+      <a href="./wallpapers/icons/smartphone.png" class="button">スマートフォン</a>
+      <a href="./wallpapers/icons/iphonex.png" class="button">iPhoneX(1:2)</a>
+    </p>
+
+    <h2 class="hina">雨</h2>
+    <p>
+      天気の子の陽菜ちゃんになりたくて作りました。天気の子は観た方が良いです。
+    </p>
+    <img src="./wallpapers/rainy/thumbnail.png" style="border-radius: 10px; width:50%">
+    <p>
+      PC用は右にかけて暗くなっていくグラデーションあり版があります。<br>
+      右側にアイコン並べるようなMacユーザーの方におすすめです。
+    </p>
+    <p>
+      <a href="./wallpapers/rainy/no_grad.png" class="button">PC</a>
+      <a href="./wallpapers/rainy/desktop.png" class="button">PC(グラデあり)</a>
+      <a href="./wallpapers/rainy/bkg_no_grad.png" class="button">PC(背景のみ)</a>
+      <a href="./wallpapers/rainy/background.png" class="button">PC(背景,グラデあり)</a><br>
+      <a href="./wallpapers/rainy/smartphone.png" class="button">スマートフォン</a>
+      <a href="./wallpapers/rainy/smartphone_bkg.png" class="button">スマホ(背景のみ)</a>
+      <a href="./wallpapers/rainy/iphonex.png" class="button">iPhoneX(1:2)</a>
+      <a href="./wallpapers/rainy/iphonex_bkg.png" class="button">iPhoneX(背景のみ)</a>
+    </p>
+  </div>
+  </main>
+
+  <script>buildFooter();</script>
+
+</body>
+</html>

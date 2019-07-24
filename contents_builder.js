@@ -1,4 +1,5 @@
-let homedir = "https://www.trpfrog.net/";
+// let homedir = "https://www.trpfrog.net/";
+let homedir = ".";
 
 function setFavicon(){
   let html = "";
@@ -45,16 +46,17 @@ function buildHeader(){
 function buildNavigation(){
   let html = "";
   html += '<p>';
-  html += '   <a href=\"'+homedir+'/index.html\" class=\"headerButton\">トップページ</a>';
+  html += '   <a href=\"'+homedir+'/index.html\" class=\"headerButton\">トップ</a>';
   html += '   <a href=\"'+homedir+'/balloon/index.html\" class=\"headerButton\">風船割り</a>';
-  html += '   <a href=\"'+homedir+'/icon_gallery/index.html\" class=\"headerButton\">アイコンギャラリー</a>';
+  html += '   <a href=\"'+homedir+'/icon_gallery/index.html\" class=\"headerButton\">アイコン</a>';
+  html += '   <a href=\"'+homedir+'/download/index.html\" class=\"headerButton\">壁紙</a>';
   html += '   <a href=\"https://github.com/TrpFrog/trpfrog.github.io/commits/master\" class=\"headerButton\">更新履歴</a>';
   html += '</p>'
   document.write(html);
 }
 
 function buildFooter() {
-  let html = '© 2019 つまみ (<a href=\"https://twitter.com/TrpFrog\">@TrpFrog</a>) All Rights Reserved.';
+  let html = '© 2019 つまみ (<a href=\"https://twitter.com/TrpFrog\">@TrpFrog</a>)';
   html += '<br><br>';
   document.write(html);
 }
