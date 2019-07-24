@@ -7,13 +7,41 @@
 @import "plugin.css";
 @import "linkbutton_grid.css";
 
-
-.centering{
-  display: inline-block;
-  text-align: left;
-  padding-left: 10px;
-  padding-right: 10px;
+@media screen and (min-width: 800px){
+  .centering{
+    display: inline-block;
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
+@media screen and (max-width: 800px){
+  .centering{
+    display: inline-block;
+    text-align: left;
+  }
+}
+@media screen and (max-width: 400px){
+  .centering{
+    display: inline-block;
+    text-align: left;
+    padding:1em;
+  }
+}
+
+@media screen and (min-width: 400px){
+}
+@media screen and (max-width: 400px){
+  table, tr, td, th{
+    display: block;
+  }
+
+  tr{
+    margin: 1em;
+  }
+}
+
+
 
 pre.aa {
   font-size: 18px;

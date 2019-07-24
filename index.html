@@ -2,6 +2,7 @@
 <head>
   <script type="text/javascript" src="contents_builder.js"></script>
   <script type="text/javascript" src="balloon/balloon_script.js"></script>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <script>
     //homedir = 'https://www.trpfrog.net/'
     setFavicon();
@@ -73,7 +74,7 @@
     </aside>
 
     <main>
-      <div class="centering" style="padding-left: 30px;">
+      <div class="centering">
 
         <h2 class=""
       <h2 class="think">特に意味のない鳥 </h2>
@@ -116,6 +117,10 @@
             setWidth(100);
             setHomedir('.');
             prepare(5);
+
+            if(window.innerWidth<480){
+              b_width = 50;
+            }
             buildBalloons();
           </script>
           <br>

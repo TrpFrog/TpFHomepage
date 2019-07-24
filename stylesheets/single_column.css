@@ -5,7 +5,7 @@
                        "c"
                        "f";
   grid-template-columns: 1fr;       /* ヨコ方向のセルの長さを単位[Fr](Fraction)で定める */
-  grid-template-rows: 2fr 3ex auto 3ex; /* タテ方向のセルの長さを単位[Fr](Fraction)で定める */
+  grid-template-rows: 2fr auto auto 3ex; /* タテ方向のセルの長さを単位[Fr](Fraction)で定める */
 }
 
 header{
@@ -29,6 +29,7 @@ main{
   grid-area: c;
   padding: 1em;
   margin:1em;
+  margin-top: 2em;
   /* padding-top: 10px; */
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 33px;

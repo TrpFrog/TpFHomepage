@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <style>
       @import "../stylesheets/single_column.css";
       @import "../stylesheets/button.css";
@@ -12,6 +13,18 @@
         text-align: left;
         padding-left: 10px;
         padding-right: 10px;
+      }
+      @media screen and (min-width: 500px) {
+        .thumbnail{
+          border-radius: 10px;
+          width:50%;
+        }
+      }
+      @media screen and (max-width: 500px) {
+        .thumbnail{
+          border-radius: 10px;
+          width:100%;
+        }
       }
     </style>
     <script type="text/javascript" src="../contents_builder.js"></script>
@@ -44,7 +57,7 @@
     <p>
       ヘッダー用に作ったものを壁紙に作り直しました。
     </p>
-    <img src="./wallpapers/icons/thumbnail.png" style="border-radius: 10px; width:50%">
+    <img src="./wallpapers/icons/thumbnail.png" class="thumbnail">
     <p>
       PC用は2560×1600pxです。
     </p>
@@ -59,7 +72,7 @@
     <p>
       天気の子の陽菜ちゃんになりたくて作りました。天気の子は観た方が良いです。
     </p>
-    <img src="./wallpapers/rainy/thumbnail.png" style="border-radius: 10px; width:50%">
+    <img src="./wallpapers/rainy/thumbnail.png" class="thumbnail">
     <p>
       PC用は右にかけて暗くなっていくグラデーションあり版があります。<br>
       右側にアイコン並べるようなMacユーザーの方におすすめです。
