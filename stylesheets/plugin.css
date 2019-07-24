@@ -23,21 +23,10 @@
 }
 
 /* TwitterがiPhoneで見るとはみ出る対策 */
-/* https://ufufu.tokyo/web/twitter_responsive/ を参考にしました。*/
-@media screen and (max-width: 768px) and (min-width: 480px) {
-  iframe .twitter-timeline-rendered{
-    width: 490px !important;
-  }
+/* https://flux-capacitor.me/twitterウィジットをios-safariに設置するとはみ出す-1277.html を参考にしました。*/
+.twitterBox {
+  width: 100%;
 }
-
-@media screen and (max-width: 480px) {
-  iframe.twitter-timeline-rendered {
-    width: 450px !important;
-    margin:0 auto;
-  }
-}
-
-.timeline-Widget {
-  max-width: 300px!important;
-  width:200px !important;
+.twitterBox iframe {
+  width: 90% !important;
 }
