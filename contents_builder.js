@@ -49,6 +49,7 @@ function buildNavigation(){
   html += '   <a href=\"'+homedir+'/index.html\" class=\"headerButton\">トップ</a>';
   html += '   <a href=\"'+homedir+'/balloon/index.html\" class=\"headerButton\">風船割り</a>';
   html += '   <a href=\"'+homedir+'/icon_gallery/index.html\" class=\"headerButton\">アイコン</a>';
+  html += '   <a href=\"'+homedir+'/sticker_gallery/index.html\" class=\"headerButton\">スタンプ</a>';
   html += '   <a href=\"'+homedir+'/download/index.html\" class=\"headerButton\">壁紙</a>';
   html += '   <a href=\"https://github.com/TrpFrog/trpfrog.github.io/commits/master\" class=\"headerButton\">更新履歴</a>';
   html += '</p>'
