@@ -21,6 +21,7 @@ nav{
   grid-area: n;
   text-align: center;
   padding-top: -20px;
+  height: 5em;
 }
 
 aside{

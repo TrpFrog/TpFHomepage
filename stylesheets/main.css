@@ -6,6 +6,7 @@
 @import "button.css";
 @import "plugin.css";
 @import "linkbutton_grid.css";
+@import "rating_text.css";
 
 @media screen and (min-width: 800px){
   .centering{

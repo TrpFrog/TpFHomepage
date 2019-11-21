@@ -20,7 +20,7 @@ function setTwitterCard(){
   html += '<meta name="twitter:card" content="summary_large_image">';
   html += '<meta name="twitter:site" content="@TrpFrog">';
   html += '<meta property="og:url" content="https://www.trpfrog.net">';
-  html += '<meta property="og:title" content="つまみさんのHP">';
+  html += '<meta property="og:title" content="つまみnet">';
   html += '<meta property="og:description" content="さかなになりたいね">';
   html += '<meta property="og:image" content="https://www.trpfrog.net/images/TwitterCard.png">';
   document.write(html);
@@ -28,7 +28,7 @@ function setTwitterCard(){
 
 function buildHeader(){
   let html = "";
-  html += '<a href=\"'+homedir+'/index.html\" id=\"title\"><h1>TrpFrog\'s Homepage</h1></a>';
+  html += '<a href=\"'+homedir+'/index.html\" id=\"title\"><h1>つまみネット</h1></a>';
   //html += '<a href=\"'+homedir+'/index.html\" id=\"title\"><h1><img src=\"'+homedir+'/images/title.png\" height=100em></h1></a>';
   for(let i = 0 ; i<3; i++){
     html += '<img src=\"'+homedir+'/images/trpfrog.png\" height=\"50px\"';
