@@ -1,5 +1,5 @@
 .platinum{
-    filter:drop-shadow(1px 1px 0.6pt rgba(0, 0, 0,30));
+    filter:drop-shadow(0.01em 0.01em 0.05em rgba(0, 0, 0,0.8));
     color: #FF7C00;
     background: -webkit-linear-gradient(top, #fff677 30%, #fffbb9 50%, #ffcb5d 50%, #fff4b3 80%);
     -webkit-background-clip: text;
@@ -7,7 +7,7 @@
 }
 
 .rainbow{
-    filter:drop-shadow(1px 1px 0.6pt rgba(0, 0, 0,30));
+    filter:drop-shadow(0.01em 0.01em 0.05em rgba(0, 0, 0,0.8));
     color: #FF8C00;
     background: -webkit-linear-gradient(top,
     red 15%,
@@ -22,7 +22,7 @@
 }
 
 .silver{
-    filter:drop-shadow(1px 1px 0.6pt rgba(0, 0, 0,30));
+    filter:drop-shadow(0.01em 0.01em 0.05em rgba(0, 0, 0,0.8));
     background: -webkit-linear-gradient(top, #fffdfd 30%,#cbc9c9 50%, #aeacac 51%, #828080 80%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
