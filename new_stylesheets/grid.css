@@ -1,0 +1,42 @@
+.grid{
+    min-height: 100%;
+    display: grid;
+    grid-template-areas:"h"
+                        "m"
+                        "f";
+    grid-template-columns: 1fr;       /* ヨコ方向のセルの長さを単位[Fr](Fraction)で定める */
+    grid-template-rows: 6em auto 6em; /* タテ方向のセルの長さを単位[Fr](Fraction)で定める */
+}
+
+.grid header{
+    grid-area: h;
+}
+
+main{
+    grid-area: m;
+    font-family:
+            system-ui,
+            -apple-system,
+            BlinkMacSystemFont,
+            "Helvetica Neue",
+            "Hiragino Sans",
+            Meiryo,
+            "メイリオ",
+            "Arial",
+            sans-serif;
+    padding: 1em;
+    margin-left:2em;
+    margin-top: 4em;
+    margin-bottom: 2em;
+    text-align: left;
+
+}
+
+.grid footer{
+    grid-area: f;
+}
+/*body{*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    min-height: 6em;*/
+/*}*/

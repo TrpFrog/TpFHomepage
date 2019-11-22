@@ -1,0 +1,88 @@
+header{
+    /*display: grid;*/
+    /*grid-template-areas: "t n";*/
+    /*grid-template-columns: auto 70%;       !* ヨコ方向のセルの長さを単位[Fr](Fraction)で定める *!*/
+    /*grid-template-rows: 1fr; !* タテ方向のセルの長さを単位[Fr](Fraction)で定める *!*/
+    position: fixed;
+    background: #66a928;
+    justify-content: space-between;
+    width: 100%;
+    height: 6em;
+    filter: drop-shadow(0em 0.1em 0.3em rgba(0,0,0,0.4));
+}
+
+
+header h1{
+    /*grid-area: t;*/
+    text-align: left;
+    color: #ffffff;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-weight: bold;
+    padding-left: 1em;
+}
+
+header h1:before {
+    content:'';
+    display: inline-block;
+    width:1.7em;
+    height:1.7em;
+    background-image: url('../images/icons/trpfrog.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    margin-right: 0.3em;
+}
+
+nav{
+    /*grid-area: n;*/
+    text-align: right;
+    position: absolute;
+    top: 50%;
+    right: 2em;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+
+    font-family: 'Comfortaa', cursive;
+    color: #ffffff;
+}
+
+.headerButton{
+    font-family: 'Comfortaa', cursive;
+    text-align: left;
+    color: #ffffff;
+    /*font-weight: bold;*/
+    /*margin-bottom: 8px;*/
+    /*margin-right: 4px;*/
+    text-decoration: none; /*リンクの下線を消す*/
+    font-size:2em;
+
+    /*ボタン上のテキストの選択をさせない*/
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+.headerButton:hover{
+    color: #90e200
+}
+
+/*nav ul{*/
+/*    height: 2em;*/
+/*}*/
+nav li{
+    display: inline-block;
+    text-align: center;
+    list-style-type: none;
+    font-family: 'Comfortaa', cursive;
+    color: #ffffff;
+    text-decoration: none; /*リンクの下線を消す*/
+    margin-right:0.8em;
+    padding-left:1.2em;
+    /*ボタン上のテキストの選択をさせない*/
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+nav li+li{
+    border-left:2px solid #ffffff;
+}
