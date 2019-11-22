@@ -1,0 +1,12 @@
+@import "grid.css";
+@import "header.css";
+@import "footer.css";
+@import "../stylesheets/rating_text.css";
+@import "h2icon.css";
+@import "../stylesheets/linkbutton_grid.css";
+
+body{
+    margin: 0;
+    background: #fafff8;
+}
+
