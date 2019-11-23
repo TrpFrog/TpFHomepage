@@ -1,70 +1,81 @@
-@import "about_me.css";
-@import "main_grid_sp.css";
-
-@media screen and (min-width:800px) {
+@media screen and (max-width:800px) {
     main {
-        min-height: 100%;
+        margin: 0.5em;
+        padding: 0;
         text-align: center;
     }
 
     main #main_wrapper {
-        max-width: 1000px;
         display: inline-grid;
-        grid-template-areas: "about_me about_me about_me" "sticker icons icons" "sticker balloon balloon" "bird balloon balloon" "links links music_game";
-        grid-template-columns: 3fr 2fr 3fr; /* ヨコ方向のセルの長さを単位[Fr](Fraction)で定める */
-        grid-template-rows: auto 350px 110px 280px 540px; /* タテ方向のセルの長さを単位[Fr](Fraction)で定める */
+        grid-template-areas: "about_me" "icons" "sticker" "balloon" "links" "music_game" "bird";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto auto auto;
         text-align: left;
     }
 
     .main_window {
-        margin: 1em;
+        margin: 0.5em;
         background-color: rgba(220, 255, 148, 0.67);
-        border-radius: 33px;
+        border-radius: 22px;
         text-align: left;
     }
-
     .main_window h2 {
         margin: 0;
     }
 
     #music_game {
         grid-area: music_game;
-        padding: 40px 40px 40px 40px;
+        padding: 30px 20px 20px 20px;
     }
 
     #links {
         grid-area: links;
-        padding: 40px 40px 40px 40px;
+        padding: 30px 20px 30px 30px;
     }
 
-
-    #icons {
-        grid-area: icons;
-        padding: 30px 40px 40px 40px;
+    #links table {
+        width: 100%;
     }
+
+    #links th, td {
+        display: block;
+        text-align: left;
+        width: 100%;
+    }
+
+    #links tr {
+        display: block;
+        margin-bottom: 1em;
+    }
+
 
     #icons .top_icons {
         width: 24%;
     }
 
+    #icons {
+        grid-area: icons;
+        padding: 30px 20px 20px 20px;
+    }
 
     #balloon {
         grid-area: balloon;
-        padding: 40px 40px 40px 40px;
+        padding: 30px 20px 20px 20px;
     }
 
 
     #sticker {
         grid-area: sticker;
-        padding: 30px 30px 30px 30px;
+        padding: 30px 20px 20px 20px;
     }
 
     #bird {
         grid-area: bird;
-        text-align: center;
-        padding: 40px 40px 40px 20px;
+        text-align: left;
+        padding: 20px 20px 20px 20px;
         /*display: flex;*/
         /*align-items: center;*/
+        height: 190px;
     }
 
     #bird h2 {
@@ -85,5 +96,6 @@
         font-size: 12px;
         line-height: 12px;
         display: inline-block;
+        text-align: center;
     }
 }

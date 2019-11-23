@@ -10,6 +10,12 @@
     grid-template-rows: 6em 1700px 6em; /* タテ方向のセルの長さを単位[Fr](Fraction)で定める */
 }
 
+@media screen and (max-width:800px){
+    .grid{
+        grid-template-rows: 6em auto 6em;
+    }
+}
+
 .grid header{
     grid-area: h;
 }
