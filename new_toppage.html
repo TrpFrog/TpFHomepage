@@ -16,6 +16,11 @@
             //homedir = 'https://www.trpfrog.net/'
             fontLoader();
         </script>
+        <style>
+            ul.rating_list li{
+                margin-bottom:0.5em;
+            }
+        </style>
 
         <!-- CSS -->
         <link rel="stylesheet" type="text/css" href="./new_stylesheets/main.css">
@@ -38,127 +43,149 @@
     <body>
     <div class="grid">
         <header>
-            <script>buildHeader();</script>
+<!--            <script>buildHeader();</script>-->
+            <div id="header_wrapper">
+                <h1>つまみネット</h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html" class="headerButton">home</a></li>
+                        <li><a href="index.html" class="headerButton">icons</a></li>
+                        <li><a href="index.html" class="headerButton">works</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
         <main>
-            <h2 class="noa"  style="margin-top: -30px">自己紹介</h2>
-            <p>
-                大学1年生の女子大生つまみちゃんです⭐︎<br>
-                音ゲーとAppleが好き。<br>
-                プログラミングとかも(よわよわですが)好きです！<br>
-<!--                あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>-->
-            </p>
-            <table>
-                <tr>
-                    <th>　年齢 </th> <td> 19歳 </td>
-                </tr><tr>
-                <th> 誕生日 </th> <td> 10月17日 </td>
-            </tr><tr>
-                <th> 住まい </th> <td> 東京都 </td>
-            </tr><tr>
-                <th> 　性別 </th><td> 美少女 </td>
-            </tr>
-            </table>
+            <div id="main_wrapper">
+                <div id="about_me">
+                    <h2 class="noa"  style="margin-top: -30px">About me</h2>
+                    <h3>つまみ</h3>
+                    <div class="profile_image">
+                        <img src="images/trpfrogvector.svg" width="200" alt="TrpFrog Icon">
+                    </div>
+                    <p class="am_text">
+                        大学1年生の女子大生つまみちゃんです⭐︎<br>
+                        音ゲーとAppleが好き。<br>
+                        プログラミングとかも好きです！<br>
+                    </p>
+                    <table>
+                        <tr>
+                            <th>　年齢 </th> <td> 19歳 </td>
+                        </tr><tr>
+                        <th> 誕生日 </th> <td> 10月17日 </td>
+                    </tr><tr>
+                        <th> 住まい </th> <td> 東京都 </td>
+                    </tr><tr>
+                        <th> 　性別 </th><td> 美少女 </td>
+                    </tr>
+                    </table>
 
-            <h2 class="pumpkin">音楽ゲーム</h2>
-            <style>
-                ul.rating_list li{
-                    margin-bottom:0.5em;
-                }
-            </style>
-            <p>
-            <ul class="rating_list">
-                <li>チュウニズム<br>
-                    <span class="rainbow" style="font-weight: bold">max</span>
-                    <span class="rainbow" style="font-size:1.7em; font-weight: bold;">15.03</span></li>
-                <li>オンゲキ<br>
-                    <span class="platinum" style="font-weight: bold">max</span>
-                    <span class="platinum" style="font-size:1.7em; font-weight: bold;">14.69</span></li>
+                    <p class="social">
+                        <a href="https://twitter.com/trpfrog"><img src="images/socialicons/bw_twitter.svg" class="socialButton" alt="Twitter icon"></a>
+                        <span style="font-size: 1.5em">@TrpFrog</span>
+                    </p>
+                </div>
 
-                <li>SOUND VOLTEX<br>
-                    <span class="silver" style="font-size:1.5em; font-weight: bold;">魔騎士</span></li>
-                <li>beatmania IIDX<br>
-                    <span class="rainbow" style="font-size:1.5em; font-weight: bold;">無段位</span></li>
-            </ul>
-            </p>
+                <div id="music_game">
+                    <h2 class="pumpkin">音楽ゲーム</h2>
 
-            <h2 class="locked">リンク集</h2>
-            <br>
-            <table>
-                <tr>
-                    <td>
-                        <a href="https://twitter.com/TrpFrog" class="linkButton">Twitter</a>
-                    </td>
-                    <td>
-                        割とうるさいので注意<br>
-                        (50〜150ツイート/日、許せる方はどうぞ)
-                    </td>
-                </tr>
+                    <p>
+                    <ul class="rating_list">
+                        <li>チュウニズム<br>
+                            <span class="rainbow" style="font-size:2em; font-weight: bold">max</span>
+                            <span class="rainbow" style="font-size:2.8em; font-weight: bold;">15.03</span></li>
+                        <li>オンゲキ<br>
+                            <span class="platinum" style="font-size:2em; font-weight: bold">max</span>
+                            <span class="platinum" style="font-size:2.8em; font-weight: bold;">14.69</span></li>
 
-                <tr>
-                    <td>
-                        <a href="https://marshmallow-qa.com/trpfrog" class="linkButton">マシュマロ</a>
-                    </td>
-                    <td>
-                        質問箱みたいなやつです。お気軽にどうぞ
-                    </td>
-                </tr>
+                        <li>SOUND VOLTEX<br>
+                            <span class="silver" style="font-size:2.5em; font-weight: bold;">魔騎士</span></li>
+                        <li>beatmania IIDX<br>
+                            <span class="rainbow" style="font-size:2.5em; font-weight: bold;">無段位</span></li>
+                    </ul>
+                    </p>
+                </div>
 
-                <tr>
-                    <td>
-                        <a href="https://www.amazon.jp/hz/wishlist/ls/2MHXSEDPHJ79J?ref_=wl_share" class="linkButton">乞食リスト</a>
-                    </td>
-                    <td>
-                        Amazonの欲しいものリストです
-                    </td>
-                </tr>
+                <div id="links">
+                    <h2 class="locked">リンク集</h2>
+                    <br>
+                    <table>
+                        <tr>
+                            <td>
+                                <a href="https://twitter.com/TrpFrog" class="linkButton">Twitter</a>
+                            </td>
+                            <td>
+                                割とうるさいので注意<br>
+                                (50〜150ツイート/日、許せる方はどうぞ)
+                            </td>
+                        </tr>
 
-                <tr>
-                    <td>
-                        <a href="https://line.me/S/sticker/4674940" class="linkButton">LINEスタンプ</a>
-                    </td>
-                    <td>
-                        好評発売中！(確か120円)
-                    </td>
-                </tr>
+                        <tr>
+                            <td>
+                                <a href="https://marshmallow-qa.com/trpfrog" class="linkButton">マシュマロ</a>
+                            </td>
+                            <td>
+                                質問箱みたいなやつです。お気軽にどうぞ
+                            </td>
+                        </tr>
 
-                <tr>
-                    <td>
-                        <a href="https://trpfrog.hateblo.jp" class="linkButton">はてなブログ</a>
-                    </td>
-                    <td>
-                        AppleWatchの記事しか書いてない
-                    </td>
-                </tr>
+                        <tr>
+                            <td>
+                                <a href="https://www.amazon.jp/hz/wishlist/ls/2MHXSEDPHJ79J?ref_=wl_share" class="linkButton">乞食リスト</a>
+                            </td>
+                            <td>
+                                Amazonの欲しいものリストです
+                            </td>
+                        </tr>
 
-                <tr>
-                    <td>
-                        <a href="https://github.com/TrpFrog" class="linkButton">GitHub</a>
-                    </td>
-                    <td>
-                        謎の組織ギフハブ
-                    </td>
-                </tr>
+                        <tr>
+                            <td>
+                                <a href="https://line.me/S/sticker/4674940" class="linkButton">LINEスタンプ</a>
+                            </td>
+                            <td>
+                                好評発売中！(確か120円)
+                            </td>
+                        </tr>
 
-                <tr>
-                    <td>
-                        <a href="http://watatentv.com" class="linkButton">わたてん</a>
-                    </td>
-                    <td>
-                        見てくれ......
-                    </td>
-                </tr>
+                        <tr>
+                            <td>
+                                <a href="https://trpfrog.hateblo.jp" class="linkButton">はてなブログ</a>
+                            </td>
+                            <td>
+                                AppleWatchの記事しか書いてない
+                            </td>
+                        </tr>
 
-                <tr>
-                    <td>
-                        <a href="https://www.nhk.or.jp/idaten/" class="linkButton">いだてん</a>
-                    </td>
-                    <td>
-                        大河ドラマ
-                    </td>
-                </tr>
+                        <tr>
+                            <td>
+                                <a href="https://github.com/TrpFrog" class="linkButton">GitHub</a>
+                            </td>
+                            <td>
+                                謎の組織ギフハブ
+                            </td>
+                        </tr>
 
-            </table>
+                        <tr>
+                            <td>
+                                <a href="http://watatentv.com" class="linkButton">わたてん</a>
+                            </td>
+                            <td>
+                                見てくれ......
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <a href="https://www.nhk.or.jp/idaten/" class="linkButton">いだてん</a>
+                            </td>
+                            <td>
+                                大河ドラマ
+                            </td>
+                        </tr>
+
+                    </table>
+                </div>
+            </div>
         </main>
         <footer>
             <script>buildFooter();</script>

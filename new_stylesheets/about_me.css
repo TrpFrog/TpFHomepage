@@ -1,0 +1,60 @@
+#about_me{
+    padding: 70px 50px 50px 50px;
+    grid-area: about_me;
+    background-color: rgba(220, 255, 148, 0.67);
+    border-radius: 33px;
+    text-align: left;
+    display: grid;
+    grid-template-areas:
+            "about_me_title about_me_title about_me_image"
+            "about_me_name about_me_table about_me_image"
+            "about_me_text about_me_social about_me_image";
+    grid-template-rows: 1fr 120px 4fr;
+    grid-template-columns: 24em 10em auto;
+}
+
+#about_me h2{
+    grid-area: about_me_title;
+    margin: 0;
+}
+
+#about_me h3{
+    text-align: left;
+    font-size: 4em;
+    margin: 0;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+#about_me .profile_image{
+    grid-area: about_me_image;
+    text-align: left;
+    padding-left: 5em;
+    display: flex;
+    align-items: center;
+}
+
+#about_me p.am_text{
+    grid-area: about_me_text;
+    margin: 0;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+
+#about_me table{
+    grid-area: about_me_table;
+    text-align: center;
+}
+
+#about_me .social{
+    grid-area: about_me_social;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+#about_me .socialButton{
+    width: 40px;
+    margin-right: 10px;
+}

@@ -1,0 +1,25 @@
+@import "about_me.css";
+
+main {
+    min-height: 100%;
+    text-align: center;
+}
+
+main #main_wrapper{
+    max-width: 1000px;
+    display: inline-grid;
+    grid-template-areas:
+    "about_me about_me"
+    "music_game links";
+    grid-template-columns: 2fr 3fr;       /* ヨコ方向のセルの長さを単位[Fr](Fraction)で定める */
+    grid-template-rows: 330px 450px; /* タテ方向のセルの長さを単位[Fr](Fraction)で定める */
+    text-align: left;
+}
+
+#music_game{
+    grid-area: music_game;
+}
+
+#links{
+    grid-area: links;
+}

@@ -5,7 +5,7 @@
                         "m"
                         "f";
     grid-template-columns: 1fr;       /* ヨコ方向のセルの長さを単位[Fr](Fraction)で定める */
-    grid-template-rows: 6em auto 6em; /* タテ方向のセルの長さを単位[Fr](Fraction)で定める */
+    grid-template-rows: 6em 100em 6em; /* タテ方向のセルの長さを単位[Fr](Fraction)で定める */
 }
 
 .grid header{
@@ -25,11 +25,8 @@ main{
             "Arial",
             sans-serif;
     padding: 1em;
-    margin-left:2em;
-    margin-top: 4em;
-    margin-bottom: 2em;
+    margin: 2em;
     text-align: left;
-
 }
 
 .grid footer{

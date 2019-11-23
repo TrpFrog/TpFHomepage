@@ -7,28 +7,32 @@ function fontLoader() {
 
 function buildHeader() {
     let html = `
-        <h1>つまみネット</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html" class="headerButton">home</a></li>
-                <li><a href="index.html" class="headerButton">icons</a></li>
-                <li><a href="index.html" class="headerButton">works</a></li>
-            </ul>
-        </nav>
+        <div id="header_wrapper">
+            <h1>つまみネット</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="headerButton">home</a></li>
+                    <li><a href="index.html" class="headerButton">icons</a></li>
+                    <li><a href="index.html" class="headerButton">works</a></li>
+                </ul>
+            </nav>
+        </div>
     `;
     document.write(html);
 }
 
 function buildFooter() {
     let html = `
-        <p id="copyright">
-            ©︎ 2019 つまみ
-        </p>
-        <p id="share">
-            <a href="`+getTwitterUrl()+`"><img src="images/socialicons/twitter.svg" height="45" class="shareButton" alt="Share with Twitter"></a>
-            <a href="`+getFacebookUrl()+`"><img src="images/socialicons/facebook.svg" height="45" class="shareButton" alt="Share with Facebook"></a>
-            <a href="`+getLineUrl()+`"><img src="images/socialicons/line.svg" height="45" class="shareButton" alt="Share with LINE"></a>
-        </p>
+        <div id="footer_wrapper">
+            <p id="copyright">
+                ©︎ 2019 つまみ
+            </p>
+            <p id="share">
+                <a href="`+getTwitterUrl()+`"><img src="images/socialicons/twitter.svg" height="45" class="shareButton" alt="Share with Twitter"></a>
+                <a href="`+getFacebookUrl()+`"><img src="images/socialicons/facebook.svg" height="45" class="shareButton" alt="Share with Facebook"></a>
+                <a href="`+getLineUrl()+`"><img src="images/socialicons/line.svg" height="45" class="shareButton" alt="Share with LINE"></a>
+            </p>
+        </div>
     `;
     document.write(html);
 }
