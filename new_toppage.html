@@ -43,17 +43,8 @@
     <body>
     <div class="grid">
         <header>
-<!--            <script>buildHeader();</script>-->
-            <div id="header_wrapper">
-                <h1>つまみネット</h1>
-                <nav>
-                    <ul>
-                        <li><a href="index.html" class="headerButton">home</a></li>
-                        <li><a href="index.html" class="headerButton">icons</a></li>
-                        <li><a href="index.html" class="headerButton">works</a></li>
-                    </ul>
-                </nav>
-            </div>
+            <script>buildHeader();</script>
+
         </header>
         <main>
             <div id="main_wrapper">
@@ -79,16 +70,14 @@
                         <th> 　性別 </th><td> 美少女 </td>
                     </tr>
                     </table>
-
                     <p class="social">
                         <a href="https://twitter.com/trpfrog"><img src="images/socialicons/bw_twitter.svg" class="socialButton" alt="Twitter icon"></a>
-                        <span style="font-size: 1.5em">@TrpFrog</span>
+                        <a href="https://twitter.com/trpfrog" style="font-size: 1.5em; color:#000000; text-decoration: none">@TrpFrog</a>
                     </p>
                 </div>
 
-                <div id="music_game">
+                <div id="music_game" class="main_window">
                     <h2 class="pumpkin">音楽ゲーム</h2>
-
                     <p>
                     <ul class="rating_list">
                         <li>チュウニズム<br>
@@ -106,7 +95,7 @@
                     </p>
                 </div>
 
-                <div id="links">
+                <div id="links" class="main_window">
                     <h2 class="locked">リンク集</h2>
                     <br>
                     <table>
@@ -115,8 +104,7 @@
                                 <a href="https://twitter.com/TrpFrog" class="linkButton">Twitter</a>
                             </td>
                             <td>
-                                割とうるさいので注意<br>
-                                (50〜150ツイート/日、許せる方はどうぞ)
+                                割とうるさいので注意
                             </td>
                         </tr>
 
@@ -125,7 +113,7 @@
                                 <a href="https://marshmallow-qa.com/trpfrog" class="linkButton">マシュマロ</a>
                             </td>
                             <td>
-                                質問箱みたいなやつです。お気軽にどうぞ
+                                質問箱です。お気軽にどうぞ
                             </td>
                         </tr>
 
@@ -184,6 +172,90 @@
                         </tr>
 
                     </table>
+                </div>
+
+                <div id="icons" class="main_window">
+                    <h2 class="evil">作ったアイコン</h2>
+                    <p>
+                        <img src="images/icons/trpfrog.png" width="24%">
+                        <img src="images/icons/thinking.png" width="24%">
+                        <img src="images/icons/ice.png" width="24%">
+                        <img src="images/icons/noa.png" width="24%">
+                    </p><p>
+                        <a href="icon_gallery/index.html" class="linkButton"> もっと見る </a>
+                    </p>
+                </div>
+
+                <div id="balloon" class="main_window">
+                    <h2 class="ice">風船コーナー</h2>
+                    <p>
+                        <script>
+                            setWidth(100);
+                            setHomedir('.');
+                            prepare(5);
+
+                            if(window.innerWidth<480){
+                                b_width = 50;
+                            }
+                            buildBalloons();
+                        </script>
+                    </p><p>
+                        <a href="balloon/index.html" class="linkButton"> もっと割る </a>
+                    </p>
+                </div>
+
+                <div id="sticker" class="main_window">
+                    <h2 class="otaku">ストア</h2>
+                    <p>
+                        つまみさんのスタンプ・グッズ<br>
+                        好評発売中！
+                    </p>
+                    <table>
+                        <tr>
+                            <th>LINEスタンプ</th>
+                            <td>
+                                <a href="https://store.line.me/stickershop/product/4674940/ja" class="linkButton" style="width: 60px;margin: 5px">vol.1</a>
+                                <a href="https://store.line.me/stickershop/product/8879469/ja" class="linkButton" style="width: 60px;margin: 5px">vol.2</a>
+                            </td>
+                        </tr><tr>
+                        <th> つまみグッズ </th>
+                        <td>
+                            <a href="https://suzuri.jp/TrpFrog" class="linkButton" style="margin: 5px">SUZURI</a>
+                        </td>
+                    </tr>
+                    </table>
+                    <p style="margin-top: 20px; text-align: center">
+                        <img src="images/goods.png" style="width: 100%;">
+                    </p>
+                </div>
+
+                <div id="bird" class="main_window">
+                    <h2 class="think">特に意味のない鳥</h2>
+
+                    <pre class="aa">
+　　 ／￣￣＼　ﾑｼｬﾑｼｬ
+  /　 (●)/￣￣＼
+.　 / 　 　ト、 　 ＼
+　彳 　 　 ＼＼　　|
+.／　　　/⌒ヽヽ　 |
+/　 　 　 |　　| .|　 /。
+　　　　|　　ヽ|／∴
+　　　　　　　。゜
+
+                    </pre><pre class="aa" style="margin-left: 20px">
+
+オエーー !!!　＿＿_
+　　　 ＿＿_／　　 ヽ
+　　 ／ 　 ／　／⌒ヽ|
+/　(ﾟ)/　 ／ /
+.　 /　 　 ﾄ､ /｡⌒ヽ。
+　彳　 　 ＼＼ﾟ｡∴｡ｏ
+.／　　　　 ＼＼｡ﾟ｡ｏ
+/　　　　 ／⌒＼Ｕ∴)
+　　　 　 | 　　ﾞＵ |
+　　　 　 | 　　　| |
+　　　　　　　　Ｕ
+          </pre>
                 </div>
             </div>
         </main>

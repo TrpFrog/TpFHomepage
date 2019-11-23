@@ -7,7 +7,7 @@
                         "m"
                         "f";
     grid-template-columns: 1fr;       /* ヨコ方向のセルの長さを単位[Fr](Fraction)で定める */
-    grid-template-rows: 6em 100em 6em; /* タテ方向のセルの長さを単位[Fr](Fraction)で定める */
+    grid-template-rows: 6em 1700px 6em; /* タテ方向のセルの長さを単位[Fr](Fraction)で定める */
 }
 
 .grid header{

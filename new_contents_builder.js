@@ -12,8 +12,8 @@ function buildHeader() {
             <nav>
                 <ul>
                     <li><a href="index.html" class="headerButton">home</a></li>
-                    <li><a href="index.html" class="headerButton">icons</a></li>
-                    <li><a href="index.html" class="headerButton">works</a></li>
+                    <li><a href="icon_gallery/index.html" class="headerButton">icons</a></li>
+                    <li><a href="download/index.html" class="headerButton">works</a></li>
                 </ul>
             </nav>
         </div>
