@@ -5,22 +5,25 @@ footer{
     height: 6em;
     display: grid;
     grid-template-areas:"c s";
-    grid-template-columns: 30em auto;
+    grid-template-columns: 30em 500px;
     grid-template-rows: 1fr;
 }
 
 
 footer #copyright{
     grid-area: c;
-    width: 30%;
     /*grid-area: t;*/
     text-align: left;
     color: #ffffff;
     font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 1.5em;
     padding-left: 1em;
+    padding-top:1.4em;
+    margin-bottom: 0;
+    margin-top: 0;
 
     position: relative;
-    top: 55%;
+    top: 50%;
     left: 2em;
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
@@ -29,10 +32,13 @@ footer #copyright{
 footer #share{
     grid-area: s;
     text-align: right;
-    margin-right: 3em;
+    margin-right: 5em;
+    padding-top: 1.8em;
+    margin-bottom: 0;
+    margin-top: 0;
 
     position: relative;
-    top: 45%;
+    top: 50%;
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
 }
