@@ -6,38 +6,46 @@
         background-color: rgba(220, 255, 148, 0.67);
         border-radius: 33px;
         text-align: left;
-        display: grid;
-        grid-template-areas:
-                "about_me_title  about_me_image"
-                "about_me_name  about_me_image"
-                "about_me_text about_me_social";
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
     }
 
     #about_me h2 {
-        grid-area: about_me_title;
-        margin: 0;
+        text-align: left;
     }
 
-    #about_me h3 {
+    #about_me_grid {
+        display: grid;
+        grid-template-areas:
+                "about_me_name  about_me_image"
+                "about_me_text about_me_image";
+        grid-template-rows: 100px 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #about_me_name{
+        grid-area: about_me_name;
+    }
+
+    #about_me_grid h3 {
         text-align: left;
         font-size: 4em;
-        margin: 0;
+        margin: 10px;
+        padding: 0;
         font-family: 'M PLUS Rounded 1c', sans-serif;
     }
 
-    #about_me .profile_image {
-        display: none;
+    #about_me_grid .profile_image {
         grid-area: about_me_image;
-        text-align: left;
-        padding-left: 5em;
-        display: flex;
+        padding: 1em 0;
+        text-align: center;
         align-items: center;
     }
 
+    #about_me_grid .profile_image object{
+        max-width: 334px;
+    }
 
-    #about_me p.am_text {
+
+    #about_me_grid p.am_text {
         grid-area: about_me_text;
         margin: 0;
         text-align: left;
@@ -46,58 +54,41 @@
     }
 
 
-    #about_me table {
+    #about_me_grid .plusinfo {
         grid-area: about_me_table;
         text-align: center;
-    }
-
-    #about_me .social {
-        grid-area: about_me_social;
-        text-align: center;
-        display: inline-flex;
-        align-items: center;
-        text-decoration: none;
-    }
-
-    #about_me .socialButton {
-        width: 40px;
-        margin-right: 10px;
-    }
-
-    #about_me .socialButton:hover {
-        filter: drop-shadow(0em 0.1em 0.3em rgb(79, 238, 232));
     }
 }
 
 @media screen and (max-width:800px) {
 
-    #about_me{
+    #about_me {
         padding: 60px 20px 20px 20px;
         margin: 0.5em;
         grid-area: about_me;
         background-color: rgba(220, 255, 148, 0.67);
         border-radius: 22px;
         text-align: center;
-
-        /*display: grid;*/
-        /*grid-template-areas:*/
-        /*        "about_me_title"*/
-        /*        "about_me_name"*/
-        /*        "about_me_image"*/
-        /*        "about_me_text"*/
-        /*        "about_me_table"*/
-        /*        "about_me_social";*/
-        /*grid-template-rows: 30px 80px 2fr 1fr 1fr 3em;*/
-        /*grid-template-columns: 1fr;*/
     }
 
-    #about_me h2{
+    #about_me h2 {
         text-align: left;
-        grid-area: about_me_title;
-        margin: 0;
     }
 
-    #about_me h3{
+    #about_me_grid{
+        display: grid;
+        grid-template-areas:
+                "about_me_image"
+                "about_me_name"
+                "about_me_text"
+                "about_me_text"
+                "about_me_social";
+        grid-template-rows: auto 3em auto auto 3em;
+        grid-template-columns: 1fr;
+    }
+
+    #about_me_grid h3{
+        grid-area: about_me_name;
         display: inline-block;
         text-align: left;
         font-size: 2em;
@@ -105,13 +96,12 @@
         font-family: 'M PLUS Rounded 1c', sans-serif;
     }
 
-    #about_me .profile_image{
-        text-align: center;
-        display: block;
-        margin: 1em 0;
+    #about_me_grid .profile_image{
+        text-align:center;
+        width: 100%;
     }
 
-    #about_me p.am_text{
+    #about_me_grid .am_text{
         grid-area: about_me_text;
         margin: 10px;
         text-align: left;
@@ -119,26 +109,10 @@
     }
 
 
-    #about_me table{
+    #about_me_grid .plusinfo{
         display: inline-block;
         text-align: center;
     }
 
-    #about_me .social{
-        grid-area: about_me_social;
-        text-align: center;
-        display: inline-flex;
-        align-items: center;
-        text-decoration: none;
-    }
-
-    #about_me .socialButton{
-        width: 40px;
-        margin-right: 10px;
-    }
-
-    #about_me .socialButton:hover{
-        filter: drop-shadow(0em 0.1em 0.3em rgb(79, 238, 232));
-    }
 
 }

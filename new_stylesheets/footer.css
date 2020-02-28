@@ -3,6 +3,7 @@
     align-items: center;
     max-width: 950px;
     margin: 0 auto;
+    padding: 0 4em;
     justify-content: space-between;
 }
 
@@ -27,13 +28,25 @@ footer #footer_wrapper #copyright{
 
 footer #footer_wrapper #share{
     text-align: right;
-    display: flex;
+
     align-items: center;
 }
+
+@media screen and (min-width:500px){
+    footer #footer_wrapper #share{
+        display: flex;
+    }
+}
+@media screen and (max-width:500px){
+    footer #footer_wrapper #share{
+        display: none;
+    }
+}
+
 footer #footer_wrapper #share .shareButton{
     margin-left: 0.8em;
 }
 
-footer #footer_wrapper #share .shareButton:hover{
-    filter: drop-shadow(0em 0.1em 0.3em rgba(255, 255, 255, 0.74));
-}
+/*footer #footer_wrapper #share .shareButton:hover{*/
+/*    filter: drop-shadow(0em 0.1em 0.3em rgba(255, 255, 255, 0.74));*/
+/*}*/

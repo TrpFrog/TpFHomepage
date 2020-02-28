@@ -1,11 +1,16 @@
 @media screen and (max-width:800px) {
     main {
-        margin: 0.5em;
         padding: 0;
         text-align: center;
     }
 
-    main #main_wrapper {
+    @media screen and (max-width:500px) {
+        main {
+            margin: 0.5em;
+        }
+    }
+
+        main #main_wrapper {
         display: inline-grid;
         grid-template-areas: "about_me" "icons" "sticker" "balloon" "links" "music_game" "bird";
         grid-template-columns: 1fr;
@@ -93,7 +98,7 @@
     #bird .aa {
         font-family: "Saitamaar";
         white-space: pre;
-        font-size: 12px;
+        font-size: 65%;
         line-height: 12px;
         display: inline-block;
         text-align: center;

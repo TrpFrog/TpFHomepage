@@ -5,6 +5,7 @@ header{
     width: 100%;
     height: 6em;
     filter: drop-shadow(0em 0.1em 0.3em rgba(0,0,0,0.4));
+    z-index: 99;
 }
 
 #header_wrapper{
@@ -12,6 +13,7 @@ header{
     align-items: center;
     max-width: 980px;
     margin: 0 auto;
+    padding: 0 4em;
     justify-content: space-between;
 }
 
@@ -61,7 +63,7 @@ header{
     color: #90e200
 }
 
-nav li {
+#header_wrapper nav li {
     display: inline-block;
     text-align: center;
     list-style-type: none;
@@ -84,12 +86,13 @@ nav li + li {
     display: none;
 }
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:800px) {
     header{
         justify-content: normal;
+        z-index: 99;
     }
 
-    nav ul{
+    #header_wrapper nav ul{
         display: none;
     }
 
@@ -115,112 +118,46 @@ nav li + li {
         justify-content: normal;
         display: block;
     }
+}
 
-    #sp_menu{
-        /*配置*/
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-        z-index: 100;
+@media screen and (max-width:500px) {
+    header{
+        justify-content: normal;
+        z-index: 99;
+        height: 4em;
     }
 
-    /****メニュー開閉ボタン****/
-    #sp_menu div{
-        /*デザイン*/
-        width: 30px;
-        height: 30px;
-        background: rgba(200,200,200,1);
-        /*配置*/
-        overflow: hidden;
-        position: absolute;
-        right: 0;
-    }
-
-    #sp_menu .menuopen{
-        /*デザイン*/
-        color: rgba(255,255,255,1);
-        font-size: 20px;
-        /*配置*/
-        display: block;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        pointer-events: auto;
-    }
-
-    #sp_menu .menuclose{
-        /*デザイン*/
-        color: rgba(255,255,255,1);
-        font-size: 20px;
-        /*配置*/
-        display: none;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        pointer-events: auto;
-    }
-
-    /****メニュー一覧****/
-    #sp_menu ul{
-        /*デザイン*/
-        background: rgba(200,200,200,1);
-        width: 80%;
-        /*配置*/
-        position: absolute;
-        top: 30px;/*#menu divの高さ*/
-        right: 0;
+    #header_wrapper nav ul{
         display: none;
     }
 
-    #sp_menu li{
-        /*デザイン*/
-        padding: 10px;
-        color: rgba(0,0,0,1);
-        border-bottom: 1px rgba(255,255,255,1) solid;
-        /*配置*/
-        pointer-events: auto;
+    #header_wrapper {
+        padding: 0;
     }
 
-    /****メニューオープン時****/
-    #sp_menu:target .menuopen{
-        /*配置*/
-        display: none;
+    #header_wrapper h1:after {
+        content:'';
+        display: inline-block;
+        width:1.7em;
+        height:1.7em;
+        background-image: url('../images/icons/trpfrog.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        vertical-align: middle;
+        margin-left: 0.3em;
     }
 
-    #sp_menu:target .menuclose{
-        /*配置*/
+    #header_wrapper{
+        text-align: center;
         display: block;
     }
 
-    #sp_menu:target ul{
-        /*配置*/
+    #header_wrapper h1{
+        text-align: center;
+        font-size: 1.5em;
+        justify-content: normal;
         display: block;
     }
-
-    /*** メインエフェクト ***/
-    #sp_main{
-        /*デザイン*/
-        background: #fff;/*ページ背景色・背景画像はここで設定*/
-        /*アニメーション*/
-        -webkit-transition: all 0.3s ease 0s;
-        transition: all 0.3s ease 0s;
-    }
-
-    #sp_menu:target ~ #main{
-        -webkit-filter:brightness(70%);
-        -moz-filter:brightness(70%);
-        -ms-filter:brightness(70%);
-        filter:brightness(70%);
-    }
-
-    /* https://spmenucss.imagecontrol.jp/ によるコード*/
 }
 
 

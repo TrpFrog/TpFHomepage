@@ -1,19 +1,45 @@
 @import "about_me.css";
 @import "main_grid_sp.css";
+@media screen and (min-width:800px){
+#store_links{
+    display: block;
+}
 
-@media screen and (min-width:800px) {
     main {
-        min-height: 100%;
+        max-height: 100%;
         text-align: center;
     }
+    @media screen and (min-width:980px){
+        main #main_wrapper {
+            max-width: 1000px;
+            display: inline-grid;
+            grid-template-areas: "about_me about_me about_me"
+                                 "sticker icons icons"
+                                 "sticker balloon balloon"
+                                 "bird balloon balloon"
+                                 "links links music_game";
+            grid-template-columns: 3fr 2fr 3fr; /* ヨコ方向のセルの長さを単位[Fr](Fraction)で定める */
+            /*grid-template-rows: auto 350px 110px 280px 540px; !* タテ方向のセルの長さを単位[Fr](Fraction)で定める *!*/
+            text-align: left;
+        }
+    }
+    @media screen and (max-width:980px){
+        main #main_wrapper {
+            max-width: 1000px;
+            display: inline-grid;
+            grid-template-areas:
+                    "about_me about_me"
+                    "sticker links"
+                    "bird links"
+                    "icons icons"
+                    "balloon balloon"
+                    "music_game music_game";
 
-    main #main_wrapper {
-        max-width: 1000px;
-        display: inline-grid;
-        grid-template-areas: "about_me about_me about_me" "sticker icons icons" "sticker balloon balloon" "bird balloon balloon" "links links music_game";
-        grid-template-columns: 3fr 2fr 3fr; /* ヨコ方向のセルの長さを単位[Fr](Fraction)で定める */
-        grid-template-rows: auto 350px 110px 280px 540px; /* タテ方向のセルの長さを単位[Fr](Fraction)で定める */
-        text-align: left;
+            grid-template-columns: 1fr 1fr; /* ヨコ方向のセルの長さを単位[Fr](Fraction)で定める */
+            /*grid-template-rows: auto auto auto auto auto auto; !* タテ方向のセルの長さを単位[Fr](Fraction)で定める *!*/
+            text-align: left;
+
+        }
     }
 
     .main_window {
@@ -82,7 +108,7 @@
     #bird .aa {
         font-family: "Saitamaar";
         white-space: pre;
-        font-size: 12px;
+        font-size: 45%;
         line-height: 12px;
         display: inline-block;
     }
