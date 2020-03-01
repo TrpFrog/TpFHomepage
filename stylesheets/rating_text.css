@@ -1,29 +1,45 @@
 .platinum{
-    filter:drop-shadow(1px 1px 0.6pt rgba(0, 0, 0,30));
+    /*filter:drop-shadow(1px 1px 0.6pt rgba(0, 0, 0,30));*/
     color: #FF7C00;
     background: -webkit-linear-gradient(top, #fff677 30%, #fffbb9 50%, #ffcb5d 50%, #fff4b3 80%);
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+    /*text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);*/
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #533c15;
+
 }
 
 .rainbow{
-    filter:drop-shadow(1px 1px 0.6pt rgba(0, 0, 0,30));
-    color: #FF8C00;
+    /*filter:drop-shadow(1px 1px 0.6pt rgba(0, 0, 0,30));*/
+    color: #fff0af;
     background: -webkit-linear-gradient(top,
     red 15%,
     orange,
     yellow,
     #00d907 60%,
     aqua ,
-    blue,
-    purple);
+    #002fff,
+    #f500f5);
+
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #858585;
+    /*text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);*/
 }
 
 .silver{
-    filter:drop-shadow(1px 1px 0.6pt rgba(0, 0, 0,30));
+    /*filter:drop-shadow(1px 1px 0.6pt rgba(0, 0, 0,30));*/
     background: -webkit-linear-gradient(top, #fffdfd 30%,#cbc9c9 50%, #aeacac 51%, #828080 80%);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+    -webkit-text-stroke: 1px #3d3d3d;
+    /*text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);*/
+}
+
+.brown{
+    background: -webkit-linear-gradient(top, #ffa200 25%,#c64000 75%);
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+    -webkit-background-clip: text;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+
 }
