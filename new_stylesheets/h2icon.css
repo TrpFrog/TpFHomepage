@@ -13,7 +13,7 @@ main h2:before {
   vertical-align: middle;
   margin-right: 5px;
 }
-
+h2.trpfrog:before{background-image: url('../images/icons/trpfrog.png');}
 h2.ice:before{background-image: url('../images/icons/ice.png');}
 h2.think:before{background-image: url('../images/icons/thinking.png');}
 h2.noa:before{background-image: url('../images/icons/noa.png');}
