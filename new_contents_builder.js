@@ -1,3 +1,5 @@
+
+
 function fontLoader() {
     let html = `
         <link href="https://fonts.googleapis.com/css?family=Comfortaa|M+PLUS+Rounded+1c:400,800|Questrial|Noto+Sans+JP&display=swap&subset=japanese" rel="stylesheet">
@@ -5,10 +7,22 @@ function fontLoader() {
     document.write(html);
 }
 
+function search_tweet(){
+    let input_word = document.getElementById("tweet_search_box").value;
+    input_word = encodeURIComponent(input_word);
+    window.location.href = "https://twilog.org/TrpFrog/search?word=" + input_word;
+}
+
 function buildHeader() {
     let html = `
         <div id="header_wrapper">
             <h1>つまみネット</h1>
+            <div id="tweet_search">
+                <form onsubmit="search_tweet();return false;">
+                    <input type="text" placeholder="過去ツイサーチ" id="tweet_search_box">
+                    <input type="submit" value="検索" class="twibutton">
+                </form>
+            </div>
             <nav>
                 <ul>
                     <li><a href="index.html" class="headerButton">home</a></li>

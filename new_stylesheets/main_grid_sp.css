@@ -39,10 +39,12 @@
     }
 
     #links table {
+        display: block;
         width: 100%;
     }
 
     #links th, td {
+        border-bottom: none;
         display: block;
         text-align: left;
         width: 100%;
@@ -55,7 +57,7 @@
 
 
     #icons .top_icons {
-        width: 24%;
+        width: 23.5%;
     }
 
     #icons {
@@ -74,6 +76,10 @@
         padding: 30px 20px 20px 20px;
     }
 
+    #sticker table,td,th,tbody{
+        display: block;
+    }
+
     #bird {
         grid-area: bird;
         text-align: left;
@@ -87,14 +93,14 @@
         margin: 0;
     }
 
-    @font-face {
-        font-family: "Saitamaar";
-        src: url("https://fonts-aahub.netlify.com/assets/fonts/Saitamaar/Saitamaar.woff2") format("woff2"),
-        url("https://fonts-aahub.netlify.com/assets/fonts/Saitamaar/Saitamaar.woff") format("woff"),
-        url("https://fonts-aahub.netlify.com/assets/fonts/Saitamaar/Saitamaar.ttf") format("ttf");
-        font-display: swap;
+    /*@font-face {*/
+    /*    font-family: "Saitamaar";*/
+    /*    src: url("https://fonts-aahub.netlify.com/assets/fonts/Saitamaar/Saitamaar.woff2") format("woff2"),*/
+    /*    url("https://fonts-aahub.netlify.com/assets/fonts/Saitamaar/Saitamaar.woff") format("woff"),*/
+    /*    url("https://fonts-aahub.netlify.com/assets/fonts/Saitamaar/Saitamaar.ttf") format("ttf");*/
+    /*    font-display: swap;*/
 
-    }
+    /*}*/
     #bird .aa {
         font-family: "Saitamaar";
         white-space: pre;

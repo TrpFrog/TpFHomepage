@@ -26,6 +26,42 @@ header{
     font-weight: bold;
 }
 
+@media screen and (min-width:1000px) {
+    #header_wrapper #tweet_search {
+        display: flex;
+        text-align: right;
+        color: #ffffff;
+    }
+    #header_wrapper input{
+        font-size: 0.8em;
+        background-color: rgba(220, 255, 148, 0.67);
+    }
+    #header_wrapper .twibutton{
+        display: inline-block;
+        border-radius: 5%;
+        text-align: center;
+        cursor: pointer;
+        background: rgba(220, 255, 148, 0.67);
+        color: #000;
+        box-shadow: 1px 1px 2px #666666;
+        border: rgba(220, 255, 148, 0.67);
+    }
+    #header_wrapper .twibutton:active{
+        display: inline-block;
+        border-radius: 5%;
+        text-align: center;
+        cursor: pointer;
+        background: rgba(0, 171, 6, 0.67);
+        box-shadow: 1px 1px 2px #666666;
+        border: rgba(220, 255, 148, 0.67);
+    }
+}
+@media screen and (max-width:1000px) {
+    #header_wrapper #tweet_search {
+        display: none;
+    }
+}
+
 #header_wrapper h1:before {
     content:'';
     display: inline-block;
