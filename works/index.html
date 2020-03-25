@@ -22,6 +22,7 @@
         @import "../new_stylesheets/header.css";
         @import "../new_stylesheets/footer.css";
         @import "../new_stylesheets/h2icon.css";
+        @import "../stylesheets/linkbutton_grid.css";
         @import "../new_stylesheets/page_elements.css";
 
         body{
@@ -48,19 +49,62 @@
             max-width: 600px;
         }
 
-        div .imageandcode{
-            margin-top: 1em;
-            display: flex;
+        .iframe-aspect{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
         }
 
-        .imageandcode .gist{
-            max-width: 600px;
+        .iframe-outer{
+            position: relative;
+            width: 100%;
         }
-        .imageandcode script{
+
+        .iframe-outer:before{
+            content: "";
             display: block;
+            padding-top: 75%;
         }
-        .imageandcode p{
-            text-align: left;
+
+        @media screen and (min-width:1000px) {
+            div .imageandcode {
+                margin-top: 1em;
+                display: flex;
+            }
+
+            .imageandcode .gist {
+                max-width: 600px;
+            }
+
+            .imageandcode script {
+                display: block;
+            }
+
+            .imageandcode p {
+                text-align: left;
+            }
+
+            .imageandcode .linkButton{
+                display: none;
+            }
+        }
+        @media screen and (max-width:1000px) {
+            .imageandcode{
+                text-align: center;
+            }
+            .imageandcode .linkButton{
+                display: inline-block;
+            }
+            .imageandcode .gist {
+                display: none;
+            }
+        }
+        @media screen and (max-width:800px) {
+            .twitter-tweet{
+                max-width: 80%;
+            }
         }
     </style>
     <!---------------->
@@ -97,26 +141,34 @@
                 <div class="imageandcode">
                     <p><img src="images/cl_grad.png"></p>
                     <script src="https://gist.github.com/TrpFrog/fab660d32c83ace2d0848e04f5536ffa.js"></script>
+                    <a href="https://gist.github.com/TrpFrog/fab660d32c83ace2d0848e04f5536ffa" class="linkButton"> ソースコードを見る </a>
                 </div>
                 <p>コンピュータリテラシーの「画像の生成」の回で勝手にJavaのコード書いて作った謎のグラデーション画像。</p>
             </div>
 
             <div class="main_window">
                 <h2 class="trpfrog">Typoraおすすめスライド</h2><br>
-                <iframe src="//www.slideshare.net/slideshow/embed_code/key/1Hscd3ZQLqn3a" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/secret/1Hscd3ZQLqn3a" title="ASE2 Procedure Presentation" target="_blank">ASE2 Procedure Presentation</a> </strong> from <strong><a href="https://www.slideshare.net/KasanaOrikawa" target="_blank">Kasana Orikawa</a></strong> </div>
+                <div class="iframe-outer" width="595" height="485">
+                    <iframe src="//www.slideshare.net/slideshow/embed_code/key/1Hscd3ZQLqn3a" allowfullscreen class="iframe-aspect"> </iframe>
+                </div>
                 <p>英語のプレゼン課題のために作ったスライドです。</p>
                 <p>文字だらけのスライドはアウトなのでシンプルなスライドを目指しました。</p>
             </div>
 
             <div class="main_window">
                 <h2 class="trpfrog">スタンプの作り方</h2><br>
-                <iframe src="//www.slideshare.net/slideshow/embed_code/key/5FRCBdqEcHw4W" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/secret/5FRCBdqEcHw4W" title="ASE2 How to Make Sticker Presentation" target="_blank">ASE2 How to Make Sticker Presentation</a> </strong> from <strong><a href="https://www.slideshare.net/KasanaOrikawa" target="_blank">Kasana Orikawa</a></strong> </div>
+                <div class="iframe-outer" width="595" height="485">
+                    <iframe src="//www.slideshare.net/slideshow/embed_code/key/5FRCBdqEcHw4W" allowfullscreen class="iframe-aspect"> </iframe>
+                </div>
+
                 <p>英語のProcedureのプレゼン課題のために作ったスライドです。</p>
             </div>
 
             <div class="main_window">
                 <h2 class="trpfrog">インターネットおすすめスライド</h2><br>
-                <iframe src="//www.slideshare.net/slideshow/embed_code/key/JUQ2ijiYX0HDcq" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/secret/JUQ2ijiYX0HDcq" title="ASE2 Two-Sided Argument Presentation" target="_blank">ASE2 Two-Sided Argument Presentation</a> </strong> from <strong><a href="https://www.slideshare.net/KasanaOrikawa" target="_blank">Kasana Orikawa</a></strong> </div>
+                <div class="iframe-outer" width="595" height="485">
+                    <iframe src="//www.slideshare.net/slideshow/embed_code/key/JUQ2ijiYX0HDcq" allowfullscreen class="iframe-aspect"> </iframe>
+                </div>
                 <p>英語のTwo-sided Argumentのプレゼン課題のために作ったスライドです。</p>
             </div>
 
@@ -125,6 +177,7 @@
                 <div class="imageandcode">
                     <p><img src="images/rubytpf.png"></p>
                     <script src="https://gist.github.com/TrpFrog/38667e64a8484167b1b429301e60d458.js" style="display: block"></script>
+                    <a href="https://gist.github.com/TrpFrog/38667e64a8484167b1b429301e60d458" class="linkButton"> ソースコードを見る </a>
                 </div>
                 <p>基礎プログラミングの「画像の生成」の回でRuby言語を使って描いたつまみさん。</p>
                 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">おかしいだろ <a href="https://t.co/s9Fah8FmcR">pic.twitter.com/s9Fah8FmcR</a></p>&mdash; つまみ (@TrpFrog) <a href="https://twitter.com/TrpFrog/status/1194831822233825280?ref_src=twsrc%5Etfw">November 14, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -139,6 +192,13 @@
                 <p>基礎プログラミングの総合課題で無果汁コロッケマンさん(
                     <a href="https://twitter.com/croute_pillow">@croute_pillow</a>
                     )と合作したアニメーション。クッキーを焼くやつです。</p>
+            </div>
+
+            <div class="main_window">
+                <h2 class="trpfrog">P演習の難しい問題の解説</h2>
+
+                <p><a href="https://www.trpfrog.net/files/jre_p_2019.pdf"><img src="images/p_ans.png"></a></p>
+                <p>P演習の答えが分からず仕舞いでつらいとの声を聞いて書きました。わかりにくかったらごめんね。</p>
             </div>
         </div>
     </main>
