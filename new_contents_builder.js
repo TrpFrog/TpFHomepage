@@ -25,9 +25,9 @@ function buildHeader() {
             </div>
             <nav>
                 <ul>
-                    <li><a href="index.html" class="headerButton">home</a></li>
-                    <li><a href="icon_gallery/index.html" class="headerButton">icons</a></li>
-                    <li><a href="download/index.html" class="headerButton">works</a></li>
+                    <li><a href="https://www.trpfrog.net/index.html" class="headerButton">home</a></li>
+                    <li><a href="https://www.trpfrog.net/icon_gallery/index.html" class="headerButton">icons</a></li>
+                    <li><a href="https://www.trpfrog.net/works/index.html" class="headerButton">works</a></li>
                 </ul>
             </nav>
         </div>
@@ -42,9 +42,9 @@ function buildFooter() {
                 ©︎ 2019 つまみ
             </p>
             <p id="share">
-                <a href="`+getTwitterUrl()+`"><img src="images/socialicons/twitter.svg" height="45" class="shareButton" alt="Share with Twitter"></a>
-                <a href="`+getFacebookUrl()+`"><img src="images/socialicons/facebook.svg" height="45" class="shareButton" alt="Share with Facebook"></a>
-                <a href="`+getLineUrl()+`"><img src="images/socialicons/line.svg" height="45" class="shareButton" alt="Share with LINE"></a>
+                <a href="`+getTwitterUrl()+`"><img src="https://www.trpfrog.net/images/socialicons/twitter.svg" height="45" class="shareButton" alt="Share with Twitter"></a>
+                <a href="`+getFacebookUrl()+`"><img src="https://www.trpfrog.net/images/socialicons/facebook.svg" height="45" class="shareButton" alt="Share with Facebook"></a>
+                <a href="`+getLineUrl()+`"><img src="https://www.trpfrog.net/images/socialicons/line.svg" height="45" class="shareButton" alt="Share with LINE"></a>
             </p>
         </div>
     `;

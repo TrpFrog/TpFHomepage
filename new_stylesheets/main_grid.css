@@ -97,16 +97,7 @@
         margin: 0;
     }
 
-    @font-face {
-        font-family: "Saitamaar";
-        src: url("https://fonts-aahub.netlify.com/assets/fonts/Saitamaar/Saitamaar.woff2") format("woff2"),
-        url("https://fonts-aahub.netlify.com/assets/fonts/Saitamaar/Saitamaar.woff") format("woff"),
-        url("https://fonts-aahub.netlify.com/assets/fonts/Saitamaar/Saitamaar.ttf") format("ttf");
-        font-display: swap;
-
-    }
     #bird .aa {
-        font-family: "Saitamaar";
         white-space: pre;
         font-size: 45%;
         line-height: 12px;
