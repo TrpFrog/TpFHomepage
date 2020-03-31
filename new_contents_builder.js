@@ -1,4 +1,17 @@
-
+let homedir = "https://www.trpfrog.net";
+function setFavicon(){
+  let html = "";
+  html += '<link rel="apple-touch-icon" sizes="180x180" href="'+homedir+'/favicon/apple-touch-icon.png">';
+  html += '<link rel="icon" type="image/png" sizes="32x32" href="'+homedir+'/favicon/favicon-32x32.png">';
+  html += '<link rel="icon" type="image/png" sizes="16x16" href="'+homedir+'/favicon/favicon-16x16.png">';
+  html += '<link rel="manifest" href="'+homedir+'/favicon/site.webmanifest">';
+  html += '<link rel="mask-icon" href="'+homedir+'/favicon/safari-pinned-tab.svg" color="#5bbad5">';
+  html += '<link rel="shortcut icon" href="'+homedir+'/favicon/favicon.ico">';
+  html += '<meta name="msapplication-TileColor" content="#da532c">';
+  html += '<meta name="msapplication-config" content="/favicon/browserconfig.xml">';
+  html += '<meta name="theme-color" content="#ffffff">';
+  document.write(html);
+}
 
 function fontLoader() {
     let html = `
