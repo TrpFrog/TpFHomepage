@@ -1,282 +1,221 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-144514287-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'UA-144514287-1');
-</script>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <style>
-      @import "../stylesheets/single_column.css";
-      @import "../stylesheets/button.css";
-      @import "../stylesheets/basebody.css";
-      @import "../stylesheets/h2icon.css";
-      .centering{
-        display: inline-block;
-        text-align: left;
-        padding-left: 10px;
-        padding-right: 10px;
-      }
-      @media screen and (min-width: 500px) {
-        .thumbnail{
-          border-radius: 10px;
-          width:50%;
-        }
-      }
-      @media screen and (max-width: 500px) {
-        .thumbnail{
-          border-radius: 10px;
-          width:100%;
-        }
-      }
-
-      .description{
-        margin-left: 15px;
-        margin-right: 10px;
-      }
-    </style>
-    <script type="text/javascript" src="../contents_builder.js"></script>
+    <meta name="robots" content="noindex">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144514287-1"></script>
     <script>
-      homedir = '..';
-      setFavicon();
-      setTwitterCard();
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-144514287-1');
     </script>
-    <title>ロボット</title>
+    <script type="text/javascript" src="../new_contents_builder.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!-- StyleSheet -->
+    <script>
+        //homedir = 'https://www.trpfrog.net/'
+        fontLoader();
+    </script>
+    <style>
+        @import "../new_stylesheets/grid.css";
+        @import "../new_stylesheets/header.css";
+        @import "../new_stylesheets/footer.css";
+        @import "../new_stylesheets/h2icon.css";
+        @import "../new_stylesheets/page_elements.css";
+
+        body{
+            margin: 0;
+            background: #f9fff6;
+            text-align: center;
+        }
+
+        #main_wrapper {
+            max-width: 1000px;
+        }
+
+        img{
+            max-width: 90%;
+        }
+
+        p{
+            font-size: 1.1em;
+        }
+    </style>
+    <!---------------->
+    <meta charset="utf-8">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@TrpFrog">
+    <meta property="og:url" content="https://www.trpfrog.net">
+    <meta property="og:title" content="つまみネット">
+    <meta property="og:description" content="さかなになりたいね">
+    <meta property="og:image" content="https://www.trpfrog.net/images/TwitterCard.png">
+    <title>History - つまみネット</title>
 </head>
-
 <body>
+<div class="grid">
+    <header>
+        <script>buildHeader();</script>
+    </header>
+    <main>
+        <div id="main_wrapper">
+            <div id="title">
+                <h1>つまみロボの取扱説明書</h1>
+            </div>
+            <div class="main_window">
+                <h2 class="think">What's つまみロボ</h2>
+                <p>
+                    つまみロボとは私が作ったツイッターbotです。<b>つまみロボ(<a href="https://twitter.com/FrogRobo">@FrogRobo</a>)に</b>コマンドを送ると返信が来ます。
+                    コマンド以外を送ると私が用意した会話辞書から1つ送られてきます。(死語があるのは仕様です)
+                </p>
 
-  <!---  ヘッダー  --->
+                <p>
+                    <b>注意！</b><br>
+                    Streaming APIの仕様上、つまみロボがフォローしているかどうかに関係なく<b>鍵垢への反応はできません</b>ので予めご了承ください。
+                </p>
+            </div>
 
-  <script>//homedir = '..'</script>
+            <div class="main_window">
+                <h2 class="robot">analyze_text</h2>
+                <p>
+                    Yahooの形態素解析APIを利用して、日本語の品詞分解を行います。
+                </p>
+                <p>
+                    <b>使い方</b>: @FrogRobo analyze_text 今日はいい天気ですね。
+                </p>
+            </div>
 
-  <header>
-    <script>buildHeader();</script>
-  </header>
+            <div class="main_window">
+                <h2 class="robot">wordcut</h2>
+                <p>
+                    Yahooの形態素解析APIを利用して、日本文を単語ごとにスラッシュを入れ、切り分けます。
+                </p>
+                <p>
+                    <b>使い方</b>: @FrogRobo wordcut 今日はいい天気ですね。
+                </p>
+            </div>
 
-  <nav>
-    <script>buildNavigation();</script>
-  </nav>
+            <div class="main_window">
+                <h2 class="robot">to_hiragana</h2>
+                <p>
+                    Yahooの形態素解析APIを利用して、日本文をひらがなにします。
+                </p>
+                <p>
+                    <b>使い方</b>: @FrogRobo wordcut 今日はいい天気ですね。
+                </p>
+            </div>
 
-  <main>
-    <div class="centering">
-    <h1>つまみロボの取扱説明書</h1>
-    <h2 class="robot">What's つまみロボ</h2>
-    <p>
-      つまみロボとは私が作ったツイッターbotです。<b>つまみロボ(<a href="https://twitter.com/FrogRobo">@FrogRobo</a>)に</b>コマンドを送ると返信が来ます。
-      コマンド以外を送ると私が用意した会話辞書から1つ送られてきます。(死語があるのは仕様です)
-    </p>
+            <div class="main_window" style="display: none">
+                <h2 class="robot">weather (現在使用不可)</h2>
+                <p>
+                    OpenWeatherMapAPIを利用して、世界の天気を取得します。
+                    地名または国名はアルファベットで入力する必要があります。
+                </p>
+                <p>
+                    <b>使い方</b>: @FrogRobo weather chofu
+                </p>
+            </div>
 
-    <p>
-      <b>注意！</b><br>
-      Streaming APIの仕様上、つまみロボがフォローしているかどうかに関係なく<b>鍵垢への反応はできません</b>ので予めご了承ください。
-    </p>
+            <div class="main_window">
+                <h2 class="robot">anagram</h2>
+                <p>
+                    アナグラム(大嘘)をします。実際は文字をランダムに並び替えるだけです。
+                </p>
+                <p>
+                    <b>使い方</b>: @FrogRobo anagram つまみ
+                </p>
+            </div>
 
-    <h2>使えるコマンド (順不同)</h2>
+            <div class="main_window">
+                <h2 class="robot">chance</h2>
+                <p>
+                    つまみロボがある自称の確率を計算しますが、計算していると見せかけてランダムなのでほぼ確実に外れます。
+                </p>
+                <p>
+                    <b>使い方</b>: @FrogRobo chance つまみさんがレポートを提出する確率
+                </p>
+            </div>
 
-    <h3>analyze_text</h3>
-    <div class="description">
-      <p>
-        Yahooの形態素解析APIを利用して、日本語の品詞分解を行います。
-      </p>
-      <p>
-        <b>使い方</b>: @FrogRobo analyze_text 今日はいい天気ですね。<br>
-        <b>省略形</b>: analtxt
-      </p>
-    </div>
+            <div class="main_window">
+                <h2 class="robot">fortune</h2>
+                <p>
+                    つまみロボが占いをします。引数を渡さないときは「総合運」「金銭運」「恋愛運」「仕事運」「健康運」を占い、
+                    引数を渡したときはその〇〇運を占います。(スペースで区切ることで複数占えます。)<br>
+                    まあつまみロボの占いなんて適当そうですが、実際の占い師だってうわなにをするやめr
+                </p>
+                <p>
+                    <b>使い方①</b>: @FrogRobo fortune <br>
+                    <b>使い方②</b>: @FrogRobo fortune 賭け 縁結び 勝
+                </p>
+            </div>
 
-    <h3>wordcut</h3>
-    <div class="description">
-      <p>
-        Yahooの形態素解析APIを利用して、日本文を単語ごとにスラッシュを入れ、切り分けます。
-      </p>
-      <p>
-        <b>使い方</b>: @FrogRobo wordcut 今日はいい天気ですね。<br>
-        <b>省略形</b>: wdct
-      </p>
-    </div>
+            <div class="main_window">
+                <h2 class="robot">plzfav</h2>
+                <p>
+                    指定したツイートIDとあなたにつまみロボがいいねします。ツイートIDが指定されていない場合はあなただけにいいねします。
+                    これはどうでもいいのですが、つまみロボはツイッター老人会なのでいいねすることを「ふぁぼる」と言います。
+                </p>
+                <p>
+                    ツイートIDとはツイートのリンクの最後に付いている長い数字のことを言います。<br>
+                    <b>例：</b>https://twitter.com/TrpFrog/status/<b><i>1178264082039787520</i></b>
+                </p>
+                <p>
+                    <b>使い方①</b>: @FrogRobo plzfav<br>
+                    <b>使い方②</b>: @FrogRobo plzfav 1178264082039787520
+                </p>
+            </div>
 
-    <h3>to_hiragana</h3>
-    <div class="description">
-      <p>
-        Yahooの形態素解析APIを利用して、日本文をひらがなにします。
-      </p>
-      <p>
-        <b>使い方</b>: @FrogRobo wordcut 今日はいい天気ですね。<br>
-        <b>省略形</b>: hrgn
-      </p>
-    </div>
+            <div class="main_window">
+                <h2 class="robot">to_hakolang</h2>
+                <p>
+                    文章をハコ語に変換します。人間でも頑張れば読め□□□■■■□■□□■。
+                </p>
+                <p>
+                    <b>使い方</b>: @FrogRobo to_hakolang 今日もいい箱ですハコ。
+                </p>
+            </div>
 
-    <h3>weather (現在使用不可)</h3>
-    <div class="description">
-      <p>
-        OpenWeatherMapAPIを利用して、世界の天気を取得します。
-        地名または国名はアルファベットで入力する必要があります。
-      </p>
-      <p>
-        <b>使い方</b>: @FrogRobo weather chofu <br>
-        <b>省略形</b>: tenki
-      </p>
-    </div>
+            <div class="main_window">
+                <h2 class="robot">search_flag</h2>
+                <p>
+                    国旗の絵文字を送ると国名を返してくれます。
+                </p>
+                <p>
+                    <b>使い方</b>: @FrogRobo whats_this_flag 🇯🇵🇩🇪🇮🇹
+                </p>
+            </div>
 
-    <h3>anagram</h3>
-    <div class="description">
-      <p>
-        アナグラム(大嘘)をします。実際は文字をランダムに並び替えるだけです。
-      </p>
-      <p>
-        <b>使い方</b>: @FrogRobo anagram つまみ <br>
-        <b>省略形</b>: angrm
-      </p>
-    </div>
+            <div class="main_window">
+                <h2 class="robot">sysinfo</h2>
+                <p>
+                    実行環境を返します。
+                </p>
+                <p>
+                    <b>使い方</b>: @FrogRobo sysinfo
+                </p>
+            </div>
 
-    <h3>chance</h3>
-    <div class="description">
-      <p>
-        つまみロボがある自称の確率を計算しますが、計算していると見せかけてランダムなのでほぼ確実に外れます。
-      </p>
-      <p>
-        <b>使い方</b>: @FrogRobo chance つまみさんがレポートを提出する確率 <br>
-        <b>省略形</b>: chns
-      </p>
-    </div>
-
-    <h3>fortune</h3>
-    <div class="description">
-      <p>
-        つまみロボが占いをします。引数を渡さないときは「総合運」「金銭運」「恋愛運」「仕事運」「健康運」を占い、
-        引数を渡したときはその〇〇運を占います。(スペースで区切ることで複数占えます。)<br>
-        まあつまみロボの占いなんて適当そうですが、実際の占い師だってうわなにをするやめr
-      </p>
-      <p>
-        <b>使い方①</b>: @FrogRobo fortune <br>
-        <b>使い方②</b>: @FrogRobo fortune 賭け 縁結び 勝<br>
-        <b>省略形</b>: frtn
-      </p>
-    </div>
-
-    <h3>plzfav</h3>
-    <div class="description">
-      <p>
-        指定したツイートIDとあなたにつまみロボがいいねします。ツイートIDが指定されていない場合はあなただけにいいねします。
-        これはどうでもいいのですが、つまみロボはツイッター老人会なのでいいねすることを「ふぁぼる」と言います。
-      </p>
-      <p>
-        ツイートIDとはツイートのリンクの最後に付いている長い数字のことを言います。<br>
-        <b>例：</b>https://twitter.com/TrpFrog/status/<b><i>1178264082039787520</i></b>
-      </p>
-      <p>
-        <b>使い方①</b>: @FrogRobo plzfav<br>
-        <b>使い方②</b>: @FrogRobo plzfav 1178264082039787520<br>
-        <b>省略形</b>: fav
-      </p>
-    </div>
-
-    <h3>to_hakolang</h3>
-    <div class="description">
-      <p>
-        文章をハコ語に変換します。人間でも頑張れば読め□□□■■■□■□□■。
-      </p>
-      <p>
-        <b>使い方</b>: @FrogRobo to_hakolang 今日もいい箱ですハコ。<br>
-        <b>省略形</b>: bxlg
-      </p>
-    </div>
-
-    <h3>whats_this_flag</h3>
-    <div class="description">
-      <p>
-        国旗の絵文字を送ると国名を返してくれます。
-      </p>
-      <p>
-        <b>使い方</b>: @FrogRobo whats_this_flag 🇯🇵🇩🇪🇮🇹<br>
-        <b>省略形</b>: flag
-      </p>
-    </div>
-
-    <h3>update_name (特殊)</h3>
-    <div class="description">
-      <p>
-        これは<b>つまみロボではなくつまみさん本人(@TrpFrog)に直接送るコマンド</b>です。
-        つまみさんの名前を強制的に好きなものに改名させることができます。
-        最後の変更から6時間以上経つと自動で「つまみ」に戻ります。
-      </p>
-      <p>
-        <b>注意！</b><br>
-        公序良俗に反する名前はやめてください！最悪この機能を停止せざるを得なくなります。
-        みんなで楽しく平和な名前に改名させましょう。(改名するな)
-      </p>
-      <p>
-        <b>使い方</b>: <b><i>@TrpFrog</i></b> update_name 美少女<br>
-        <b>省略形</b>: updname
-      </p>
-    </div>
-
-    <h2>ヒットアンドブロー</h2>
-    <p>
-      つまみロボは賢いので(？)ヒットアンドブロー(ヌメ◯ン)で遊んでくれます。
-    </p><p>
-      あなたはつまみロボの思い浮かべている数字を当てます。
-      ロボは毎回ヒントとして「桁と数字が当たっている数字の数」を<b>ヒット</b>、
-      「桁は間違えているが含まれてはいる数字の数」を<b>ブロー</b>として教えてくれます。
-      ヒントを頼りに10回以内に言い当てることができればあなたの勝ちです。
-    </p><p>
-      詳しいルールはGoogle先生に聞いてね。
-    </p>
-    <p>
-      <b>使い方</b>: @FrogRobo hit_and_blow <b>[第2コマンド]</b><br>
-      <b>省略形</b>: hab
-    </p>
-    <p>
-      ここでは第2コマンドの解説をします。
-    </p>
-    <h3>newgame</h3>
-    <div class="description">
-      <p>
-        任意の桁数でゲームを開始します。何も指定しない場合は3桁になります。
-      </p>
-      <p>
-        <b>使い方①</b>: @FrogRobo hab newgame<br>
-        <b>使い方②</b>: @FrogRobo hab newgame 5<br>
-        <b>省略形</b>: new
-      </p>
-    </div>
-
-    <h3>(数字n桁)</h3>
-    <div class="description">
-      <p>
-        数を当てます。n桁でゲームを始めた時、n桁の数字を答えます。
-      </p>
-      <p>
-        <b>使い方①</b>: @FrogRobo hab 123<br>
-        <b>使い方②</b>: @FrogRobo hab 512810<br>
-      </p>
-    </div>
-
-    <h3>giveup</h3>
-    <div class="description">
-      <p>
-        ゲームを終了します。
-      </p>
-      <p>
-        <b>使い方①</b>: @FrogRobo hab giveup<br>
-        <b>省略形</b>: end
-      </p>
-    </div>
-
-  <h2>使用させて頂いたAPI・ライブラリ</h2>
-
-
-
-  </div>
-  </main>
-
-  <script>buildFooter();</script>
-
+            <div class="main_window">
+                <h2 class="trpfrog">update_name (特殊)</h2>
+                <p>
+                    これは<b>つまみロボではなくつまみさん本人(@TrpFrog)に直接送るコマンド</b>です。
+                    つまみさんの名前を強制的に好きなものに改名させることができます。
+                    最後の変更から6時間以上経つと自動で「つまみ」に戻ります。
+                </p>
+                <p>
+                    <b>注意！</b><br>
+                    <span style="color: firebrick"><b><i>公序良俗に反する名前はやめてください！</i></b></span>最悪この機能を停止せざるを得なくなります。
+                    みんなで楽しく平和な名前に改名させましょう。(改名するな)
+                </p>
+                <p>
+                    <b>使い方</b>: <b><i>@TrpFrog</i></b> update_name 美少女
+                </p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <script>buildFooter();</script>
+    </footer>
+</div>
 </body>
 </html>
