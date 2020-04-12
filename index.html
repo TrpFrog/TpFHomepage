@@ -40,16 +40,6 @@
 </head>
 
 <body>
-    <!--エイプリルフール用画面遷移-->
-    <script>
-        let today = new Date();
-        let isAplilFool = (today.getFullYear()==2020) && (today.getMonth()==3) & (today.getDate()==1);
-        let isFromAprilSite = (document.referrer == "https://www.trpfrog.net/index_april2020.html");
-        if(!isFromAprilSite && isAplilFool) {
-            window.location.href = "https://www.trpfrog.net/index_april2020.html";
-        }
-    </script>
-    <!--エイプリルフール用画面遷移ここまで-->
     <div class="grid">
         <header>
             <script>buildHeader();</script>
@@ -115,8 +105,8 @@
                     <h2 class="robot">競プロ</h2>
                     <ul class="rating_list">
                         <li><b>AtCoder</b> (<a href="https://atcoder.jp/users/TrpFrog">TrpFrog</a>) <br>
-                            <span class="brown" style="font-size:1.5em; font-weight: bold">highest</span>
-                            <span class="brown" style="font-size:2.8em; font-weight: bold;">716</span>
+                            <span class="green" style="font-size:1.5em; font-weight: bold">highest</span>
+                            <span class="green" style="font-size:2.8em; font-weight: bold;">874</span>
                         </li>
                     </ul>
                 </div>

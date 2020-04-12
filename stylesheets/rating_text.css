@@ -42,3 +42,10 @@
     -webkit-background-clip: text;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
 }
+
+.green{
+    background: -webkit-linear-gradient(top, #47c017 25%,#006609 75%);
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+    -webkit-background-clip: text;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
