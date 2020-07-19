@@ -58,7 +58,7 @@
 }
 
 .blue{
-    background: -webkit-linear-gradient(top, #0a9cd6 25%,#0662b8 75%);
+    background: -webkit-linear-gradient(top, #2495ff 25%,#072792 75%);
     -webkit-text-fill-color: rgba(255, 255, 255, 0);
     -webkit-background-clip: text;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
