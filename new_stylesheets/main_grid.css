@@ -15,8 +15,9 @@
             display: inline-grid;
             grid-template-areas: "about_me about_me about_me"
                                  "sticker icons icons"
-                                 "sticker balloon balloon"
-                                 "bird balloon balloon"
+                                 "sticker music music"
+                                 "bird music music"
+                                 "balloon balloon balloon"
                                  "links links music_game";
             grid-template-columns: 3fr 2fr 3fr; /* ヨコ方向のセルの長さを単位[Fr](Fraction)で定める */
             /*grid-template-rows: auto 350px 110px 280px 540px; !* タテ方向のセルの長さを単位[Fr](Fraction)で定める *!*/
@@ -32,6 +33,7 @@
                     "sticker links"
                     "bird links"
                     "icons icons"
+                    "music music"
                     "balloon balloon"
                     "music_game music_game";
 
@@ -63,6 +65,10 @@
         padding: 40px 40px 40px 40px;
     }
 
+    #music {
+        grid-area: music;
+        padding: 40px 40px 40px 40px;
+    }
 
     #icons {
         grid-area: icons;

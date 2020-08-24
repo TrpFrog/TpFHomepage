@@ -12,7 +12,7 @@
 
         main #main_wrapper {
         display: inline-grid;
-        grid-template-areas: "about_me" "icons" "sticker" "balloon" "links" "music_game" "bird";
+        grid-template-areas: "about_me" "icons" "music" "sticker" "balloon" "links" "music_game" "bird";
         grid-template-columns: 1fr;
         grid-template-rows: auto auto auto auto auto auto auto;
         text-align: left;
@@ -30,6 +30,11 @@
 
     #music_game {
         grid-area: music_game;
+        padding: 30px 20px 20px 20px;
+    }
+
+    #music {
+        grid-area: music;
         padding: 30px 20px 20px 20px;
     }
 
