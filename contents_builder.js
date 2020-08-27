@@ -57,7 +57,7 @@ function buildNavigation(){
 }
 
 function buildFooter() {
-  let html = '© 2019 つまみ (<a href=\"https://twitter.com/TrpFrog\">@TrpFrog</a>)';
+  let html = '© 2019-2020 つまみ (<a href=\"https://twitter.com/TrpFrog\">@TrpFrog</a>)';
   html += '<br><br>';
   document.write(html);
 }

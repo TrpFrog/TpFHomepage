@@ -74,7 +74,7 @@ function buildFooter() {
     let html = `
         <div id="footer_wrapper">
             <p id="copyright">
-                ©︎ 2019 つまみ
+                ©︎ 2019-2020 つまみ
             </p>
             <p id="share">
                 <a href="`+getTwitterUrl()+`"><img src="https://www.trpfrog.net/images/socialicons/twitter.svg" height="45" class="shareButton" alt="Share with Twitter"></a>
