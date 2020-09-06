@@ -8,6 +8,10 @@
 @import "linkbutton_grid.css";
 @import "rating_text.css";
 
+body {
+    height: 100vh;
+}
+
 @media screen and (min-width: 800px){
   .centering{
     display: inline-block;

@@ -7,6 +7,7 @@
 body{
     margin: 0;
     background: #f9fff6;
+    height: 100vh;
     /*background: -webkit-linear-gradient(top,*/
     /*#163600 1%,*/
     /*#f9fff6 2%,*/
