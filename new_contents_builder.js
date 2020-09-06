@@ -29,7 +29,7 @@ function search_tweet(){
 function buildHeader() {
     let html = `
         <div id="header_wrapper">
-            <h1>つまみネット</h1>
+            <h1><a href="https://www.trpfrog.net">つまみネット</a></h1>
             <div id="tweet_search">
                 <form onsubmit="search_tweet();return false;">
                     <input type="text" placeholder="過去ツイサーチ" id="tweet_search_box">

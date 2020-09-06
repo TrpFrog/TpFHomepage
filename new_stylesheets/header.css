@@ -8,6 +8,11 @@ header{
     z-index: 99;
 }
 
+header a{
+    text-decoration: none;
+    color: white;
+}
+
 #header_wrapper{
     display: flex;
     align-items: center;
