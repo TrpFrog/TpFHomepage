@@ -1,7 +1,3 @@
-@import "basebody.css";
-@import "image_viewer.css";
-@import "button.css";
-
 .prevAndNextButton{
   background-color:rgba(255, 255, 255, 0.5);
   display: inline-block;
@@ -9,7 +5,7 @@
   margin-right: 4px;
   margin-top: 25px;
   text-decoration: none; /*リンクの下線を消す*/
-  min-width: 3em;
+  min-width: 2em;
   width:17%;
   height: 30px;
   font-size:20px;
@@ -20,6 +16,11 @@
   border-radius: 10px;
   box-shadow: 2px 2px 8px rgba(66, 66, 66, 0.48);
 }
+@media screen and (max-width: 600px){
+  .prevAndNextButton{
+      padding: 0;
+  }
+}
 
 .prevAndNextButton:hover{
   color: rgb(0, 93, 145);
@@ -29,9 +30,17 @@
 }
 
 .imgButton{
-  height: 5em;
+  width:12%;
   vertical-align: middle;
   cursor: pointer;
+}
+@media screen and (max-width: 800px){
+  .imgButton.wideimgbutton {
+      display: none;
+  }
+  .imgButton{
+    width: 15%;
+  }
 }
 
 .prevAndNextButton:active{

@@ -1,58 +1,61 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-      <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144514287-1"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'UA-144514287-1');
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-144514287-1');
     </script>
-
+    <script type="text/javascript" src="../new_contents_builder.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!-- StyleSheet -->
     <meta charset="utf-8">
+    <script>
+        fontLoader();
+    </script>
     <style>
-      @import "../stylesheets/single_column.css";
-      @import "../stylesheets/button.css";
-      @import "../stylesheets/basebody.css";
+        @import "../new_stylesheets/grid.css";
+        @import "../new_stylesheets/header.css";
+        @import "../new_stylesheets/footer.css";
+        @import "../new_stylesheets/h2icon.css";
+        @import "../stylesheets/linkbutton_grid.css";
+        @import "../new_stylesheets/page_elements.css";
     </style>
-    <script type="text/javascript" src="../contents_builder.js"></script>
     <script type="text/javascript" src="image_list.js"></script>
     <script>
-      homedir = '..';
-      setFavicon();
-      setTwitterCard();
+        homedir = '..';
+        setFavicon();
+        setTwitterCard();
     </script>
     <title>Icon Gallery</title>
 </head>
 
 <body>
+    <div class="grid">
+        <header>
+            <script>buildHeader();</script>
+        </header>
 
-  <!---  ヘッダー  --->
+        <main>
+            <div id="main_wrapper">
+                <div id="title">
+                    <h1>Icons</h1>
+                    <p>つまみちゃんの作ったアイコンです。クリックで高解像度版に飛びます。</p>
+                </div>
+                <div class="main_window">
+                    <script>imageList();</script>
+                </div>
+            </div>
+        </main>
 
-  <script>//homedir = '..'</script>
-
-  <header>
-    <script>buildHeader();</script>
-  </header>
-
-  <nav>
-    <script>buildNavigation();</script>
-  </nav>
-
-  <aside style="height:1em;">
-
-  </aside>
-
-  <main>
-    <div style="font-size: 150%; text-align: center; margin-top: 1em;">
-      クリックで拡大できます。
+        <footer>
+            <script>buildFooter();</script>
+        </footer>
     </div>
-    <script>imageList();</script>
-  </main>
-
-  <script>buildFooter();</script>
-
 </body>
+
 </html>

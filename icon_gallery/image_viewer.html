@@ -1,45 +1,61 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144514287-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-144514287-1');
-  </script>
-    <meta charset="utf-8">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144514287-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-144514287-1');
+    </script>
+
+    <script type="text/javascript" src="../new_contents_builder.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="shortcut icon" href="../favicon.ico">
-    <link rel="stylesheet" type="text/css" href="../stylesheets/icon_gallery.css">
-    <script type="text/javascript" src="../contents_builder.js"></script>
+    <!-- StyleSheet -->
+    <meta charset="utf-8">
+    <script>
+        fontLoader();
+    </script>
+
     <script type="text/javascript" src="image_view.js"></script>
     <title>Icon Gallery</title>
+    <!-- StyleSheet -->
+    <meta charset="utf-8">
+    <script>
+        fontLoader();
+    </script>
+    <style>
+        @import "../new_stylesheets/grid.css";
+        @import "../new_stylesheets/header.css";
+        @import "../new_stylesheets/footer.css";
+        @import "../new_stylesheets/h2icon.css";
+        @import "../stylesheets/linkbutton_grid.css";
+        @import "../new_stylesheets/page_elements.css";
+        @import "../stylesheets/icon_gallery.css";
+    </style>
 </head>
-<body style="padding-top: 0px;">
-  <div class="grid" style="grid-template-rows: 0fr 0ex 3ex auto 3ex;">
 
-    <script>homedir = '..'</script>
-
-    <header style="height=0px;margin:0px;">
-      <!-- <script>buildHeader();</script> -->
-    </header>
-
-    <nav style="height=0px;margin:0px;">
-      <!-- <script>buildNavigation();</script> -->
-    </nav>
-
-    <main>
-      <script>imageView();</script>
-    </main>
-
-    <footer>
-      <script>controlPane();</script>
-      <br><br>
-      <script>buildFooter();</script>
-    </footer>
-
-  </div>
+<body>
+    <div class="grid">
+        <header>
+            <script>buildHeader();</script>
+        </header>
+        <main>
+            <div id="main_wrapper">
+                <div class="main_window" style="text-align: center;">
+                    <script>imageView();</script>
+                </div>
+                <div class="main_window">
+                    <script>controlPane();</script>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <script>buildFooter();</script>
+        </footer>
+    </div>
 </body>
+
 </html>
