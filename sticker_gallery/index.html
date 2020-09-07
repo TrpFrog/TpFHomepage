@@ -1,84 +1,77 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-      <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144514287-1"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'UA-144514287-1');
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-144514287-1');
     </script>
-
+    <script type="text/javascript" src="../new_contents_builder.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!-- StyleSheet -->
     <meta charset="utf-8">
+    <script>
+        fontLoader();
+    </script>
     <style>
-      @import "../stylesheets/single_column.css";
-      @import "../stylesheets/button.css";
-      @import "../stylesheets/basebody.css";
-      @media screen and (min-width: 500px) {
-        .thumbnail{
-          border-radius: 10px;
-          width:50%;
-        }
-      }
-      @media screen and (max-width: 500px) {
-        .thumbnail{
-          border-radius: 10px;
-          width:100%;
-        }
-      }
+        @import "../new_stylesheets/grid.css";
+        @import "../new_stylesheets/header.css";
+        @import "../new_stylesheets/footer.css";
+        @import "../new_stylesheets/h2icon.css";
+        @import "../stylesheets/linkbutton_grid.css";
+        @import "../new_stylesheets/page_elements.css";
+        @import "../new_stylesheets/media.css";
     </style>
-    <script type="text/javascript" src="../contents_builder.js"></script>
     <script type="text/javascript" src="image_list.js"></script>
     <script>
-      homedir = '..';
-      setFavicon();
-      setTwitterCard();
+        homedir = '..';
+        setFavicon();
+        setTwitterCard();
     </script>
     <title>Sticker Gallery</title>
 </head>
 
 <body>
 
-  <!---  ヘッダー  --->
-
-  <script>//homedir = '..'</script>
-
-  <header>
-    <script>buildHeader();</script>
-  </header>
-
-  <nav>
-    <script>buildNavigation();</script>
-  </nav>
-
-  <aside style="margin-bottom:2em;">
-    <p style="margin-left: 3em;">
-      つまみスタンプの元画像の5倍に拡大したやつです。<br>
-      良識の範囲内でご自由にどうぞ。(Twitterの会話とか)<br>
-      サムネイルは幅150pxの小さいので拡大させたやつを保存してね<br>
-      <a href="https://store.line.me/stickershop/product/8879469/ja">
-        (LINEスタンプ発売中！！！！買って！！！！！)
-      </a>
-    </p>
-  </aside>
-
-  <main>
-    <div style="font-size: 150%; text-align: center; margin-top: 1em;">
-
-      クリックで拡大できます。<br>
+    <div class="grid">
+        <header>
+            <script>buildHeader();</script>
+        </header>
+    
+        <main>
+            <div id="main_wrapper">
+                <div id="title">
+                    <h1>Stickers</h1>
+                    <p>つまみスタンプの元画像の5倍に拡大したやつです。<br>
+                    良識の範囲内でご自由にどうぞ。(Twitterの会話とか)<br>
+                    サムネイルは幅150pxの小さいので保存するときは拡大してね<br>
+                    <a href="https://store.line.me/stickershop/product/8879469/ja">
+                        (LINEスタンプ発売中！！！！買って！！！！！)
+                    </a></p>
+                    <p>クリックで拡大できます。</p>
+                </div>
+                <div class="main_window">
+                    <script>imageList();</script>
+                </div>
+                <div class="main_window">
+                    <h2 class="trpfrog">スタンプ発売中！</h2>
+                    <p>
+                        つまみスタンプ1,2発売中！！買ってね！！<br><br>
+                        <a href="https://store.line.me/stickershop/product/8879469/ja">
+                            <img src="./sticker_pr.png" style="width:80%" class="thumbnail"><br><br>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </main>
+    
+        <footer>
+            <script>buildFooter();</script>
+        </footer>
     </div>
-    <script>imageList();</script>
-  </main>
-
-  <footer>
-    つまみスタンプ1,2発売中！！買ってね！！<br><br>
-    <a href="https://store.line.me/stickershop/product/8879469/ja">
-      <img src="./sticker_pr.png" style="width:80%" class="thumbnail"><br><br>
-    </a>
-    <script>buildFooter();</script>
-  </footer>
-
 </body>
 </html>
