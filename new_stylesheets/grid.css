@@ -37,6 +37,10 @@ main {
     text-align: left;
 }
 
+#main_wrapper {
+    max-width: 1000px;
+}
+
 @media screen and (min-width:800px) {
     main{
         margin: 2em;

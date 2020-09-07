@@ -1,104 +1,96 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-144514287-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'UA-144514287-1');
-</script>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <style>
-      @import "../stylesheets/single_column.css";
-      @import "../stylesheets/button.css";
-      @import "../stylesheets/basebody.css";
-      @import "../stylesheets/h2icon.css";
-      .centering{
-        display: inline-block;
-        text-align: left;
-        padding-left: 10px;
-        padding-right: 10px;
-      }
-      @media screen and (min-width: 500px) {
-        .thumbnail{
-          border-radius: 10px;
-          width:50%;
-        }
-      }
-      @media screen and (max-width: 500px) {
-        .thumbnail{
-          border-radius: 10px;
-          width:100%;
-        }
-      }
-    </style>
-    <script type="text/javascript" src="../contents_builder.js"></script>
-    <script>
-      homedir = '..';
-      setFavicon();
-      setTwitterCard();
-    </script>
-    <title>Wallpapers</title>
-</head>
 
-<body>
+<html lang="ja"> 
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144514287-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-144514287-1');
+        </script>
+        <script type="text/javascript" src="../new_contents_builder.js"></script>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <!-- StyleSheet -->
+        <meta charset="utf-8">
+        <script>
+            fontLoader();
+            setFavicon();
+        </script>
+        <style>
+            @import "../new_stylesheets/grid.css";
+            @import "../new_stylesheets/header.css";
+            @import "../new_stylesheets/footer.css";
+            @import "../new_stylesheets/h2icon.css";
+            @import "../stylesheets/linkbutton_grid.css";
+            @import "../new_stylesheets/page_elements.css";
+            @import "../new_stylesheets/media.css";
+            
+        </style>
+        <script>
+        homedir = '..';
+        setTwitterCard();
+        </script>
+        <title>Wallpapers</title>
+    </head>
 
-  <!---  ヘッダー  --->
+    <body>
 
-  <script>//homedir = '..'</script>
+        <div class="grid">
+            <header>
+                <script>buildHeader();</script>
+            </header>
+            <main>
+                <div id="main_wrapper">
+                    <div id="title">
+                        <h1>壁紙配布</h1>
+                    </div>
 
-  <header>
-    <script>buildHeader();</script>
-  </header>
+                    <div class="main_window">
+                        <h2 class="trpfrog">アイコン集合</h2>
+                        <p>
+                            ヘッダー用に作ったものを壁紙に作り直しました。
+                        </p>
+                        <img src="./wallpapers/icons/thumbnail.png" class="thumbnail">
+                        <p>
+                            PC用は2560×1600pxです。
+                        </p>
+                        <p>
+                            <a href="./wallpapers/icons/desktop.png" class="linkButton">PC</a>
+                            <a href="./wallpapers/icons/background.png" class="linkButton">PC(背景)</a>
+                            <a href="./wallpapers/icons/smartphone.png" class="linkButton">スマートフォン</a>
+                            <a href="./wallpapers/icons/iphonex.png" class="linkButton">iPhoneX(1:2)</a>
+                        </p>
+                    </div>
 
-  <nav>
-    <script>buildNavigation();</script>
-  </nav>
-
-  <main>
-    <div class="centering">
-    <h1>壁紙配布</h1>
-    <h2>アイコン集合</h2>
-    <p>
-      ヘッダー用に作ったものを壁紙に作り直しました。
-    </p>
-    <img src="./wallpapers/icons/thumbnail.png" class="thumbnail">
-    <p>
-      PC用は2560×1600pxです。
-    </p>
-    <p>
-      <a href="./wallpapers/icons/desktop.png" class="button">PC</a>
-      <a href="./wallpapers/icons/background.png" class="button">PC(背景)</a>
-      <a href="./wallpapers/icons/smartphone.png" class="button">スマートフォン</a>
-      <a href="./wallpapers/icons/iphonex.png" class="button">iPhoneX(1:2)</a>
-    </p>
-
-    <h2 class="hina">雨</h2>
-    <p>
-      天気の子の陽菜ちゃんになりたくて作りました。天気の子は観た方が良いです。
-    </p>
-    <img src="./wallpapers/rainy/thumbnail.png" class="thumbnail">
-    <p>
-      PC用は右にかけて暗くなっていくグラデーションあり版があります。<br>
-      右側にアイコン並べるようなMacユーザーの方におすすめです。
-    </p>
-    <p>
-      <a href="./wallpapers/rainy/no_grad.png" class="button">PC</a>
-      <a href="./wallpapers/rainy/desktop.png" class="button">PC(グラデあり)</a>
-      <a href="./wallpapers/rainy/bkg_no_grad.png" class="button">PC(背景のみ)</a>
-      <a href="./wallpapers/rainy/background.png" class="button">PC(背景,グラデあり)</a><br>
-      <a href="./wallpapers/rainy/smartphone.png" class="button">スマートフォン</a>
-      <a href="./wallpapers/rainy/smartphone_bkg.png" class="button">スマホ(背景のみ)</a>
-      <a href="./wallpapers/rainy/iphonex.png" class="button">iPhoneX(1:2)</a>
-      <a href="./wallpapers/rainy/iphonex_bkg.png" class="button">iPhoneX(背景のみ)</a>
-    </p>
-  </div>
-  </main>
-
-  <script>buildFooter();</script>
-
-</body>
+                    <div class="main_window">
+                        <h2 class="hina">雨</h2>
+                        <p>
+                            天気の子の陽菜ちゃんになりたくて作りました。天気の子は観た方が良いです。
+                        </p>
+                        <img src="./wallpapers/rainy/thumbnail.png" class="thumbnail">
+                        <p>
+                            PC用は右にかけて暗くなっていくグラデーションあり版があります。<br>
+                            右側にアイコン並べるようなMacユーザーの方におすすめです。
+                        </p>
+                        <p>
+                            <a href="./wallpapers/rainy/no_grad.png" class="linkButton">PC</a>
+                            <a href="./wallpapers/rainy/desktop.png" class="linkButton">PC(グラデあり)</a>
+                            <a href="./wallpapers/rainy/bkg_no_grad.png" class="linkButton">PC(背景のみ)</a>
+                            <a href="./wallpapers/rainy/background.png" class="linkButton">PC(背景,グラデあり)</a><br>
+                            <a href="./wallpapers/rainy/smartphone.png" class="linkButton">スマートフォン</a>
+                            <a href="./wallpapers/rainy/smartphone_bkg.png" class="linkButton">スマホ(背景のみ)</a>
+                            <a href="./wallpapers/rainy/iphonex.png" class="linkButton">iPhoneX(1:2)</a>
+                            <a href="./wallpapers/rainy/iphonex_bkg.png" class="linkButton">iPhoneX(背景のみ)</a>
+                        </p>
+                    </div>
+                </div>
+            </main>
+            
+            <footer>
+                <script>buildFooter();</script>
+            </footer>
+        </div>
+    </body>
 </html>
