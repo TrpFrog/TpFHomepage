@@ -12,22 +12,30 @@
 </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script type="text/javascript" src="../new_contents_builder.js"></script>
+    <script>
+        fontLoader();
+        setFavicon();
+    </script>
     <style>
-      @import "../stylesheets/basebody.css";
-      @import "../stylesheets/single_column_two_elements.css";
-      @import "../stylesheets/button.css";
-      .balloon{
-        display: inline-block;
-        margin-bottom: 8px;
-        margin-right: 4px;
-        margin-top: 4px;
-      }
+        @import "../new_stylesheets/grid.css";
+        @import "../new_stylesheets/header.css";
+        @import "../new_stylesheets/footer.css";
+        @import "../new_stylesheets/h2icon.css";
+        @import "../stylesheets/linkbutton_grid.css";
+        @import "../new_stylesheets/page_elements.css";
+        @import "../new_stylesheets/media.css";
+        .balloon{
+            display: inline-block;
+            margin-bottom: 8px;
+            margin-right: 4px;
+            margin-top: 4px;
+        }
     </style>
     <audio preload="auto" id="sound">
       <source src="../audio/break.mp3" type="audio/mp3">
     </audio>
     <script type="text/javascript" src="balloon_script.js"></script>
-    <script type="text/javascript" src="../contents_builder.js"></script>
     <script>
       homedir = 'https://www.trpfrog.net/';
       setFavicon();
@@ -37,32 +45,31 @@
 </head>
 
 <body>
-
-  <!---  ヘッダー  --->
-
-  <header>
-    <script>buildHeader();</script>
-  </header>
-
-  <nav>
-    <script>buildNavigation();</script>
-  </nav>
-
-  <aside>
-    <h1>風船コーナー</h1>
-    <div onclick=reset() class="button"> 蘇生モード </div>
-    <script>buildSoundButton();</script>
-
-  </aside>
-
-  <main>
-    <script>
-      prepare(100);
-      buildBalloons();
-    </script>
-  </main>
-
-  <script>buildFooter();</script>
+    <div class="grid">
+        <header>
+            <script>buildHeader();</script>
+        </header>
+    
+        <main>
+            <div id="main_wrapper">
+                <div id="title">
+                    <h1>風船コーナー</h1>
+                    <div onclick=reset() class="linkButton"> 蘇生モード </div>
+                    <script>buildSoundButton();</script>
+                </div>
+                <div class="main_window">
+                    <script>
+                        prepare(100);
+                        buildBalloons();
+                    </script>
+                </div>
+            </div>
+        </main>
+    
+        <footer>
+            <script>buildFooter();</script>
+        </footer>
+    </div>
 
 </body>
 </html>

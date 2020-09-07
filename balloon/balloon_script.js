@@ -13,9 +13,9 @@ let b_width = 50;
 function buildSoundButton() {
     let html = '';
     if (breakSound) {
-        html = '<a href=\"' + b_homedir + '/balloon/index.html\" class=\"button\">音を消す</a>';
+        html = '<a href=\"' + b_homedir + '/balloon/index.html\" class=\"linkButton\">音を消す</a>';
     } else {
-        html = '<a href=\"' + b_homedir + '/balloon/index.html?enable_breaking_sound\" class=\"button\">音を鳴らす</a>';
+        html = '<a href=\"' + b_homedir + '/balloon/index.html?enable_breaking_sound\" class=\"linkButton\">音を鳴らす</a>';
     }
     document.write(html);
 }
