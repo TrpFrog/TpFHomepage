@@ -39,6 +39,12 @@ body {
     }
 }
 
+@media screen and (max-width:800px){
+    #title h1{
+        font-size: 2em;
+    }
+}
+
 @media screen and (min-width:980px){
     main #main_wrapper {
         width: 100%;
