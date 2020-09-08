@@ -19,13 +19,14 @@
         grid-template-areas:
         "L U R Plus  rotateleft Apply"
         "L D R Minus rotateright Apply";
-        grid-template-columns: 3fr 4fr 3fr 5fr 3fr 6fr;
+        grid-template-columns: 3fr 4fr 3fr 4fr 4fr 6fr;
         grid-template-rows: 3em 3em;
     }
 }
 
 .ctrl-btn { 
     margin: 1px;
+    padding: 0;
     appearance: none;
     background: #66a928;
     cursor: pointer;
