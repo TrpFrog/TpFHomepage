@@ -38,6 +38,7 @@ header a{
         color: #ffffff;
     }
     #header_wrapper input{
+        border-color:  rgba(220, 255, 148, 0.67);
         font-size: 0.8em;
         background-color: rgba(220, 255, 148, 0.67);
     }
