@@ -1,12 +1,27 @@
 .ctrl-btn-grid {
     margin: 0;
+    max-width: 500px;
     display: grid;
-    grid-template-areas:
-    "L U R Plus  rotateleft rotateright Apply"
-    "L D R Minus rotateleft rotateright Apply";
-    grid-template-columns: 3em 4em 3em 6em 3em 3.5em 6em;
-    grid-template-rows: 3em 3em;
     touch-action: manipulation;
+}
+
+@media screen and (min-width: 500px) {
+    .ctrl-btn-grid {
+        grid-template-areas:
+        "L U R Plus  rotateleft rotateright Apply"
+        "L D R Minus rotateleft rotateright Apply";
+        grid-template-columns: 3fr 4fr 3fr 6fr 3fr 3.5fr 6fr;
+        grid-template-rows: 3em 3em;
+    }
+}
+@media screen and (max-width: 500px) {
+    .ctrl-btn-grid {
+        grid-template-areas:
+        "L U R Plus  rotateleft Apply"
+        "L D R Minus rotateright Apply";
+        grid-template-columns: 3fr 4fr 3fr 5fr 3fr 6fr;
+        grid-template-rows: 3em 3em;
+    }
 }
 
 .ctrl-btn { 
@@ -46,6 +61,12 @@
 .down-btn { grid-area: D; }
 .plus-btn { grid-area: Plus; margin-left: 0.5em; margin-right: 0.5em;}
 .minus-btn { grid-area: Minus;  margin-left: 0.5em; margin-right: 0.5em; }
-.rotateleft-btn { grid-area: rotateleft;}
-.rotateright-btn { grid-area: rotateright; margin-right: 0.5em; }
 .apply-btn { grid-area: Apply; }
+.rotateright-btn { grid-area: rotateright; margin-right: 0.5em; }
+
+@media screen and (min-width: 500px) {
+    .rotateleft-btn { grid-area: rotateleft;}
+}
+@media screen and (max-width: 500px) {
+    .rotateleft-btn { grid-area: rotateleft; margin-right: 0.5em; }
+}
