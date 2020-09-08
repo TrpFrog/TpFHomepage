@@ -12,6 +12,13 @@ function upload(files, iconcanvas){
     let canvas = document.getElementById(iconcanvas);
     let context = canvas.getContext('2d');
     let reader = new FileReader();
+
+    //initialize
+    imagex = 35;
+    imagey = 10;
+    imagew = 0;
+    imageh = 0;
+    imageangle = 0;
     
     reader.onload = function(event){
         
