@@ -5,6 +5,13 @@
     display: grid;
     grid-template-areas: "h" "m" "f";
     grid-template-columns: 1fr;
+    transition: .5s;
+}
+
+@media (prefers-color-scheme: dark){
+    .grid {
+        background: #0c2400;
+    }
 }
 
 @media screen and (min-width:550px){

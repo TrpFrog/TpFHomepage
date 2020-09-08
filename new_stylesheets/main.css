@@ -11,5 +11,19 @@
 body{
     margin: 0;
     background: #f9fff6;
+    transition: .5s;
+}
+
+@media (prefers-color-scheme: dark){
+    body {
+        background: #061300;
+        color: white;
+    }
+    a:link:not(.linkButton) {
+        color: aquamarine;
+    }
+    a:visited:not(.linkButton) {
+        color: plum;
+    }
 }
 

@@ -33,6 +33,11 @@ body {
     background: #f9fff6;
     text-align: center;
 }
+
+.main_window {
+    transition: .5s;
+}
+
 @media screen and (max-width:980px){
     #title{
         padding: 0 20px;
@@ -83,4 +88,20 @@ body {
 }
 .main_window h2 {
     margin: 0;
+}
+
+@media (prefers-color-scheme: dark){
+    body {
+        background: #061300;
+        color: white;
+    }
+    a:link:not(.linkButton) {
+        color: aquamarine;
+    }
+    a:visited:not(.linkButton) {
+        color: plum;
+    }
+    .main_window {
+        background-color: rgba(50, 75, 0, 0.67);
+    }
 }
