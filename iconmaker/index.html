@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta name="robots" content="noindex">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144514287-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-144514287-1');
+    </script>
+    <script type="text/javascript" src="../new_contents_builder.js"></script>
+    <script type="text/javascript" src="iconmaker.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!-- StyleSheet -->
+    <script>
+        //homedir = 'https://www.trpfrog.net/'
+        fontLoader();
+    </script>
+    <style>
+        @import "../new_stylesheets/grid.css";
+        @import "../new_stylesheets/header.css";
+        @import "../new_stylesheets/footer.css";
+        @import "../new_stylesheets/h2icon.css";
+        @import "../new_stylesheets/page_elements.css";
+        @import "../new_stylesheets/media.css";
+        @import "./iconmakerbtn.css";
+
+        body {
+            margin: 0;
+            background: #f9fff6;
+            text-align: center;
+        }
+
+        #main_wrapper {
+            max-width: 1000px;
+        }
+
+        img {
+            max-width: 90%;
+        }
+    </style>
+    <!---------------->
+    <meta charset="utf-8">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@TrpFrog">
+    <meta property="og:url" content="https://www.trpfrog.net">
+    <meta property="og:title" content="つまみネット">
+    <meta property="og:description" content="さかなになりたいね">
+    <meta property="og:image" content="https://www.trpfrog.net/images/TwitterCard.png">
+    <title>IconMaker - つまみネット</title>
+</head>
+
+<body>
+    <div class="grid">
+        <header>
+            <script>buildHeader();</script>
+        </header>
+        <main>
+            <div id="main_wrapper">
+                <div id="title">
+                    <h1>アイコンメーカー</h1>
+                    <p>
+                        画像をアップロードしてつまみアイコンを作ろう！
+                    </p>
+                    <p>
+                        作成したアイコンはSNS等のアイコンに使うことができます。
+                    </p>
+                </div>
+                <div class="main_window">
+                    <h2 class="trpfrog">画像の選択</h2>
+                    <p>
+                        アイコンにしたい画像を選択してください。
+                    </p>
+                    <div id="preview"></div> <!-- アンカーリンク位置調整用、ウンコードやめろ -->
+                    <p>
+                        <input type="file" onchange="upload(this.files, 'canv-result')">
+                    </p>
+                </div>
+                <div class="main_window">
+                    <h2 class="trpfrog">プレビュー</h2>
+                    <p>
+                        位置を調整していい感じのところで描画を押してください。
+                    </p>
+                    <p>
+                    <div width="100%" class="content">
+                        <canvas class="richimage" id="canv-result" width="100%"></canvas>
+                    </div>
+                    </p>
+                    <p>
+                        <div class="ctrl-btn-grid">
+                            <button type="button" class="ctrl-btn plus-btn" onclick="scaleImage(1.05,'canv-result')">+</button>
+                            <button type="button" class="ctrl-btn minus-btn" onclick="scaleImage(1/1.05,'canv-result')">-</button>
+                            <button type="button" class="ctrl-btn left-btn" onclick="moveImage(-5,0,'canv-result')">←</button>
+                            <button type="button" class="ctrl-btn down-btn" onclick="moveImage(0,5,'canv-result')">↓</button>
+                            <button type="button" class="ctrl-btn up-btn" onclick="moveImage(0,-5,'canv-result')">↑</button>
+                            <button type="button" class="ctrl-btn right-btn" onclick="moveImage(5,0,'canv-result')">→</button>
+                            <button type="button" class="ctrl-btn rotateleft-btn" onclick="rotateImage(-5,'canv-result')">←R</button>
+                            <button type="button" class="ctrl-btn rotateright-btn" onclick="rotateImage(5,'canv-result')">R→</button>
+                            <button type="button" class="ctrl-btn apply-btn" onclick="writeImage('canv-result')">描画</button>
+                        </div>
+                    </p>
+                </div>
+                <div class="main_window" id="result">
+                    <h2 class="trpfrog">生成した画像</h2>
+                    <p>
+                    <img class="richimage" id="resultimage" src='../trpfrog_icons/つまみ.png' style='max-width: 500px;'>
+                    <img src="./mask.png" style="display: none;">
+                    </p>
+                </div>
+
+                <div class="main_window">
+                    <h2 class="trpfrog">ご利用条件・免責事項</h2>
+                    <p>
+                        当サービスは第三者の権利を侵害したり、
+                        公序良俗や法律に反するような用途にはご利用いただけません。
+                        また、当サービスを使用したことにより発生したいかなる損害に対しても、
+                        当サイトは一切の責任を負いません。
+                    </p>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <script>buildFooter();</script>
+        </footer>
+    </div>
+</body>
+
+</html>
