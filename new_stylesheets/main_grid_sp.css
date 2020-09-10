@@ -84,10 +84,6 @@
         padding: 30px 20px 20px 20px;
     }
 
-    #sticker table,td,th,tbody{
-        display: block;
-    }
-
     #bird {
         grid-area: bird;
         text-align: left;
