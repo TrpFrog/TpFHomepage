@@ -13,6 +13,7 @@
     </script>
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <script type="text/javascript" src="new_contents_builder.js"></script>
+    <script type="text/javascript" src="trpfrogsvg.js"></script>
     <script type="text/javascript" src="balloon/balloon_script.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
     <style>
@@ -56,7 +57,9 @@
                     <h2 class="trpfrog" style="margin-top: -30px">About me</h2>
                     <div id="about_me_grid">
                         <div class="profile_image">
-                            <object type="image/svg+xml" data="images/trpfrogvector.svg"></object>
+                            <script>
+                                buildTrpFrogSVG();
+                            </script>
                         </div>
                         <div id="about_me_name">
                             <h3>つまみ</h3>
