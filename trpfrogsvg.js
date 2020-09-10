@@ -18,7 +18,7 @@ class TsumamiFormation {
 
 let formations = [];
 
-onload = function() {
+function initProfileImage() {
     let formationNames = [
         'real', 'normal', 'ice', 'thinking_face', 'hamburger', 'noa', 'crying', 'invisible', 'angry', 'pien', 'robot', 'ghost', 'devil', 'bad'
     ];
@@ -48,6 +48,7 @@ function toggleIconMode() {
     formations[nowform].toggle();
     formations[nextform].toggle();
     nowform = nextform;
+    incrementStatNumber(PROFILE_IMAGE_CLICKED);
 }
 
 function buildTrpFrogSVG() {

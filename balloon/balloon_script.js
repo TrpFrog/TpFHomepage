@@ -69,7 +69,8 @@ function buildBalloons() {
         html += 'onmouseover=\"if( !balloonClicked[' + i + '] ) this.src=\'' + b_homedir + '/images/balloon/' + color + '/tremble.gif\'\" '
         html += 'onmouseout=\"if( !balloonClicked[' + i + '] ) this.src=\'' + b_homedir + '/images/balloon/' + color + '/normal.png\'\" '
         html += 'onclick=\"this.src=\'' + b_homedir + '/images/balloon/' + color + '/break.png\'; '
-        html += '    if( !balloonClicked[' + i + '] ) breakBalloon();'
+        html += '    if( !balloonClicked[' + i + '] ) {breakBalloon();'
+        html += '    incrementStatNumber(BALLOON_BROKENS);}'
         html += '    balloonClicked[' + i + '] = true\"'
         html += 'style=\"cursor: crosshair\"; '
         html += 'class=\"balloon\">'
@@ -78,8 +79,20 @@ function buildBalloons() {
 }
 
 function buildTopBalloons(preparedBaloons) {
+    let html = '';
+    let prevcolor = '';
+    let colorhistory = [];
+    let isCompleted = true;
     for (let i = 0; i < balloonClicked.length; i++) {
         let random = Math.floor(Math.random() * 3);
+        
+        if(i == 0){
+            prevcolor = random;
+        }else{
+            if(prevcolor != random) isCompleted = false;
+        }
+        colorhistory.push(random);
+
         let color = "orange";
         switch (random) {
             case 0:
@@ -93,7 +106,6 @@ function buildTopBalloons(preparedBaloons) {
                 break;
             default:
         }
-        let html = '';
         html += '<img src=\"' + b_homedir + '/images/balloon/' + color + '/normal.png\" '
         html += 'width='
         html += (100 / preparedBaloons) + ''
@@ -101,10 +113,28 @@ function buildTopBalloons(preparedBaloons) {
         html += 'onmouseover=\"if( !balloonClicked[' + i + '] ) this.src=\'' + b_homedir + '/images/balloon/' + color + '/tremble.gif\'\" '
         html += 'onmouseout=\"if( !balloonClicked[' + i + '] ) this.src=\'' + b_homedir + '/images/balloon/' + color + '/normal.png\'\" '
         html += 'onclick=\"this.src=\'' + b_homedir + '/images/balloon/' + color + '/break.png\'; '
-        html += '    if( !balloonClicked[' + i + '] ) breakBalloon();'
+        html += '    if( !balloonClicked[' + i + '] ){ breakBalloon();'
+        html += '    incrementStatNumber(BALLOON_BROKENS);}'
         html += '    balloonClicked[' + i + '] = true\"'
         html += 'style=\"cursor: crosshair\"; '
         html += 'class=\"balloon\">'
-        document.write(html);
     }
+    if(isCompleted) {
+        incrementStatNumber(BALLOON_COMPLETED);
+    }
+
+    let isPalindrome = true;
+    for(let i = 0; i < 3; i++){
+        if(colorhistory[i] != colorhistory[6-i]) isPalindrome = false;
+    }
+    if (isPalindrome) {
+        incrementStatNumber(BALLOON_SYMMETRY);
+    }
+    
+    document.getElementById('balloon-area').innerHTML = html;
+}
+
+function regenerateTopBalloon() {
+    prepare(7);
+    buildTopBalloons(7);
 }

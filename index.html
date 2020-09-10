@@ -13,6 +13,7 @@
     </script>
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <script type="text/javascript" src="new_contents_builder.js"></script>
+    <script type="text/javascript" src="stats.js"></script>
     <script type="text/javascript" src="trpfrogsvg.js"></script>
     <script type="text/javascript" src="balloon/balloon_script.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -20,9 +21,11 @@
         ul.rating_list li {
             margin-bottom: 0.5em;
         }
+
         #links .linkButton {
             width: 180px;
         }
+
         #music .linkButton {
             width: 180px;
         }
@@ -100,9 +103,6 @@
                         </li>
                         <li><b>SOUND VOLTEX</b><br>
                             <span class="silver" style="font-size:2.5em; font-weight: bold;">魔騎士</span>
-                        </li>
-                        <li><b>beatmania IIDX</b><br>
-                            <span class="rainbow" style="font-size:2.5em; font-weight: bold;">やってない</span>
                         </li>
                     </ul>
                     <br>
@@ -199,7 +199,7 @@
                         <tr>
                             <td><a href="http://negiissei.com/" class="linkButton">ねぎー日記</a></td>
                             <td>ねぎ一世さん(<a href="https://twitter.com/negiissei/">@negiissei</a>)
-                                のHP。古来からのオタク。リンク貼る許可取ってない。</td>
+                                のHP。なんか昔からいる。</td>
                         </tr>
                         <tr>
                             <td><a href="https://baki-0.github.io/index.html" class="linkButton">B.B.B</a></td>
@@ -259,7 +259,7 @@
 
                 <div id="balloon" class="main_window">
                     <h2 class="ice">風船コーナー</h2>
-                    <p>
+                    <p id="balloon-area">
                         <script>
                             setHomedir('.');
                             prepare(7);
@@ -267,6 +267,7 @@
                         </script>
                     </p>
                     <p>
+                        <span class="linkButton" onclick="regenerateTopBalloon();">新しい風船を用意</span>
                         <a href="balloon/index.html" class="linkButton"> もっと割る </a>
                     </p>
                 </div>
@@ -307,11 +308,32 @@
                 <div id="iconmaker" class="main_window">
                     <h2 class="robot">アイコンメーカー</h2>
                     <p><a href="iconmaker/index.html">
-                        <img src="iconmaker/TwitterCardIconmaker.png" class="img-btn">
-                    </a></p>
+                            <img src="iconmaker/TwitterCardIconmaker.png" class="img-btn">
+                        </a></p>
                     <p>
                         つまみアイコンを作ろう！
                     </p>
+                </div>
+
+                <div id="stats" class="main_window">
+                    <h2 class="robot">Stats</h2>
+                    <p>
+                        記録を確認しましょう！
+                    </p>
+                    <ul class="rating_list">
+                        <li id="profileImageClicked_wrapper"><b>つまみちゃんを触った回数</b><br>
+                            <script>buildStatNumber(PROFILE_IMAGE_CLICKED)</script>
+                        </li>
+                        <li id="balloonBrokens_wrapper"><b>風船を割った回数</b><br>
+                            <script>buildStatNumber(BALLOON_BROKENS)</script>
+                        </li>
+                        <li id="balloonLineSymmetry_wrapper"><b>風船が線対称に並んだ回数</b><br>
+                            <script>buildStatNumber(BALLOON_SYMMETRY)</script>
+                        </li>
+                        <li id="balloonCompleted_wrapper"><b>風船の色が揃った回数</b><br>
+                            <script>buildStatNumber(BALLOON_COMPLETED)</script>
+                        </li>
+                    </ul>
                 </div>
 
                 <div id="bird" class="main_window">

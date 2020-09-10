@@ -32,7 +32,8 @@
                                  "iconmaker music music"
                                  "bird music music"
                                  "balloon balloon balloon"
-                                 "links links music_game";
+                                 "links links music_game"
+                                 "links links stats";
             grid-template-columns: 3fr 2fr 3fr; /* ヨコ方向のセルの長さを単位[Fr](Fraction)で定める */
             /*grid-template-rows: auto 350px 110px 280px 540px; !* タテ方向のセルの長さを単位[Fr](Fraction)で定める *!*/
             text-align: left;
@@ -50,7 +51,7 @@
                     "icons icons"
                     "music music"
                     "balloon balloon"
-                    "music_game music_game";
+                    "music_game stats";
 
             grid-template-columns: 1fr 1fr; /* ヨコ方向のセルの長さを単位[Fr](Fraction)で定める */
             /*grid-template-rows: auto auto auto auto auto auto; !* タテ方向のセルの長さを単位[Fr](Fraction)で定める *!*/
@@ -131,5 +132,11 @@
         font-size: 45%;
         line-height: 12px;
         display: inline-block;
+    }
+
+    #stats {
+        grid-area: stats;
+        opacity: 0;
+        padding: 40px 40px 40px 40px;
     }
 }
