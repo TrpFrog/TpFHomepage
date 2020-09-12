@@ -45,5 +45,5 @@ function buildStatNumber(property) {
     }else{
         html += String(localStorage.getItem(property)) + '</span>';
     }
-    document.write(html);
+    document.getElementById(property + '_wrapper').insertAdjacentHTML('beforeend', html);
 }

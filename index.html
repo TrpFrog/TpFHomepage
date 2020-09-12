@@ -30,13 +30,13 @@
             width: 180px;
         }
     </style>
+    <script>
+        initIsSupportedLocalStorage();
+        initStats();
+        initProfileImage();
+    </script>
 
     <!-- StyleSheet -->
-    <script>
-        //homedir = 'https://www.trpfrog.net/'
-        fontLoader();
-        setFavicon();
-    </script>
     <link rel="stylesheet" type="text/css" href="./new_stylesheets/main.css">
     <!---------------->
     <meta charset="utf-8">
@@ -51,15 +51,13 @@
 
 <body>
     <div class="grid">
-        <header>
-            <script>buildHeader();</script>
-        </header>
+        <header></header>
         <main>
             <div id="main_wrapper">
                 <div id="about_me">
                     <h2 class="trpfrog" style="margin-top: -30px">About me</h2>
                     <div id="about_me_grid">
-                        <div class="profile_image">
+                        <div id="profile_image" class="profile_image">
                             <script>
                                 buildTrpFrogSVG();
                             </script>
@@ -321,16 +319,20 @@
                         記録を確認しましょう！
                     </p>
                     <ul class="rating_list">
-                        <li id="profileImageClicked_wrapper"><b>つまみちゃんを触った回数</b><br>
+                        <li id="profileImageClicked_wrapper">
+                            <b>つまみちゃんを触った回数</b><br>
                             <script>buildStatNumber(PROFILE_IMAGE_CLICKED)</script>
                         </li>
-                        <li id="balloonBrokens_wrapper"><b>風船を割った回数</b><br>
+                        <li id="balloonBrokens_wrapper">
+                            <b>風船を割った回数</b><br>
                             <script>buildStatNumber(BALLOON_BROKENS)</script>
                         </li>
-                        <li id="balloonLineSymmetry_wrapper"><b>風船が線対称に並んだ回数</b><br>
+                        <li id="balloonLineSymmetry_wrapper">
+                            <b>風船が線対称に並んだ回数</b><br>
                             <script>buildStatNumber(BALLOON_SYMMETRY)</script>
                         </li>
-                        <li id="balloonCompleted_wrapper"><b>風船の色が揃った回数</b><br>
+                        <li id="balloonCompleted_wrapper">
+                            <b>風船の色が揃った回数</b><br>
                             <script>buildStatNumber(BALLOON_COMPLETED)</script>
                         </li>
                     </ul>
@@ -367,9 +369,7 @@
                 </div>
             </div>
         </main>
-        <footer>
-            <script>buildFooter();</script>
-        </footer>
+        <footer></footer>
     </div>
 </body>
 

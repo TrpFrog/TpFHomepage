@@ -2,21 +2,17 @@
 <html>
 
 <head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-144514287-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'UA-144514287-1');
-</script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144514287-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-144514287-1');
+    </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <script type="text/javascript" src="../new_contents_builder.js"></script>
-    <script>
-        fontLoader();
-        setFavicon();
-    </script>
     <style>
         @import "../new_stylesheets/grid.css";
         @import "../new_stylesheets/header.css";
@@ -25,7 +21,8 @@
         @import "../stylesheets/linkbutton_grid.css";
         @import "../new_stylesheets/page_elements.css";
         @import "../new_stylesheets/media.css";
-        .balloon{
+
+        .balloon {
             display: inline-block;
             margin-bottom: 8px;
             margin-right: 4px;
@@ -33,23 +30,16 @@
         }
     </style>
     <audio preload="auto" id="sound">
-      <source src="../audio/break.mp3" type="audio/mp3">
+        <source src="../audio/break.mp3" type="audio/mp3">
     </audio>
     <script type="text/javascript" src="balloon_script.js"></script>
-    <script>
-      homedir = 'https://www.trpfrog.net/';
-      setFavicon();
-      setTwitterCard();
-    </script>
     <title>Balloon Paradise</title>
 </head>
 
 <body>
     <div class="grid">
-        <header>
-            <script>buildHeader();</script>
-        </header>
-    
+        <header></header>
+
         <main>
             <div id="main_wrapper">
                 <div id="title">
@@ -65,11 +55,10 @@
                 </div>
             </div>
         </main>
-    
-        <footer>
-            <script>buildFooter();</script>
-        </footer>
+
+        <footer></footer>
     </div>
 
 </body>
+
 </html>

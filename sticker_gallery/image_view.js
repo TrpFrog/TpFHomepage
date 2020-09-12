@@ -14,14 +14,18 @@ function fitInRange(i) {
         return i;
     }
 }
-// alert(prepreimg+" "+preimg+" "+num+" "+nxtimg+" "+nxtnxtimg);
+
+document.addEventListener("DOMContentLoaded", function () {
+    imageView();
+    controlPane();
+});
 
 function imageView() {
     let html = "";
     //   html += '  <div id=\"contents\" style=\"text-align: center; width: 100%\">'
     html += '      <img src=\"large_icons/' + num + '.png\" style=\"height:40vh;\">'
     //   html += '  </div>'
-    document.write(html);
+    document.getElementById('image_viewer').insertAdjacentHTML('beforeend', html);
 }
 
 function controlPane() {
@@ -36,5 +40,5 @@ function controlPane() {
     html += '      <a href=\"image_viewer.html?' + nxtimg + '\" class=\"prevAndNextButton\" style=\"margin-left:0.5em;width:10%;\">→</a><br>'
     html += '      <a href=\"index.html\" class=\"prevAndNextButton\" style=\"width:90%; margin-top:10px;\">一覧に戻る</a>'
     html += '  </div>'
-    document.write(html);
+    document.getElementById('control_panel').insertAdjacentHTML('beforeend', html);
 }

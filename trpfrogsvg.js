@@ -1466,5 +1466,5 @@ function buildTrpFrogSVG() {
   <g id="レイヤー_3"/>
 </svg>
     `;
-    document.write(html);
+    document.getElementById('profile_image').insertAdjacentHTML('beforeend', html);
 }

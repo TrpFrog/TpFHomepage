@@ -14,18 +14,11 @@
     <script type="text/javascript" src="../new_contents_builder.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <!-- StyleSheet -->
-    <meta charset="utf-8">
-    <script>
-        fontLoader();
-    </script>
 
     <script type="text/javascript" src="image_view.js"></script>
     <title>Stickers Gallery</title>
     <!-- StyleSheet -->
     <meta charset="utf-8">
-    <script>
-        fontLoader();
-    </script>
     <style>
         @import "../new_stylesheets/grid.css";
         @import "../new_stylesheets/header.css";
@@ -39,22 +32,14 @@
 
 <body>
     <div class="grid">
-        <header>
-            <script>buildHeader();</script>
-        </header>
+        <header></header>
         <main>
             <div id="main_wrapper">
-                <div class="main_window" style="text-align: center;">
-                    <script>imageView();</script>
-                </div>
-                <div class="main_window">
-                    <script>controlPane();</script>
-                </div>
+                <div id="image_viewer" class="main_window" style="text-align: center;"></div>
+                <div id="control_panel" class="main_window"></div>
             </div>
         </main>
-        <footer>
-            <script>buildFooter();</script>
-        </footer>
+        <footer></footer>
     </div>
 </body>
 

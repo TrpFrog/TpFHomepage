@@ -26,19 +26,12 @@
         @import "../new_stylesheets/page_elements.css";
     </style>
     <script type="text/javascript" src="image_list.js"></script>
-    <script>
-        homedir = '..';
-        setFavicon();
-        setTwitterCard();
-    </script>
     <title>Icon Gallery</title>
 </head>
 
 <body>
     <div class="grid">
-        <header>
-            <script>buildHeader();</script>
-        </header>
+        <header></header>
 
         <main>
             <div id="main_wrapper">
@@ -46,15 +39,11 @@
                     <h1>Icons</h1>
                     <p>つまみちゃんの作ったアイコンです。クリックで高解像度版に飛びます。</p>
                 </div>
-                <div class="main_window">
-                    <script>imageList();</script>
-                </div>
+                <div id="image_list" class="main_window"></div>
             </div>
         </main>
 
-        <footer>
-            <script>buildFooter();</script>
-        </footer>
+        <footer></footer>
     </div>
 </body>
 

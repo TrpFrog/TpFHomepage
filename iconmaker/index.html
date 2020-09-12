@@ -15,11 +15,6 @@
     <script type="text/javascript" src="iconmaker.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <!-- StyleSheet -->
-    <script>
-        //homedir = 'https://www.trpfrog.net/'
-        fontLoader();
-        setFavicon();
-    </script>
     <style>
         @import "../new_stylesheets/grid.css";
         @import "../new_stylesheets/header.css";
@@ -53,9 +48,7 @@
 
 <body>
     <div class="grid">
-        <header>
-            <script>buildHeader();</script>
-        </header>
+        <header></header>
         <main>
             <div id="main_wrapper">
                 <div id="title">
@@ -89,17 +82,24 @@
                     </div>
                     </p>
                     <p>
-                        <div class="ctrl-btn-grid">
-                            <button type="button" class="ctrl-btn plus-btn" onclick="scaleImage(1.05,'canv-result')">+</button>
-                            <button type="button" class="ctrl-btn minus-btn" onclick="scaleImage(1/1.05,'canv-result')">-</button>
-                            <button type="button" class="ctrl-btn left-btn" onclick="moveImage(-5,0,'canv-result')">←</button>
-                            <button type="button" class="ctrl-btn down-btn" onclick="moveImage(0,5,'canv-result')">↓</button>
-                            <button type="button" class="ctrl-btn up-btn" onclick="moveImage(0,-5,'canv-result')">↑</button>
-                            <button type="button" class="ctrl-btn right-btn" onclick="moveImage(5,0,'canv-result')">→</button>
-                            <button type="button" class="ctrl-btn rotateleft-btn" onclick="rotateImage(-5,'canv-result')">←R</button>
-                            <button type="button" class="ctrl-btn rotateright-btn" onclick="rotateImage(5,'canv-result')">R→</button>
-                            <button type="button" class="ctrl-btn apply-btn" onclick="writeImage('canv-result')">描画</button>
-                        </div>
+                    <div class="ctrl-btn-grid">
+                        <button type="button" class="ctrl-btn plus-btn"
+                            onclick="scaleImage(1.05,'canv-result')">+</button>
+                        <button type="button" class="ctrl-btn minus-btn"
+                            onclick="scaleImage(1/1.05,'canv-result')">-</button>
+                        <button type="button" class="ctrl-btn left-btn"
+                            onclick="moveImage(-5,0,'canv-result')">←</button>
+                        <button type="button" class="ctrl-btn down-btn"
+                            onclick="moveImage(0,5,'canv-result')">↓</button>
+                        <button type="button" class="ctrl-btn up-btn" onclick="moveImage(0,-5,'canv-result')">↑</button>
+                        <button type="button" class="ctrl-btn right-btn"
+                            onclick="moveImage(5,0,'canv-result')">→</button>
+                        <button type="button" class="ctrl-btn rotateleft-btn"
+                            onclick="rotateImage(-5,'canv-result')">←R</button>
+                        <button type="button" class="ctrl-btn rotateright-btn"
+                            onclick="rotateImage(5,'canv-result')">R→</button>
+                        <button type="button" class="ctrl-btn apply-btn" onclick="writeImage('canv-result')">描画</button>
+                    </div>
                     </p>
                 </div>
                 <div class="main_window" id="result">
@@ -108,12 +108,14 @@
                         PCの方は右クリック、スマートフォンの方は長押しで保存できます。
                     </p>
                     <p>
-                    <img class="richimage" id="resultimage" src="../trpfrog_icons/つまみ.png" style="width:100%; max-width: 500px;">
-                    <img src="./mask.png" style="display: none;">
-                    </p> 
+                        <img class="richimage" id="resultimage" src="../trpfrog_icons/つまみ.png"
+                            style="width:100%; max-width: 500px;">
+                        <img src="./mask.png" style="display: none;">
+                    </p>
                     <p>
                         <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + '://platform.twitter.com/widgets.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'twitter-wjs');</script>
-                        <a href="https://twitter.com/intent/tweet?text=%23%E3%81%A4%E3%81%BE%E3%81%BF%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3%E3%83%A1%E3%83%BC%E3%82%AB%E3%83%BC%20%E3%81%A7%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3%E3%82%92%E4%BD%9C%E6%88%90%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F%EF%BC%81&url=https%3A%2F%2Fwww.trpfrog.net%2Ficonmaker%2F" class="twitter-share-button">Tweet</a>
+                        <a href="https://twitter.com/intent/tweet?text=%23%E3%81%A4%E3%81%BE%E3%81%BF%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3%E3%83%A1%E3%83%BC%E3%82%AB%E3%83%BC%20%E3%81%A7%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3%E3%82%92%E4%BD%9C%E6%88%90%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F%EF%BC%81&url=https%3A%2F%2Fwww.trpfrog.net%2Ficonmaker%2F"
+                            class="twitter-share-button">Tweet</a>
                     </p>
                     <p>
                         (画像付きツイートで共有するのが無理だったので、一旦画像を保存してからこのボタンで共有して欲しいです〜(ごめんね))
@@ -131,9 +133,7 @@
                 </div>
             </div>
         </main>
-        <footer>
-            <script>buildFooter();</script>
-        </footer>
+        <footer></footer>
     </div>
 </body>
 

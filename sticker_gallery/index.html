@@ -27,36 +27,27 @@
         @import "../new_stylesheets/media.css";
     </style>
     <script type="text/javascript" src="image_list.js"></script>
-    <script>
-        homedir = '..';
-        setFavicon();
-        setTwitterCard();
-    </script>
     <title>Sticker Gallery</title>
 </head>
 
 <body>
 
     <div class="grid">
-        <header>
-            <script>buildHeader();</script>
-        </header>
-    
+        <header></header>
+
         <main>
             <div id="main_wrapper">
                 <div id="title">
                     <h1>Stickers</h1>
                     <p>つまみスタンプの元画像の5倍に拡大したやつです。<br>
-                    良識の範囲内でご自由にどうぞ。(Twitterの会話とか)<br>
-                    サムネイルは幅150pxの小さいので保存するときは拡大してね<br>
-                    <a href="https://store.line.me/stickershop/product/8879469/ja">
-                        (LINEスタンプ発売中！！！！買って！！！！！)
-                    </a></p>
+                        良識の範囲内でご自由にどうぞ。(Twitterの会話とか)<br>
+                        サムネイルは幅150pxの小さいので保存するときは拡大してね<br>
+                        <a href="https://store.line.me/stickershop/product/8879469/ja">
+                            (LINEスタンプ発売中！！！！買って！！！！！)
+                        </a></p>
                     <p>クリックで拡大できます。</p>
                 </div>
-                <div class="main_window">
-                    <script>imageList();</script>
-                </div>
+                <div id="image_list" class="main_window"></div>
                 <div class="main_window">
                     <h2 class="trpfrog">スタンプ発売中！</h2>
                     <p>
@@ -68,10 +59,9 @@
                 </div>
             </div>
         </main>
-    
-        <footer>
-            <script>buildFooter();</script>
-        </footer>
+
+        <footer></footer>
     </div>
 </body>
+
 </html>
