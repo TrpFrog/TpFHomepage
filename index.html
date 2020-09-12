@@ -31,9 +31,11 @@
         }
     </style>
     <script>
-        initIsSupportedLocalStorage();
-        initStats();
-        initProfileImage();
+        onload = function() {
+            initIsSupportedLocalStorage();
+            initStats();
+            initProfileImage();
+        }
     </script>
 
     <!-- StyleSheet -->
