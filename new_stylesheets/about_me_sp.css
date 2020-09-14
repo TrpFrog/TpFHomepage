@@ -40,7 +40,7 @@
         align-items: center;
     }
 
-    #about_me_grid .profile_image object{
+    #about_me_grid .profile_image svg{
         max-width: 334px;
     }
 
