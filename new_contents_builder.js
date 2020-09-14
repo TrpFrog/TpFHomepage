@@ -4,6 +4,7 @@ let headElement = document.getElementsByTagName('head')[0];
 document.addEventListener("DOMContentLoaded", function () {
     fontLoader();
     buildHeader();
+    buildHamburger();
     buildFooter();
     setFavicon();
 });
@@ -35,27 +36,56 @@ function search_tweet() {
     window.location.href = "https://twilog.org/TrpFrog/search?word=" + input_word;
 }
 
+function buildHamburger() {
+    let homedir = 'https://www.trpfrog.net/';
+    let html = `
+        <section id="mobile_menu"></section>
+            <aside id="menu_background" onclick="toggleSideMenu();"></aside>
+            <aside id="side_menu">
+                <div id="side_header"></div>
+                <div id="side_links">
+                    <a href="`+ homedir +`index.html"><div class="sidemenu_link">Home      </div></a>
+                    <a href="`+ homedir +`icon_gallery/index.html"><div class="sidemenu_link">Icon      </div></a>
+                    <a href="`+ homedir +`balloon/index.html"><div class="sidemenu_link">Balloon   </div></a>
+                    <a href="`+ homedir +`sticker_gallery/index.html"><div class="sidemenu_link">Sticker   </div></a>
+                    <a href="`+ homedir +`works/index.html"><div class="sidemenu_link">Works     </div></a>
+                    <a href="`+ homedir +`download/index.html"><div class="sidemenu_link">Download  </div></a>
+                    <a href="`+ homedir +`iconmaker/index.html"><div class="sidemenu_link">Icon Maker</div></a>
+                </div>
+            </aside>
+        </section>
+    `;
+    document.getElementsByTagName('body')[0].insertAdjacentHTML('afterbegin', html);
+}
+
 function buildHeader() {
     let html = `
         <div id="header_wrapper">
-            <h1><a href="https://www.trpfrog.net">つまみネット</a></h1>
-            <div id="tweet_search">
-                <form onsubmit="search_tweet();return false;">
-                    <input type="text" placeholder="過去ツイサーチ" id="tweet_search_box">
-                    <input type="submit" value="検索" class="twibutton">
-                </form>
+                <h1><a href="https://www.trpfrog.net">つまみネット</a></h1>
+                <div id="tweet_search">
+                    <form onsubmit="search_tweet();return false;">
+                        <input type="text" placeholder="過去ツイサーチ" id="tweet_search_box">
+                        <input type="submit" value="検索" class="twibutton">
+                    </form>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="https://www.trpfrog.net/index.html" class="headerButton">home</a></li>
+                        <li><a href="https://www.trpfrog.net/icon_gallery/index.html" class="headerButton">icons</a></li>
+                        <li><a href="https://www.trpfrog.net/works/index.html" class="headerButton">works</a></li>
+                    </ul>
+                </nav>
+                <div id="hamburger_menu" onclick="toggleSideMenu();">
+                    <a class="menu-trigger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+                </div>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="https://www.trpfrog.net/index.html" class="headerButton">home</a></li>
-                    <li><a href="https://www.trpfrog.net/icon_gallery/index.html" class="headerButton">icons</a></li>
-                    <li><a href="https://www.trpfrog.net/works/index.html" class="headerButton">works</a></li>
-                </ul>
-            </nav>
-        </div>
     `;
     document.getElementsByTagName('header')[0]
-        .insertAdjacentHTML('beforeend', html);
+        .insertAdjacentHTML('afterbegin', html);
 }
 
 function buildAprilHeader() {
@@ -95,6 +125,70 @@ function buildFooter() {
     `;
     document.getElementsByTagName('footer')[0]
         .insertAdjacentHTML('beforeend', html);
+}
+
+let isSideMenuOpened = false;
+function toggleSideMenu(){
+    if(isSideMenuOpened){
+        hideMenu();
+    }else{
+        showMenu();
+    }
+    isSideMenuOpened = !isSideMenuOpened;
+}
+
+function showMenu() {
+    document.getElementsByTagName('body')[0].style.overflow = 'hidden';
+    document.getElementById('menu_background').style.visibility = 'visible';
+    document.getElementById('menu_background').style.opacity = 0;
+    document.getElementById('menu_background').style.opacity = 0.7;
+
+
+    document.getElementById('side_menu').style.right = '0';
+
+    let btn = document.getElementsByClassName('menu-trigger')[0].children;
+    
+    let style = `
+        top: 0;
+        width: 43%;
+        -webkit-transform: translate3d(1.5px, 3.6px, 0) rotate(45deg);
+        transform: translate3d(1.5px, 3.6px, 0) rotate(45deg);
+    `;
+    btn[0].setAttribute('style', style);
+
+    style = `
+        top: 10px;
+        width: 105%;
+        -webkit-transform: translate3d(-1px, 0, 0) rotate(-45deg);
+        transform: translate3d(-1px, 0, 0) rotate(-45deg);
+    `;
+    btn[1].setAttribute('style', style);
+
+    style = `
+        bottom: 0;
+        width: 43%;
+        -webkit-transform: translate3d(14px, -3.5px, 0) rotate(45deg);
+        transform: translate3d(14px, -3.5px, 0) rotate(45deg);
+    `;
+    btn[2].setAttribute('style', style);
+
+}
+
+function hideMenu() {
+    document.getElementsByTagName('body')[0].style.overflow = 'visible';
+    document.getElementById('menu_background').style.visibility = 'hidden';
+    document.getElementById('side_menu').style.right = '-260px';
+
+    let btn = document.getElementsByClassName('menu-trigger')[0].children;
+
+    let style = 'top: 0;';
+    btn[0].setAttribute('style', style);
+
+    style = 'top: 10px;';
+    btn[1].setAttribute('style', style);
+
+    style = 'bottom: 0;';
+    btn[2].setAttribute('style', style);
 }
 
 function getTwitterUrl() {
