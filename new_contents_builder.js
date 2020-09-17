@@ -15,11 +15,11 @@ function setFavicon() {
     html += '<link rel="icon" type="image/png" sizes="32x32" href="' + homedir + '/favicon/favicon-32x32.png">';
     html += '<link rel="icon" type="image/png" sizes="16x16" href="' + homedir + '/favicon/favicon-16x16.png">';
     html += '<link rel="manifest" href="' + homedir + '/favicon/site.webmanifest">';
-    html += '<link rel="mask-icon" href="' + homedir + '/favicon/safari-pinned-tab.svg" color="#5bbad5">';
+    html += '<link rel="mask-icon" href="' + homedir + '/favicon/safari-pinned-tab.svg" color="#90e200">';
     html += '<link rel="shortcut icon" href="' + homedir + '/favicon/favicon.ico">';
-    html += '<meta name="msapplication-TileColor" content="#da532c">';
+    html += '<meta name="msapplication-TileColor" content="#90e200">';
     html += '<meta name="msapplication-config" content="/favicon/browserconfig.xml">';
-    html += '<meta name="theme-color" content="#ffffff">';
+    html += '<meta name="theme-color" content="#66a928">';
     headElement.insertAdjacentHTML('beforeend', html);
 }
 
