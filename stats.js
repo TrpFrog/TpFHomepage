@@ -27,14 +27,16 @@ function initStats() {
     }
 }
 
-function incrementStatNumber(property) {
+function incrementStatNumber(property, applyToppage = true) {
     let n = Number(localStorage.getItem(property)) + 1;
-    if(n == 1){
-        document.getElementById('stats').style.opacity = 1;
-        document.getElementById(property + '_wrapper').style.opacity = 1;
-    }
     localStorage.setItem(property, n);
-    document.getElementById(property).innerHTML = String(n);
+    if(applyToppage) {
+        if (n == 1) {
+            document.getElementById('stats').style.opacity = 1;
+            document.getElementById(property + '_wrapper').style.opacity = 1;
+        }
+        document.getElementById(property).innerHTML = String(n);
+    }
 }
 
 function buildStatNumber(property) {

@@ -13,6 +13,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <script type="text/javascript" src="../new_contents_builder.js"></script>
+    <script type="text/javascript" src="../stats.js"></script>
     <style>
         @import "../new_stylesheets/grid.css";
         @import "../new_stylesheets/header.css";
@@ -47,7 +48,7 @@
                     <div onclick=reset() class="linkButton"> 蘇生モード </div>
                     <script>buildSoundButton();</script>
                 </div>
-                <div class="main_window">
+                <div class="main_window" id="balloon_area">
                     <script>
                         prepare(100);
                         buildBalloons();

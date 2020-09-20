@@ -48,33 +48,42 @@ function breakBalloon() {
 }
 
 function buildBalloons() {
+    let balloon_area = document.getElementById('balloon_area');
+    let balloon_color = ['orange', 'green', 'blue'];
+    
     for (let i = 0; i < balloonClicked.length; i++) {
         let random = Math.floor(Math.random() * 3);
-        let color = "orange";
-        switch (random) {
-            case 0:
-                color = "orange";
-                break;
-            case 1:
-                color = "blue";
-                break;
-            case 2:
-                color = "green";
-                break;
-            default:
-        }
-        let html = '';
-        html += '<img src=\"' + b_homedir + '/images/balloon/' + color + '/normal.png\" '
-        html += 'width=' + b_width + 'px '
-        html += 'onmouseover=\"if( !balloonClicked[' + i + '] ) this.src=\'' + b_homedir + '/images/balloon/' + color + '/tremble.gif\'\" '
-        html += 'onmouseout=\"if( !balloonClicked[' + i + '] ) this.src=\'' + b_homedir + '/images/balloon/' + color + '/normal.png\'\" '
-        html += 'onclick=\"this.src=\'' + b_homedir + '/images/balloon/' + color + '/break.png\'; '
-        html += '    if( !balloonClicked[' + i + '] ) {breakBalloon();'
-        html += '    incrementStatNumber(BALLOON_BROKENS);}'
-        html += '    balloonClicked[' + i + '] = true\"'
-        html += 'style=\"cursor: crosshair\"; '
-        html += 'class=\"balloon\">'
-        document.write(html);
+        let color = balloon_color[random];
+
+        let balloon = document.createElement('img');
+        balloon.setAttribute('class', 'balloon');
+
+        balloon.src          = b_homedir + '/images/balloon/' + color + '/normal.png';
+        balloon.style.width  = b_width + 'px';
+        balloon.style.cursor = 'crosshair';
+
+        balloon.addEventListener('mouseover', function() {
+            if(!balloonClicked[i]) {
+                this.src = b_homedir + '/images/balloon/' + color + '/tremble.gif';
+            }
+        });
+
+        balloon.addEventListener('mouseout', function () {
+            if (!balloonClicked[i]) {
+                this.src = b_homedir + '/images/balloon/' + color + '/normal.png';
+            }
+        });
+
+        balloon.addEventListener('click', function () {
+            this.src = b_homedir + '/images/balloon/' + color + '/break.png';
+            if (!balloonClicked[i]) {
+                breakBalloon();
+                incrementStatNumber(BALLOON_BROKENS, false);
+            }
+            balloonClicked[i] = true;
+        });
+
+        balloon_area.appendChild(balloon);
     }
 }
 
