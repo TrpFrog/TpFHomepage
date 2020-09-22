@@ -1,18 +1,8 @@
 @charset "UTF-8";
 
-h1 {
-  font-size: 60px
-}
-
-body{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform : translate(-50%,-50%);
-  transform : translate(-50%,-50%);
-  text-align: center;
-  font-family: arial;
-  background-color: #d1ffd1
+#title h1 {
+    padding-top: 20px;
+    text-align: center !important;
 }
 
 .blacklink {
@@ -21,6 +11,10 @@ body{
    border-bottom: dotted 1px black;
  }
 
- .fake {
-    font-size: 20px
-  }
+p {
+    font-size: 1.2em;
+}
+
+.fake {
+    font-size: 1.4em;
+}
