@@ -72,7 +72,7 @@ function buildHeader() {
                     <ul>
                         <li><a href="https://www.trpfrog.net/index.html" class="headerButton">home</a></li>
                         <li><a href="https://www.trpfrog.net/icon_gallery/index.html" class="headerButton">icons</a></li>
-                        <li><a href="https://www.trpfrog.net/works/index.html" class="headerButton">works</a></li>
+                        <li><a href="https://trpfrog.hateblo.jp" class="headerButton">blog</a></li>
                     </ul>
                 </nav>
                 <div id="hamburger_menu" onclick="toggleSideMenu();">
