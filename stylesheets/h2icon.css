@@ -1,21 +1,25 @@
-h2{
-  text-shadow:2px 2px 2px rgb(104, 217, 241);
-  margin-top: 30px;
-  margin-bottom: -5px;
+main h2{
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  text-shadow:0.08em 0.08em 0.08em rgb(144, 226, 0);
 }
 
-h2:before {
+@media (prefers-color-scheme: dark){
+    main h2{
+        text-shadow:0.08em 0.08em 0.08em rgb(116, 184, 0);
+    }
+}
+
+main h2:before {
   content:'';
   display: inline-block;
   width:40px;
   height:40px;
-  background-image: url('../images/icons/trpfrog.webp');
   background-size: contain;
   background-repeat: no-repeat;
   vertical-align: middle;
   margin-right: 5px;
 }
-
+h2.trpfrog:before{background-image: url('../images/icons/trpfrog.webp');}
 h2.ice:before{background-image: url('../images/icons/ice.webp');}
 h2.think:before{background-image: url('../images/icons/thinking.webp');}
 h2.noa:before{background-image: url('../images/icons/noa.webp');}

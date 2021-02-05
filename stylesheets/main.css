@@ -1,56 +1,29 @@
-@charset "UTF-8";
-
-@import "basebody.css";
-@import "two_columns.css";
-@import "h2icon.css";
-@import "button.css";
-@import "plugin.css";
-@import "linkbutton_grid.css";
+@import "grid.css";
+@import "header.css";
+@import "footer.css";
+@import "media.css";
 @import "rating_text.css";
+@import "h2icon.css";
+@import "linkbutton_grid.css";
+@import "blocks.css";
+@import "main_grid.css";
 
-body {
-    height: 100vh;
+body{
+    margin: 0;
+    background: #f9fff6;
+    transition: .5s;
 }
 
-@media screen and (min-width: 800px){
-  .centering{
-    display: inline-block;
-    text-align: left;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-}
-@media screen and (max-width: 800px){
-  .centering{
-    display: inline-block;
-    text-align: left;
-  }
-}
-@media screen and (max-width: 400px){
-  .centering{
-    display: inline-block;
-    text-align: left;
-    padding:1em;
-  }
+@media (prefers-color-scheme: dark){
+    body {
+        background: #061300;
+        color: white;
+    }
+    a:link:not(.linkButton) {
+        color: aquamarine;
+    }
+    a:visited:not(.linkButton) {
+        color: plum;
+    }
 }
 
-@media screen and (min-width: 400px){
-}
-@media screen and (max-width: 400px){
-  table, tr, td, th{
-    display: block;
-  }
-
-  tr{
-    margin: 1em;
-  }
-}
-
-
-
-pre.aa {
-  font-size: 18px;
-  line-height: 1;
-  margin-left: 15px;
-  font-weight: bold;
-}
