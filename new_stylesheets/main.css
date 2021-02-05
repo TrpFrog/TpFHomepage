@@ -2,9 +2,9 @@
 @import "header.css";
 @import "footer.css";
 @import "media.css";
-@import "../stylesheets/rating_text.css";
+@import "rating_text.css";
 @import "h2icon.css";
-@import "../stylesheets/linkbutton_grid.css";
+@import "linkbutton_grid.css";
 @import "blocks.css";
 @import "main_grid.css";
 
