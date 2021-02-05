@@ -2,7 +2,7 @@
 @import "header.css";
 @import "footer.css";
 @import "h2icon.css";
-@import "../stylesheets/linkbutton_grid.css";
+@import "linkbutton_grid.css";
 
 body{
     margin: 0;
