@@ -51,6 +51,7 @@ function buildHamburger() {
                     <a href="`+ homedir +`works/index.html"><div class="sidemenu_link">Works     </div></a>
                     <a href="`+ homedir +`download/index.html"><div class="sidemenu_link">Download  </div></a>
                     <a href="`+ homedir +`iconmaker/index.html"><div class="sidemenu_link">Icon Maker</div></a>
+                    <a href="`+ homedir +`walking/index.html"><div class="sidemenu_link">Walking</div></a>
                 </div>
             </aside>
         </section>

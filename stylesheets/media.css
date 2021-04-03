@@ -42,10 +42,39 @@
         border-radius: 10px;
         width:50%;
     }
+    .curved_image {
+        display: inline-block;
+        border-radius: 10px;
+        padding: 5px;
+    }
 }
 @media screen and (max-width: 500px) {
     .thumbnail{
         border-radius: 10px;
         width:100%;
     }
+    .curved_image {
+        display: inline-block;
+        border-radius: 5px;
+        padding: 0.5px;
+    }
 }
+
+.horizontal_photo_2 {
+    display: inline-block;
+    border-radius: 10px;
+    width:49%;
+}
+
+.horizontal_photo_3 {
+    display: inline-block;
+    border-radius: 10px;
+    width:33%;
+}
+
+.horizontal_photo_4 {
+    display: inline-block;
+    border-radius: 10px;
+    width:24%;
+}
+
