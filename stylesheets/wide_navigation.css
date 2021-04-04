@@ -3,6 +3,12 @@
     text-align: center;
 }
 
+@media (prefers-color-scheme: dark){
+    #wide_nav {
+        background: #2d4b11d3;
+    }
+}
+
 #wide_nav_wrapper {
     height: 1em;
 }
@@ -12,5 +18,9 @@
     font-family: 'Comfortaa', cursive;
     text-decoration: none;
     color: white;
-    margin: 1em;
+    padding: 1em;
+}
+
+#wide_nav a:hover {
+    color: #90e200;
 }
