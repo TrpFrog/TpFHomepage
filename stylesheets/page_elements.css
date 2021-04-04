@@ -1,6 +1,7 @@
-@import "../stylesheets/header.css";
-@import "../stylesheets/footer.css";
-@import "../stylesheets/wide_navigation.css";
+@import "header.css";
+@import "footer.css";
+@import "wide_navigation.css";
+@import "backtotop.css";
 
 html {
     scroll-behavior: smooth;

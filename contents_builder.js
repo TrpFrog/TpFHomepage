@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     buildWideNavigationBar();
     buildHamburger();
     buildFooter();
+    buildBackToTopButton();
     setFavicon();
 });
 
@@ -27,6 +28,7 @@ function setFavicon() {
 function fontLoader() {
     let html = `
         <link href="https://fonts.googleapis.com/css?family=Comfortaa|M+PLUS+Rounded+1c:400,800|Questrial|Noto+Sans+JP&display=swap&subset=japanese" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
     `;
     headElement.insertAdjacentHTML('beforeend', html);
 }
@@ -144,6 +146,13 @@ function buildFooter() {
     `;
     document.getElementsByTagName('footer')[0]
         .insertAdjacentHTML('beforeend', html);
+}
+
+function buildBackToTopButton() {
+    let html = `
+        <div id="page_top"><a href="#"></a></div>
+    `;
+    document.getElementsByTagName('body')[0].insertAdjacentHTML('afterbegin', html);
 }
 
 let isSideMenuOpened = false;

@@ -59,6 +59,10 @@ footer #footer_wrapper #share .shareButton{
     margin-left: 0.8em;
 }
 
+footer #footer_wrapper #share {
+    margin-right: 25px;
+}
+
 /*footer #footer_wrapper #share .shareButton:hover{*/
 /*    filter: drop-shadow(0em 0.1em 0.3em rgba(255, 255, 255, 0.74));*/
 /*}*/
