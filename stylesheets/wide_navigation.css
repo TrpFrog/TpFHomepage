@@ -1,0 +1,16 @@
+#wide_nav {
+    background: #66a928d3;
+    text-align: center;
+}
+
+#wide_nav_wrapper {
+    height: 1em;
+}
+
+#wide_nav a {
+    display: inline-block;
+    font-family: 'Comfortaa', cursive;
+    text-decoration: none;
+    color: white;
+    margin: 1em;
+}

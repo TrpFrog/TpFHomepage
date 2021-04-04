@@ -4,6 +4,7 @@ let headElement = document.getElementsByTagName('head')[0];
 document.addEventListener("DOMContentLoaded", function () {
     fontLoader();
     buildHeader();
+    buildWideNavigationBar();
     buildHamburger();
     buildFooter();
     setFavicon();
@@ -36,27 +37,44 @@ function search_tweet() {
     window.location.href = "https://twilog.org/TrpFrog/search?word=" + input_word;
 }
 
-function buildHamburger() {
-    let homedir = 'https://www.trpfrog.net/';
+function getNavLinks() {
     let html = `
-        <section id="mobile_menu"></section>
+        <a href="`+ homedir +`/index.html"><div class="sidemenu_link">Home</div></a>
+        <a href="`+ homedir +`/icon_gallery/index.html"><div class="sidemenu_link">Icon</div></a>
+        <a href="`+ homedir +`/balloon/index.html"><div class="sidemenu_link">Balloon</div></a>
+        <a href="`+ homedir +`/sticker_gallery/index.html"><div class="sidemenu_link">Sticker</div></a>
+        <a href="`+ homedir +`/works/index.html"><div class="sidemenu_link">Works</div></a>
+        <a href="`+ homedir +`/download/index.html"><div class="sidemenu_link">Download</div></a>
+        <a href="`+ homedir +`/iconmaker/index.html"><div class="sidemenu_link">Icon Maker</div></a>
+        <a href="`+ homedir +`/walking/index.html"><div class="sidemenu_link">Walking</div></a>
+    `;
+    return html;
+}
+
+function buildHamburger() {
+    let html = `
+        <section id="mobile_menu">
             <aside id="menu_background" onclick="toggleSideMenu();"></aside>
             <aside id="side_menu">
                 <div id="side_header"></div>
                 <div id="side_links">
-                    <a href="`+ homedir +`index.html"><div class="sidemenu_link">Home      </div></a>
-                    <a href="`+ homedir +`icon_gallery/index.html"><div class="sidemenu_link">Icon      </div></a>
-                    <a href="`+ homedir +`balloon/index.html"><div class="sidemenu_link">Balloon   </div></a>
-                    <a href="`+ homedir +`sticker_gallery/index.html"><div class="sidemenu_link">Sticker   </div></a>
-                    <a href="`+ homedir +`works/index.html"><div class="sidemenu_link">Works     </div></a>
-                    <a href="`+ homedir +`download/index.html"><div class="sidemenu_link">Download  </div></a>
-                    <a href="`+ homedir +`iconmaker/index.html"><div class="sidemenu_link">Icon Maker</div></a>
-                    <a href="`+ homedir +`walking/index.html"><div class="sidemenu_link">Walking</div></a>
+                    `+ getNavLinks() +`
                 </div>
             </aside>
         </section>
     `;
     document.getElementsByTagName('body')[0].insertAdjacentHTML('afterbegin', html);
+}
+
+function buildWideNavigationBar() {
+    let html = `
+        <nav id="wide_nav">
+            <div id="wide_nav_wrapper">
+                `+ getNavLinks() +`
+            </div>
+        </nav>
+    `;
+    document.getElementsByTagName('header')[0].insertAdjacentHTML('afterend', html);
 }
 
 function buildHeader() {
