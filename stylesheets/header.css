@@ -28,6 +28,10 @@ header a{
     color: white !important;
 }
 
+header a:hover {
+    color: #90e200 !important;
+}
+
 #header_wrapper{
     display: flex;
     align-items: center;
