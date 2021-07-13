@@ -33,3 +33,9 @@ h2.otaku:before{background-image: url('../images/icons/otaku.webp');}
 h2.shark:before{background-image: url('../images/icons/shark.webp');}
 h2.locked:before{background-image: url('../images/icons/locked.webp');}
 h2.hina:before{background-image: url('../images/icons/hina.webp');}
+
+h2.none::before {
+    background-image: none;
+    width: 0;
+    margin-right: 0;
+}

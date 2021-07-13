@@ -138,6 +138,7 @@ function buildFooter() {
                 ©︎ 2019-2020 つまみ
             </p>
             <p id="share">
+                <a href="https://www.trpfrog.net/legal" style="color: white">Legal</a>
                 <a href="`+ getTwitterUrl() + `"><img src="https://www.trpfrog.net/images/socialicons/twitter.svg" height="45" class="shareButton" alt="Share with Twitter"></a>
                 <a href="`+ getFacebookUrl() + `"><img src="https://www.trpfrog.net/images/socialicons/facebook.svg" height="45" class="shareButton" alt="Share with Facebook"></a>
                 <a href="`+ getLineUrl() + `"><img src="https://www.trpfrog.net/images/socialicons/line.svg" height="45" class="shareButton" alt="Share with LINE"></a>
