@@ -109,28 +109,6 @@ function buildHeader() {
         .insertAdjacentHTML('afterbegin', html);
 }
 
-function buildAprilHeader() {
-    let html = `
-        <div id="header_wrapper">
-            <h1>`+ getName(3) + `ネット</h1>
-            <div id="tweet_search">
-                <form onsubmit="search_tweet();return false;">
-                    <input type="text" placeholder="過去ツイサーチ" id="tweet_search_box">
-                    <input type="submit" value="検索" class="twibutton">
-                </form>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="https://www.trpfrog.net/index.html" class="headerButton">home</a></li>
-                    <li><a href="https://www.trpfrog.net/icon_gallery/index.html" class="headerButton">icons</a></li>
-                    <li><a href="https://www.trpfrog.net/works/index.html" class="headerButton">works</a></li>
-                </ul>
-            </nav>
-        </div>
-    `;
-    document.write(html);
-}
-
 function buildFooter() {
     let html = `
         <div id="footer_wrapper">
