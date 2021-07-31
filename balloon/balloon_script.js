@@ -17,7 +17,7 @@ function buildSoundButton() {
     } else {
         html = '<a href=\"' + b_homedir + '/balloon/index.html?enable_breaking_sound\" class=\"linkButton\">音を鳴らす</a>';
     }
-    document.write(html);
+    document.getElementById('title').innerHTML += html;
 }
 
 function setHomedir(newhomedir) {
