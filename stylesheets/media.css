@@ -6,7 +6,7 @@
     overflow: hidden;
 }
 
-.youtube-outer iframe {
+.youtube-outer lite-youtube {
     position: absolute;
     top: 0;
     left: 0;

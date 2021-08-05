@@ -1,0 +1,3 @@
+[submodule "library/lite-youtube-embed"]
+	path = library/lite-youtube-embed
+	url = https://github.com/paulirish/lite-youtube-embed.git
