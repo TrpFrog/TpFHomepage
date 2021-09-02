@@ -26,11 +26,25 @@ function setFavicon() {
 }
 
 function fontLoader() {
-    let html = `
-        <link href="https://fonts.googleapis.com/css?family=Comfortaa|M+PLUS+Rounded+1c:400,800|Questrial|Noto+Sans+JP&display=swap&subset=japanese" rel="stylesheet">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
-    `;
-    headElement.insertAdjacentHTML('beforeend', html);
+    WebFontConfig = {
+        google: {
+            families: ['Comfortaa', 'M+PLUS+Rounded+1c:400,800', 'Questrial', 'Noto+Sans+JP']
+        },
+        custom: {
+            families: ['Font Awesome\ 5 Icons:400,900', 'Font Awesome\ 5 Brands:400'],
+            urls: ['https://use.fontawesome.com/releases/v5.6.4/css/all.css']
+        },
+        active: function() {
+            sessionStorage.fonts = true;
+        }
+    };
+      
+    (function(d) {
+        var wf = d.createElement('script'), s = d.scripts[0];
+        wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
+        wf.async = true;
+        s.parentNode.insertBefore(wf, s);
+    })(document);
 }
 
 function search_tweet() {
