@@ -1,7 +1,6 @@
 #!/bin/sh
 
-echo 'python-3.7.2' > runtime.txt
-pip install markdown
-pip install beautifulsoup4
 cd notes
-python notes_builder.py
+/opt/buildhome/python3.7/bin/python3.7 -m pip install markdown
+/opt/buildhome/python3.7/bin/python3.7 -m pip install beautifulsoup4
+/opt/buildhome/python3.7/bin/python3.7 notes_builder.py
