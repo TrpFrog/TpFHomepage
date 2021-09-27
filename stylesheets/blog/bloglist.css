@@ -3,7 +3,11 @@ main h2 {
 }
 
 main h2 a {
-    color: #000;
+    color: rgb(14, 51, 0);
+}
+
+main h2 a:hover {
+    color: #67a300;
 }
 
 .item-label {

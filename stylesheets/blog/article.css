@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    background: #f9fff6;
+    text-align: center;
+}
+
+h2 {
+    display: block;
+    margin-top: 2em !important;
+}
+
+#main_wrapper {
+    max-width: 1000px;
+}
+
+h2.trpfrog::before {
+    background-image: none;
+    width: 0;
+    margin-right: 0;
+}
+
+p.images {
+    text-align: center;
+}
+
+@media screen and (min-width:800px) {
+    .main_window {
+        font-size: 1.12em;
+    }
+    .main_window img {
+        border-radius: 15px;
+        width: 80%;
+        margin: 1em 10%;
+    }
+}
+@media screen and (max-width:800px) {
+    img {
+        border-radius: 10px;
+        width: 100%;
+        margin: 0.5em 0;
+    }
+}
+
+
+h2::before {
+    background-image: none !important;
+    width: 0 !important;
+    margin-right: 0 !important;
+}

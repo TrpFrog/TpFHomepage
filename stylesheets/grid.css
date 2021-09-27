@@ -20,15 +20,7 @@
 
 main {
     grid-area: m;
-    font-family: system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Helvetica Neue",
-    "Hiragino Sans",
-    Meiryo,
-    "メイリオ",
-    "Arial",
-    sans-serif;
+    font-family: "Noto Sans";
     padding: 1em;
     text-align: left;
 }

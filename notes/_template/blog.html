@@ -15,49 +15,16 @@
             @import "../../stylesheets/linkbutton_grid.css";
             @import "../../stylesheets/media.css";
             @import "../../stylesheets/blog/blogtag.css";
-    
-            body {
-                margin: 0;
-                background: #f9fff6;
-                text-align: center;
-            }
-    
-            h3 {
-                margin-top: 2em;
-            }
-    
-            #main_wrapper {
-                max-width: 1000px;
-            }
-    
-            h2.trpfrog::before {
-                background-image: none;
-                width: 0;
-                margin-right: 0;
-            }
-    
-            p.images {
-                text-align: center;
-            }
-    
-            img {
-                max-width: 90%;
-            }
-    
-            h2::before {
-                background-image: none !important;
-                width: 0 !important;
-                margin-right: 0 !important;
-            }
+            @import "../../stylesheets/blog/article.css";
         </style>
         <!---------------->
         <meta charset="utf-8">
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:site" content="@TrpFrog">
         <meta property="og:url" content="https://www.trpfrog.net">
-        <meta property="og:title" content="つまみネット">
-        <meta property="og:description" content="さかなになりたいね">
-        <meta property="og:image" content="https://www.trpfrog.net/images/TwitterCard.png">
+        <meta property="og:title" content="雑記「$(title)」 - つまみネット">
+        <meta property="og:description" content="$(description)</>">
+        <meta property="og:image" content="https://www.trpfrog.net/notes/$(folder_name)/thumbnail.webp">
         <title>雑記「$(title)」 - つまみネット</title>
     </head>
     
@@ -69,7 +36,8 @@
                     <div id="title">
                         <h1>$(title)</h1>
                         <p>
-                            $(written_date) (更新: $(last_modified)) <br>
+                            <span style="display: inline-block;">$(written_date)</span>
+                            <span style="display: inline-block;">(更新: $(last_modified))</span><br>
                             <b>Tags: </b> $(tags)
                         </p>
                         <p>

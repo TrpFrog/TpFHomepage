@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import os
+import shutil
 import markdown
 from datetime import datetime
 from bs4 import BeautifulSoup
@@ -32,6 +33,7 @@ def build_toppage():
     for folder in os.listdir('.'):
         if os.path.isfile(folder) or folder.startswith('_'):
             continue
+
         title, description, tags, written_on, last_modified = read_info(folder) 
 
         fragment = list_fragment
@@ -84,14 +86,20 @@ def build_toppage():
         f.write(list_template.replace('$(content)', html).replace('$(tags)', tag_list_html))
 
 
-def build_blogpage(md: markdown.Markdown, file_name: str):
+def build_blogpage(md: markdown.Markdown, folder_name: str):
     html = blog_template
-    with open(f'{file_name}/index.html', 'w') as f:
-        title, description, tags, written_on, last_modified = read_info(file_name) 
+
+    if not os.path.exists(f'./{folder_name}/thumbnail.webp'):
+        shutil.copyfile("./default_thumbnail.webp", f"./{folder_name}/thumbnail.webp")
+
+    with open(f'{folder_name}/index.html', 'w') as f:
+        title, description, tags, written_on, last_modified = read_info(folder_name) 
 
         # Date
         html = html.replace('$(written_date)', datetime.strftime(written_on, '%Y年%m月%d日'))  
         html = html.replace('$(last_modified)', datetime.strftime(last_modified, '%Y年%m月%d日'))
+
+        html = html.replace('$(folder_name)', folder_name)
 
         # Tags
         tag_str = ''
@@ -100,7 +108,7 @@ def build_blogpage(md: markdown.Markdown, file_name: str):
         html = html.replace('$(tags)', tag_str)
 
         # Contents
-        with open(f'{file_name}/index.md', 'r') as f_md:
+        with open(f'{folder_name}/index.md', 'r') as f_md:
             content = md.convert(f_md.read())
             soup = BeautifulSoup(content, "html.parser")
             content = '\n'.join(content.split('\n')[1:])
