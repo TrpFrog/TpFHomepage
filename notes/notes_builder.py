@@ -88,13 +88,25 @@ def make_toppage():
 def make_blogpage(md: markdown.Markdown, file_name: str):
     html = blog_template
     with open(f'{file_name}/index.html', 'w') as f:
+        title, description, tags, written_on, last_modified = read_info(file_name) 
+
+        # Date
+        html = html.replace('$(written_date)', datetime.strftime(written_on, '%Y年%m月%d日'))  
+        html = html.replace('$(last_modified)', datetime.strftime(last_modified, '%Y年%m月%d日'))
+
+        # Tags
+        tag_str = ''
+        for t in tags:
+            tag_str += f'<span class="article_tag">{t}</span>'
+        html = html.replace('$(tags)', tag_str)
+
+        # Contents
         with open(f'{file_name}/index.md', 'r') as f_md:
             content = md.convert(f_md.read())
             soup = BeautifulSoup(content, "html.parser")
             content = '\n'.join(content.split('\n')[1:])
             
             html = html.replace('$(title)', soup.find('h1').text)
-            html = html.replace('$(description)', '')
             html = html.replace('$(content)', content)
             
             f.write(html)
