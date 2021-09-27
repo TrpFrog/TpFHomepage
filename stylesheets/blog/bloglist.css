@@ -1,27 +1,5 @@
-main table {
-    width: 100%;
-}
-
-main tbody {
-    width: 100%;
-}
-
-main tr {
-    display: block;
-    border-radius: 10px;
-    background-color: #fff;
-    padding: 10px;
-    list-style-type: none;
-    margin: 10px 0;
-}
-
-main tr td {
-    width: 100%;
-}
-
 main h2 {
     display: block;
-    font-size: 30px;
 }
 
 main h2 a {
