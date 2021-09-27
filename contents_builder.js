@@ -1,4 +1,4 @@
-let homedir = "https://www.trpfrog.net";
+let homedir = "https://trpfrog.net";
 let headElement = document.getElementsByTagName('head')[0];
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -56,6 +56,7 @@ function search_tweet() {
 function getNavLinks() {
     let html = `
         <a href="`+ homedir +`/index.html"><div class="sidemenu_link">Home</div></a>
+        <a href="`+ homedir +`/notes/index.html"><div class="sidemenu_link">Notes</div></a>
         <a href="`+ homedir +`/icon_gallery/index.html"><div class="sidemenu_link">Icon</div></a>
         <a href="`+ homedir +`/balloon/index.html"><div class="sidemenu_link">Balloon</div></a>
         <a href="`+ homedir +`/sticker_gallery/index.html"><div class="sidemenu_link">Sticker</div></a>

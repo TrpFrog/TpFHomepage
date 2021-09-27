@@ -3,6 +3,10 @@
 @import "wide_navigation.css";
 @import "backtotop.css";
 
+:root {
+    --window-bkg-color: rgba(159, 212, 51, 0.2);
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -55,7 +59,7 @@ body {
 
 @media screen and (max-width:800px){
     #title h1{
-        font-size: 2em;
+        font-size: 1.5em;
     }
 }
 
@@ -80,7 +84,7 @@ body {
 @media screen and (min-width:800px) {
     .main_window {
         margin: 1em;
-        background-color: rgba(220, 255, 148, 0.67);
+        background-color: var(--window-bkg-color);
         padding: 40px 40px 40px 40px;
         border-radius: 33px;
         text-align: left;
@@ -88,13 +92,14 @@ body {
 }
 @media screen and (max-width:800px) {
     .main_window {
-        margin: 0.5em;
-        background-color: rgba(220, 255, 148, 0.67);
+        margin: 5px 0;
+        background-color: var(--window-bkg-color);
         border-radius: 22px;
         text-align: left;
         padding: 20px 20px 20px 20px;
     }
 }
+
 .main_window h2 {
     margin: 0;
 }
@@ -111,6 +116,6 @@ body {
         color: plum;
     }
     .main_window {
-        background-color: rgba(50, 75, 0, 0.67);
+        background-color: var(--window-bkg-color);
     }
 }

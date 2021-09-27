@@ -1,0 +1,14 @@
+# Title
+メモ帳みたいなページを作った
+
+# Written on
+2021-9-27
+
+# Last updated on
+2021-9-27
+
+# Tags
+技術, つまみネット
+
+# Description
+Pythonで作る静的サイトジェネレータ

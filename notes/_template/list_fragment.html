@@ -1,0 +1,21 @@
+<div class="main_window blog_window $(tag_classes)">
+    <h2 class="$(icon)">
+        <a href="./$(folder_name)/index.html">$(title)</a> 
+        <script>
+            if(new Date().getTime() - $(written_unixtime) < 1000 * 60 * 60 * 24 * 7) {
+                document.write('<span class="item-label">NEW</span>');
+            } else if(new Date().getTime() - $(last_modified_unixtime) < 1000 * 60 * 60 * 24 * 7) {
+                document.write('<span class="item-label">UPDATED</span>');
+            }
+        </script>
+    </h2>
+    <p>
+        <b>$(written_date) (更新: $(last_modified))</b>
+    </p>
+    <p>
+        $(tags)
+    </p>
+    <p>
+        $(description)
+    </p>
+</div>
