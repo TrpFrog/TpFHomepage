@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 import os
 import markdown
-import random
 from datetime import datetime
 from bs4 import BeautifulSoup
 
@@ -26,7 +25,7 @@ def read_info(folder_name: str):
     return title, description, tags, written_on, last_modified
 
 
-def make_toppage():
+def build_toppage():
     fragments = []
     all_tags_set = set()
 
@@ -85,7 +84,7 @@ def make_toppage():
         f.write(list_template.replace('$(content)', html).replace('$(tags)', tag_list_html))
 
 
-def make_blogpage(md: markdown.Markdown, file_name: str):
+def build_blogpage(md: markdown.Markdown, file_name: str):
     html = blog_template
     with open(f'{file_name}/index.html', 'w') as f:
         title, description, tags, written_on, last_modified = read_info(file_name) 
@@ -125,8 +124,8 @@ if __name__ == '__main__':
     with open('./_template/list_fragment.html') as f:
         list_fragment = f.read()
     
-    make_toppage()
+    build_toppage()
     for folder in folders:
         if os.path.isfile(folder) or folder.startswith('_'):
             continue
-        make_blogpage(md, folder)
+        build_blogpage(md, folder)
