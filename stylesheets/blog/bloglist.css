@@ -36,6 +36,8 @@ main h2 a {
     font-weight: bold;
     color: white; 
     text-shadow: none;
-    background-color: #66a928;
+    background-color: #96e410;
     border-radius: 10px;
+    user-select: none;
 }
+

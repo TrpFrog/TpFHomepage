@@ -21,39 +21,68 @@ def read_info(folder_name: str):
         title = l[0].strip()
         written_on = datetime.strptime(l[1].strip(), '%Y-%m-%d')
         last_modified = datetime.strptime(l[2].strip(), '%Y-%m-%d')
-        description = '\n'.join(l[3:]).strip()
-    return title, description, written_on, last_modified
+        tags = list(map(lambda s: s.strip().replace(' ', ''), l[3].split(',')))
+        description = '\n'.join(l[4:]).strip()
+    return title, description, tags, written_on, last_modified
 
 
 def make_toppage():
     fragments = []
+    all_tags_set = set()
 
     for folder in os.listdir('.'):
         if os.path.isfile(folder) or folder.startswith('_'):
             continue
-        title, description, written_on, last_modified = read_info(folder) 
+        title, description, tags, written_on, last_modified = read_info(folder) 
+
         fragment = list_fragment
         fragment = fragment.replace('$(icon)', 'trpfrog')
 
+        # Date
         fragment = fragment.replace('$(written_date)', datetime.strftime(written_on, '%Y年%m月%d日'))  
         fragment = fragment.replace('$(last_modified)', datetime.strftime(last_modified, '%Y年%m月%d日'))
         fragment = fragment.replace('$(written_unixtime)', datetime.strftime(written_on, '%s000'))  
         fragment = fragment.replace('$(last_modified_unixtime)', datetime.strftime(last_modified, '%s000'))
 
+        # Tags
+        tag_str = ''
+        tag_classes_str = ''
+        for t in tags:
+            all_tags_set.add(t)
+            tag_str += f'<span class="article_tag">{t}</span>'
+            tag_classes_str += 'tag_' + t + ' '
+        fragment = fragment.replace('$(tags)', tag_str)
+        fragment = fragment.replace('$(tag_classes)', tag_classes_str[:-1])
+
+        # Title link
         fragment = fragment.replace('$(folder_name)', folder)
         fragment = fragment.replace('$(title)', title)
+
+        # Description
+        if description == 'none': description = ''
         fragment = fragment.replace('$(description)', description)
 
         fragments.append((written_on, fragment))
 
     fragments.sort(key=lambda x: x[0], reverse=True)
 
+
+    tag_list_html = ''
+
+    all_tags = []
+    for t in all_tags_set:
+        all_tags.append(t)
+    all_tags.sort()
+
+    for t in all_tags:
+        tag_list_html += f'<span class="tag_button tag_btn_{t}" onclick="showTag(\'{t}\')">{t}</span>'
+    
     html = ''
     for written_on, fragment in fragments:
         html += fragment + '\n'
         
     with open('index.html', 'w') as f:
-        f.write(list_template.replace('$(content)', html))
+        f.write(list_template.replace('$(content)', html).replace('$(tags)', tag_list_html))
 
 
 def make_blogpage(md: markdown.Markdown, file_name: str):

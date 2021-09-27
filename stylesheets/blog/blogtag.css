@@ -1,0 +1,26 @@
+:root {
+    --tag-button-active: #66a928;
+    --tag-button-disabled: rgb(184, 192, 170);
+}
+
+.article_tag {
+    display: inline-block;
+    margin-right: 2px;
+    font-size: 0.8em;
+    padding: 0.2em 5px;
+    border-radius: 5px;
+    background-color: var(--tag-button-active);
+    color: white; 
+    font-weight: bold;
+}
+
+.tag_button {
+    display: inline-block;
+    margin-right: 5px;
+    padding: 0.2em 0.5em;
+    border-radius: 5px;
+    background-color: var(--tag-button-active);
+    color: white; 
+    font-weight: bold;
+    user-select: none;
+}
