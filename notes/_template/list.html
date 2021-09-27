@@ -14,6 +14,7 @@
             @import "../stylesheets/page_elements.css";
             @import "../stylesheets/linkbutton_grid.css";
             @import "../stylesheets/media.css";
+            @import "../stylesheets/bloglist.css";
     
             body {
                 margin: 0;
@@ -29,24 +30,12 @@
                 max-width: 1000px;
             }
     
-            h2.trpfrog::before {
-                background-image: none;
-                width: 0;
-                margin-right: 0;
-            }
-    
             p.images {
                 text-align: center;
             }
     
             img {
                 max-width: 90%;
-            }
-    
-            h2::before {
-                background-image: none !important;
-                width: 0 !important;
-                margin-right: 0 !important;
             }
         </style>
         <!---------------->
@@ -71,9 +60,7 @@
                             ブログに書くほどでもないやつ
                         </p>
                     </div>
-                    <div class="main_window">
-                        $(content)
-                    </div>
+                    $(content)
                 </div>
             </main>
             <footer></footer>
