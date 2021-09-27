@@ -100,6 +100,7 @@ def build_blogpage(md: markdown.Markdown, folder_name: str):
         html = html.replace('$(last_modified)', datetime.strftime(last_modified, '%Y年%m月%d日'))
 
         html = html.replace('$(folder_name)', folder_name)
+        html = html.replace('$(description)', description)
 
         # Tags
         tag_str = ''
