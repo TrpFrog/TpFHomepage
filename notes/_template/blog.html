@@ -41,7 +41,11 @@
                             <b>Tags: </b> $(tags)
                         </p>
                         <p>
-                            <a href="../index.html" class="linkButton" style="margin: 5px">記事一覧</a>
+                            <a href="../index.html" class="linkButton" style="margin: 5px; width: 7em;">記事一覧</a>
+                            <script>
+                                let link = '<a href="' + getTwitterUrl() + '" class="linkButton" style="margin: 5px">記事をツイート</a>';
+                                document.write(link);
+                            </script>
                         </p>
                     </div>
                     <div class="main_window">
