@@ -92,7 +92,7 @@ body {
 }
 @media screen and (max-width:800px) {
     .main_window {
-        margin: 0em;
+        margin: 5px 0;
         background-color: var(--window-bkg-color);
         border-radius: 22px;
         text-align: left;
