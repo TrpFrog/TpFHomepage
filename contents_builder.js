@@ -128,7 +128,7 @@ function buildFooter() {
     let html = `
         <div id="footer_wrapper">
             <p id="copyright">
-                ©︎ 2019-2020 つまみ
+                ©︎ 2019-2021 つまみ
             </p>
             <p id="share">
                 <a href="https://trpfrog.net/legal" style="color: white">Legal</a>
