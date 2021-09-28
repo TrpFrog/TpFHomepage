@@ -23,9 +23,13 @@ p.images {
     text-align: center;
 }
 
+main li {
+    margin: 7px 0;
+}
+
 @media screen and (min-width:800px) {
     .main_window {
-        font-size: 1.12em;
+        font-size: 1.08em;
     }
     .main_window img {
         border-radius: 15px;

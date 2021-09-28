@@ -28,7 +28,7 @@ function setFavicon() {
 function fontLoader() {
     WebFontConfig = {
         google: {
-            families: ['Comfortaa', 'M+PLUS+Rounded+1c:400,800', 'Questrial', 'Noto+Sans+JP']
+            families: ['Comfortaa', 'M+PLUS+Rounded+1c:400,800', 'Questrial', 'Noto+Sans+JP:400,900']
         },
         custom: {
             families: ['Font Awesome\ 5 Icons:400,900', 'Font Awesome\ 5 Brands:400'],
