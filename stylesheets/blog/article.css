@@ -31,7 +31,7 @@ p.images {
     }
 }
 @media screen and (max-width:800px) {
-    img {
+    .main_window img {
         border-radius: 10px;
         width: 100%;
         margin: 0.5em 0;
