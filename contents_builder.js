@@ -97,7 +97,7 @@ function buildWideNavigationBar() {
 function buildHeader() {
     let html = `
         <div id="header_wrapper">
-                <h1><a href="https://www.trpfrog.net">つまみネット</a></h1>
+                <h1><a href="https://trpfrog.net">つまみネット</a></h1>
                 <div id="tweet_search">
                     <form onsubmit="search_tweet();return false;">
                         <input type="text" placeholder="過去ツイサーチ" id="tweet_search_box">
@@ -106,8 +106,8 @@ function buildHeader() {
                 </div>
                 <nav>
                     <ul>
-                        <li><a href="https://www.trpfrog.net/index.html" class="headerButton">home</a></li>
-                        <li><a href="https://www.trpfrog.net/icon_gallery/index.html" class="headerButton">icons</a></li>
+                        <li><a href="https://trpfrog.net/index.html" class="headerButton">home</a></li>
+                        <li><a href="https://trpfrog.net/icon_gallery/index.html" class="headerButton">icons</a></li>
                         <li><a href="https://trpfrog.hateblo.jp" class="headerButton">blog</a></li>
                     </ul>
                 </nav>
@@ -131,10 +131,10 @@ function buildFooter() {
                 ©︎ 2019-2020 つまみ
             </p>
             <p id="share">
-                <a href="https://www.trpfrog.net/legal" style="color: white">Legal</a>
-                <a href="`+ getTwitterUrl() + `"><img src="https://www.trpfrog.net/images/socialicons/twitter.svg" height="45" class="shareButton" alt="Share with Twitter"></a>
-                <a href="`+ getFacebookUrl() + `"><img src="https://www.trpfrog.net/images/socialicons/facebook.svg" height="45" class="shareButton" alt="Share with Facebook"></a>
-                <a href="`+ getLineUrl() + `"><img src="https://www.trpfrog.net/images/socialicons/line.svg" height="45" class="shareButton" alt="Share with LINE"></a>
+                <a href="https://trpfrog.net/legal" style="color: white">Legal</a>
+                <a href="`+ getTwitterUrl() + `"><img src="https://trpfrog.net/images/socialicons/twitter.svg" height="45" class="shareButton" alt="Share with Twitter"></a>
+                <a href="`+ getFacebookUrl() + `"><img src="https://trpfrog.net/images/socialicons/facebook.svg" height="45" class="shareButton" alt="Share with Facebook"></a>
+                <a href="`+ getLineUrl() + `"><img src="https://trpfrog.net/images/socialicons/line.svg" height="45" class="shareButton" alt="Share with LINE"></a>
             </p>
         </div>
     `;
