@@ -60,7 +60,6 @@ function getNavLinks() {
         <a href="`+ homedir +`/icon_gallery/index.html"><div class="sidemenu_link">Icon</div></a>
         <a href="`+ homedir +`/balloon/index.html"><div class="sidemenu_link">Balloon</div></a>
         <a href="`+ homedir +`/sticker_gallery/index.html"><div class="sidemenu_link">Sticker</div></a>
-        <a href="`+ homedir +`/works/index.html"><div class="sidemenu_link">Works</div></a>
         <a href="`+ homedir +`/download/index.html"><div class="sidemenu_link">Download</div></a>
         <a href="`+ homedir +`/iconmaker/index.html"><div class="sidemenu_link">Icon Maker</div></a>
         <a href="`+ homedir +`/walking/index.html"><div class="sidemenu_link">Walking</div></a>
