@@ -11,6 +11,7 @@
     display: inline-block;
     margin-bottom: 8px;
     margin-right: 2em;
+    line-height: 1.5;
     text-decoration: none; /*リンクの下線を消す*/
     width:160px;
     height: 14px;
