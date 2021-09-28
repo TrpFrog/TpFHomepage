@@ -1,5 +1,5 @@
-@import "about_me.css";
-@import "main_grid_sp.css";
+@import "toppage/about_me.css";
+@import "toppage/main_grid_sp.css";
 
 .main_window {
     background-color: rgba(220, 255, 148, 0.67);

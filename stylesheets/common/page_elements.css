@@ -1,6 +1,6 @@
 @import "header.css";
 @import "footer.css";
-@import "wide_navigation.css";
+@import "common/wide_navigation.css";
 @import "backtotop.css";
 
 :root {
