@@ -23,6 +23,8 @@ main {
     font-family: "Noto Sans JP";
     padding: 1em;
     text-align: left;
+    line-height: 1.8;
+    letter-spacing: 0.5px;
 }
 
 #wide_nav {
