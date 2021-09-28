@@ -7,7 +7,7 @@ if (urlpara == "?enable_breaking_sound") {
 }
 let audio = document.getElementById('sound');
 let balloons = 0;
-let b_homedir = 'https://www.trpfrog.net';
+let b_homedir = 'https://trpfrog.net';
 let b_width = 50;
 
 function buildSoundButton() {
