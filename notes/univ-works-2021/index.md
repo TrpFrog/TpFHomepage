@@ -7,14 +7,16 @@
 ## Space Wandering
 
 <style>
-    .space-wandering {
-        width: 47% !important;
-        margin: 0.5em !important;
-    }
-    .space-wandering-wrapper {
-        display: block;
-        width: 100%;
-        margin: 0;
+    @media screen and (min-width: 800px) {
+        .space-wandering {
+            width: 47% !important;
+            margin: 0.5em !important;
+        }
+        .space-wandering-wrapper {
+            display: block;
+            width: 100%;
+            margin: 0;
+        }
     }
 </style>
 <p class="space-wandering-wrapper">
