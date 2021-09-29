@@ -43,13 +43,21 @@
                         <p>
                             <a href="../index.html" class="linkButton" style="margin: 5px; width: 7em;">記事一覧</a>
                             <script>
-                                let link = '<a href="' + getTwitterUrl() + '" class="linkButton" style="margin: 5px">記事をツイート</a>';
-                                document.write(link);
+                                let tweet_link = '<a href="' + getTwitterUrl() + '" class="linkButton" style="margin: 5px">記事をツイート</a>';
+                                document.write(tweet_link);
                             </script>
                         </p>
                     </div>
                     <div class="main_window">
                         $(content)
+                    </div>
+                    <div class="main_window" style="background-color: transparent; margin: 0; padding: 0 40px;">
+                        <p>
+                            <a href="../index.html" class="linkButton" style="margin: 5px; width: 7em;">記事一覧</a>
+                            <script>
+                                document.write(tweet_link);
+                            </script>
+                        </p>
                     </div>
                 </div>
             </main>
