@@ -1,0 +1,14 @@
+# Title
+時間割作るやつを作った
+
+# Written on
+2021-9-29
+
+# Last updated on
+2021-9-29
+
+# Tags
+大学, 技術
+
+# Description
+ホームページに設定すると便利！
