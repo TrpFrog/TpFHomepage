@@ -33,7 +33,7 @@
 
     #stats {
         grid-area: stats;
-        opacity: 0;
+        display: none;
         padding: 30px 20px 20px 20px;
     }
 

@@ -17,13 +17,13 @@ function initStats() {
             localStorage.setItem(e, '0');
         }
         if (localStorage.getItem(e) == 0) {
-            document.getElementById(e + '_wrapper').style.opacity = 0;
+            document.getElementById(e + '_wrapper').style.display = 'none';
         } else {
             isAllHidden = false;
         }
     });
     if(!isAllHidden){
-        document.getElementById('stats').style.opacity = 1;
+        document.getElementById('stats').style.display = 'block';
     }
 }
 
@@ -32,8 +32,8 @@ function incrementStatNumber(property, applyToppage = true) {
     localStorage.setItem(property, n);
     if(applyToppage) {
         if (n == 1) {
-            document.getElementById('stats').style.opacity = 1;
-            document.getElementById(property + '_wrapper').style.opacity = 1;
+            document.getElementById('stats').style.display = 'block';
+            document.getElementById(property + '_wrapper').style.display = 'block';
         }
         document.getElementById(property).innerHTML = String(n);
     }
