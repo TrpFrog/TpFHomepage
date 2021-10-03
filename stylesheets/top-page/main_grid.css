@@ -12,10 +12,15 @@
     }
 }
 
+#store_links{
+    display: block;
+}
+
+#store_links .linkButton {
+    width: 100%;
+}
+
 @media screen and (min-width:800px){
-    #store_links{
-        display: block;
-    }
 
     main {
         max-height: 100%;
