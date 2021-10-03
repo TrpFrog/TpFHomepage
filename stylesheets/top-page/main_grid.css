@@ -29,7 +29,6 @@
             grid-template-areas: "about_me about_me about_me"
                                  "sticker icons icons"
                                  "sticker music music"
-                                 "iconmaker music music"
                                  "bird music music"
                                  "balloon balloon balloon"
                                  "links links music_game"
@@ -46,7 +45,6 @@
             grid-template-areas:
                     "about_me about_me"
                     "sticker links"
-                    "iconmaker links"
                     "bird links"
                     "icons icons"
                     "music music"
@@ -83,12 +81,7 @@
         grid-area: links;
         padding: 40px 40px 40px 40px;
     }
-
-    #iconmaker {
-        grid-area: iconmaker;
-        padding: 40px 40px 40px 40px;
-    }
-
+    
     #music {
         grid-area: music;
         padding: 40px 40px 40px 40px;
