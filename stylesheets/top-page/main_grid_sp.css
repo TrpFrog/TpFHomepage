@@ -10,7 +10,7 @@
         }
     }
 
-        main #main_wrapper {
+    main #main_wrapper {
         display: inline-grid;
         grid-template-areas: "about_me" "icons" "music" "sticker" "balloon" "links" "music_game" "bird" "stats";
         grid-template-columns: 1fr;
@@ -89,8 +89,6 @@
         grid-area: bird;
         text-align: left;
         padding: 20px 20px 20px 20px;
-        /*display: flex;*/
-        /*align-items: center;*/
         height: 190px;
     }
 
@@ -98,14 +96,6 @@
         margin: 0;
     }
 
-    /*@font-face {*/
-    /*    font-family: "Saitamaar";*/
-    /*    src: url("https://fonts-aahub.netlify.com/assets/fonts/Saitamaar/Saitamaar.woff2") format("woff2"),*/
-    /*    url("https://fonts-aahub.netlify.com/assets/fonts/Saitamaar/Saitamaar.woff") format("woff"),*/
-    /*    url("https://fonts-aahub.netlify.com/assets/fonts/Saitamaar/Saitamaar.ttf") format("ttf");*/
-    /*    font-display: swap;*/
-
-    /*}*/
     #bird .aa {
         white-space: pre;
         font-size: 65%;
