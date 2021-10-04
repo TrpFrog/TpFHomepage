@@ -1,5 +1,6 @@
 :root {
     --tag-button-active: #66a928;
+    --tag-button-hovered: #90e200;
     --tag-button-disabled: rgb(184, 192, 170);
 }
 
@@ -25,4 +26,9 @@
     color: white; 
     font-weight: bold;
     user-select: none;
+}
+
+.tag_button:hover {
+    cursor: pointer;
+    background-color: var(--tag-button-hovered);
 }
