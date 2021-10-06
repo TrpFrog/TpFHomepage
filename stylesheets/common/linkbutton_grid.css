@@ -13,11 +13,11 @@
     margin-right: 2em;
     line-height: 1.5;
     text-decoration: none; /*リンクの下線を消す*/
-    width:160px;
-    height: 14px;
+    min-width:160px;
+    height: 30px;
     font-weight:bold;
     text-align:center;
-    padding:8px 0 15px;
+    padding:8px 12px 0;
     background: #77bd36;
     cursor: pointer;
     border: 0;
