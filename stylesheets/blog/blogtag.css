@@ -8,11 +8,22 @@
     display: inline-block;
     margin-right: 5px;
     font-size: 0.8em;
-    padding: 0.2em 5px;
+    padding: 0 5px;
     border-radius: 5px;
     background-color: var(--tag-button-active);
     color: white; 
     font-weight: bold;
+}
+
+.tag-icon {
+    vertical-align: -10%;
+    color: var(--tag-button-active);
+}
+
+.tag-selector-icon {
+    font-size: 1.5em;
+    vertical-align: -10%;
+    color: var(--tag-button-active);
 }
 
 .tag_button {

@@ -1,5 +1,5 @@
 <div class="main_window blog_window $(tag_classes)">
-    <h2 class="$(icon)">
+    <h2 class="$(icon) article-title">
         <a href="./$(folder_name)/index.html">$(title)</a> 
         <script>
             if(new Date().getTime() - $(written_unixtime) < 1000 * 60 * 60 * 24 * 7) {
@@ -9,13 +9,20 @@
             }
         </script>
     </h2>
-    <p>
-        <b>$(written_date) (更新: $(last_modified))</b>
+    <p class="written-date">
+        <b>
+            $(written_date)
+            <script>
+                if('$(written_date)' !== '$(last_modified)') {
+                    document.write('<br>更新: $(last_modified)');
+                }
+            </script>
+        </b>
     </p>
     <p>
-        $(tags)
+        <i class="fas fa-tags tag-icon"></i> $(tags)
     </p>
-    <p>
+    <p class="article-description">
         $(description)
     </p>
 </div>
