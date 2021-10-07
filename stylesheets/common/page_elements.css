@@ -35,6 +35,8 @@ main {
     font-size: 3em;
     font-family: 'M PLUS Rounded 1c', sans-serif;
     margin: 20px 0px;
+    line-height: 1;
+    margin-bottom: 0;
 }
 #title{
     padding: 0 40px;
