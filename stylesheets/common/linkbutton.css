@@ -1,0 +1,49 @@
+:root {
+    --link-button-color: #77bd36;
+    --link-button-color-bottom: #558d21;
+    --link-button-color-highlighted: #90e200;
+    --link-button-font-color: white;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --link-button-color: #558d21;
+        --link-button-color-bottom: #406919;
+        --link-button-color-highlighted: #7fc900;
+    }
+}
+
+.linkButton {
+    display: inline-block;
+    height: 30px;
+    padding: 8px 12px 0;
+    cursor: pointer;
+    border: 0;
+    border-radius: 5px;
+    background: var(--link-button-color);
+    border-bottom: solid 4px var(--link-button-color-bottom);
+
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    text-align: center;
+    font-weight: bold;
+    color: var(--link-button-font-color);
+    line-height: 1.5;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    vertical-align: middle;
+
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.linkButton:hover {
+    background: var(--link-button-color-highlighted);
+}
+
+.linkButton:active {
+    -webkit-transform: translateY(1px);
+    transform: translateY(2px);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+    border-bottom: none;
+}
