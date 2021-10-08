@@ -13,25 +13,12 @@
     <script src="library/lite-youtube-embed/src/lite-yt-embed.js"></script>
 
     <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-    <style>
-        ul.rating_list li {
-            margin-bottom: 0.5em;
-        }
-
-        #links .linkButton {
-            width: 180px;
-        }
-
-        #music .linkButton {
-            width: 180px;
-        }
-    </style>
     <script>
-        onload = function() {
+        document.addEventListener("DOMContentLoaded", function() {
             initIsSupportedLocalStorage();
             initStats();
             initProfileImage();
-        }
+        });
     </script>
 
     <!-- StyleSheet -->

@@ -85,6 +85,14 @@
         grid-area: links;
         padding: 40px 40px 40px 40px;
     }
+
+    #links table {
+        border-spacing: 1em;
+    }
+
+    #links .linkButton {
+        width: 180px;
+    }
     
     #music {
         grid-area: music;

@@ -71,3 +71,8 @@
         filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.438));
     }
 }
+
+ul.rating_list li {
+    margin-bottom: 0.5em;
+}
+

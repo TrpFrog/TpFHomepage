@@ -9,7 +9,6 @@
 @import "../common/linkbutton.css";
 @import "blocks.css";
 @import "main_grid.css";
-@import "mutual_link.css";
 
 body{
     margin: 0;
