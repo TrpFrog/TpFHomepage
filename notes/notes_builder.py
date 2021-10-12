@@ -122,7 +122,7 @@ def build_blogpage(md: markdown.Markdown, folder_name: str):
 
 if __name__ == '__main__':
     folders = os.listdir('.')
-    md = markdown.Markdown()
+    md = markdown.Markdown(extensions=['fenced_code'])
     
     with open('./_template/blog.html') as f:
         blog_template = f.read()

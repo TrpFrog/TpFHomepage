@@ -44,3 +44,23 @@ h2::before {
     width: 0 !important;
     margin-right: 0 !important;
 }
+
+code {
+    background-color: #313131 !important;
+    font-family: 'Noto Sans Mono', 'Noto Sans JP';
+    font-size: 0.9em;
+}
+
+code:not(.hljs) {
+    color: white;
+    padding: 0 4px;
+    font-size: 0.8em;
+    display: inline-block;
+    border-radius: 5px;
+    vertical-align: 5%;
+}
+
+.hljs {
+    border-radius: 10px;
+    padding-left: 1.5em !important;
+}
