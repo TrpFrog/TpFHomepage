@@ -1,0 +1,14 @@
+# Title
+おうちMac+PythonでLINE botを作る
+
+# Written on
+2021-10-12
+
+# Last updated on
+2021-10-12
+
+# Tags
+技術
+
+# Description
+オウム返しするまでのメモ
