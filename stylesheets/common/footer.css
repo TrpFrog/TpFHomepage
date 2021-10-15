@@ -47,7 +47,7 @@ footer #footer_wrapper #share{
         display: none;
     }
     footer #footer_wrapper #copyright {
-        margin: 0 auto;
+        margin: 12px auto;
         font-size: 1em;
     }
 }
