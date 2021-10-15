@@ -1,23 +1,52 @@
 let balloonClicked = Array(5);
 reset();
-let breakSound = false;
-let urlParameter = location.search;
-if (urlParameter === "?enable_breaking_sound") {
-    breakSound = true;
-}
+
+const urlParameter = location.search;
+const makesBreakingSound = urlParameter === "?enable_breaking_sound";
+
 let audio = document.getElementById('sound');
 let balloons = 0;
-let b_homedir = 'https://trpfrog.net';
 let b_width = 50;
 
 function buildSoundButton() {
     let html;
-    if (breakSound) {
-        html = '<a href=\"' + b_homedir + '/balloon/index.html\" class=\"linkButton\">音を消す</a>';
+    if (makesBreakingSound) {
+        html = '<a href="/balloon/index.html" class="linkButton">音を消す</a>';
     } else {
-        html = '<a href=\"' + b_homedir + '/balloon/index.html?enable_breaking_sound\" class=\"linkButton\">音を鳴らす</a>';
+        html = '<a href="/balloon/index.html?enable_breaking_sound" class="linkButton">音を鳴らす</a>';
     }
-    document.getElementById('title').innerHTML += html;
+    document.getElementById('button-area').insertAdjacentHTML('beforeend', html);
+}
+
+function getInputNumber(id, minValue, maxValue, defaultValue, useInt) {
+    let inputBox = document.getElementById(id);
+    let val = inputBox.value;
+    if(isNaN(val)) {
+        inputBox.value = defaultValue;
+        return defaultValue;
+    } else {
+        if(useInt && !Number.isInteger(val)) {
+            val = Math.floor(val);
+            inputBox.value = val;
+        }
+        if(val < minValue) {
+            inputBox.value = minValue;
+            return minValue;
+        } else if(maxValue < val) {
+            inputBox.value = maxValue;
+            return maxValue;
+        } else {
+            return val;
+        }
+    }
+}
+
+function getInputNumberOfBalloons() {
+    return getInputNumber('number-of-balloons', 0, 10000, 100, true);
+}
+
+function getInputSizeOfBalloons() {
+    return getInputNumber('size-of-balloons', 0, 800, 50, true);
 }
 
 function setWidth(newwidth) {
@@ -37,7 +66,7 @@ function reset() {
 }
 
 function breakBalloon() {
-    if (breakSound) {
+    if (makesBreakingSound) {
         audio.load();
         audio.play();
     }
@@ -54,24 +83,24 @@ function buildBalloons() {
         let balloon = document.createElement('img');
         balloon.setAttribute('class', 'balloon');
 
-        balloon.src          = b_homedir + '/images/balloon/' + color + '/normal.png';
+        balloon.src          = '/images/balloon/' + color + '/normal.png';
         balloon.style.width  = b_width + 'px';
         balloon.style.cursor = 'crosshair';
 
         balloon.addEventListener('mouseover', function() {
             if(!balloonClicked[i]) {
-                this.src = b_homedir + '/images/balloon/' + color + '/tremble.gif';
+                this.src = '/images/balloon/' + color + '/tremble.gif';
             }
         });
 
         balloon.addEventListener('mouseout', function () {
             if (!balloonClicked[i]) {
-                this.src = b_homedir + '/images/balloon/' + color + '/normal.png';
+                this.src = '/images/balloon/' + color + '/normal.png';
             }
         });
 
         balloon.addEventListener('click', function () {
-            this.src = b_homedir + '/images/balloon/' + color + '/break.png';
+            this.src = '/images/balloon/' + color + '/break.png';
             if (!balloonClicked[i]) {
                 breakBalloon();
                 incrementStatNumber(BALLOON_BROKENS, false);
@@ -81,6 +110,13 @@ function buildBalloons() {
 
         balloon_area.appendChild(balloon);
     }
+}
+
+function regenerate() {
+    document.getElementById('balloon_area').innerHTML = '';
+    prepare(getInputNumberOfBalloons());
+    setWidth(getInputSizeOfBalloons());
+    buildBalloons();
 }
 
 function buildTopBalloons(preparedBaloons) {

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 
 <head>
     <meta charset="utf-8">
@@ -30,27 +30,37 @@
 </head>
 
 <body>
-    <div class="grid">
-        <header></header>
+<div class="grid">
+    <header></header>
 
-        <main>
-            <div id="main_wrapper">
-                <div id="title">
-                    <h1>風船コーナー</h1>
-                    <div onclick="reset()" class="linkButton"> 蘇生モード </div>
-                    <script>buildSoundButton();</script>
-                </div>
-                <div class="main_window" id="balloon_area">
-                    <script>
-                        prepare(100);
-                        buildBalloons();
-                    </script>
-                </div>
+    <main>
+        <div id="main_wrapper">
+            <div id="title">
+                <h1>風船コーナー</h1>
+                <p>
+                    <label>
+                        <input type="number" value="100" max="10000" min="0" id="number-of-balloons"> balloons
+                    </label>
+                    <label style="margin-left: 10px">
+                        <input type="number" value="50" max="800" min="0" id="size-of-balloons"> px
+                    </label>
+                </p>
+                <p id="button-area">
+                    <span onclick="regenerate()" class="linkButton">再生成</span>
+                    <span onclick="reset()" class="linkButton">蘇生モード</span>
+                </p>
+                <script>buildSoundButton();</script>
             </div>
-        </main>
+            <div class="main_window" id="balloon_area">
+                <script>
+                    regenerate();
+                </script>
+            </div>
+        </div>
+    </main>
 
-        <footer></footer>
-    </div>
+    <footer></footer>
+</div>
 
 </body>
 
