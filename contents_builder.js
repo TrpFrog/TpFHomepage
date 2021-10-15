@@ -1,4 +1,3 @@
-let homedir = "https://trpfrog.net";
 let headElement = document.getElementsByTagName('head')[0];
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -12,16 +11,17 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function setFavicon() {
-    let html = "";
-    html += '<link rel="apple-touch-icon" sizes="180x180" href="' + homedir + '/favicon/apple-touch-icon.png">';
-    html += '<link rel="icon" type="image/png" sizes="32x32" href="' + homedir + '/favicon/favicon-32x32.png">';
-    html += '<link rel="icon" type="image/png" sizes="16x16" href="' + homedir + '/favicon/favicon-16x16.png">';
-    html += '<link rel="manifest" href="' + homedir + '/favicon/site.webmanifest">';
-    html += '<link rel="mask-icon" href="' + homedir + '/favicon/safari-pinned-tab.svg" color="#90e200">';
-    html += '<link rel="shortcut icon" href="' + homedir + '/favicon/favicon.ico">';
-    html += '<meta name="msapplication-TileColor" content="#90e200">';
-    html += '<meta name="msapplication-config" content="/favicon/browserconfig.xml">';
-    html += '<meta name="theme-color" content="#66a928">';
+    let html = `
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+        <link rel="manifest" href="/favicon/site.webmanifest">
+        <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#90e200">
+        <link rel="shortcut icon" href="/favicon/favicon.ico">
+        <meta name="msapplication-TileColor" content="#90e200">
+        <meta name="msapplication-config" content="/favicon/browserconfig.xml">
+        <meta name="theme-color" content="#66a928">
+    `;
     headElement.insertAdjacentHTML('beforeend', html);
 }
 
@@ -54,17 +54,16 @@ function search_tweet() {
 }
 
 function getNavLinks() {
-    let html = `
-        <a href="`+ homedir +`/index.html"><div class="sidemenu_link">Home</div></a>
-        <a href="`+ homedir +`/notes/index.html"><div class="sidemenu_link">Notes</div></a>
-        <a href="`+ homedir +`/icon_gallery/index.html"><div class="sidemenu_link">Icon</div></a>
-        <a href="`+ homedir +`/sticker_gallery/index.html"><div class="sidemenu_link">Sticker</div></a>
-        <a href="`+ homedir +`/balloon/index.html"><div class="sidemenu_link">Balloon</div></a>
-        <a href="`+ homedir +`/download/index.html"><div class="sidemenu_link">Download</div></a>
-        <a href="`+ homedir +`/iconmaker/index.html"><div class="sidemenu_link">Icon Maker</div></a>
-        <a href="`+ homedir +`/walking/index.html"><div class="sidemenu_link">Walking</div></a>
+    return `
+        <a href="/index.html"><div class="sidemenu_link">Home</div></a>
+        <a href="/notes/index.html"><div class="sidemenu_link">Notes</div></a>
+        <a href="/icon_gallery/index.html"><div class="sidemenu_link">Icon</div></a>
+        <a href="/sticker_gallery/index.html"><div class="sidemenu_link">Sticker</div></a>
+        <a href="/balloon/index.html"><div class="sidemenu_link">Balloon</div></a>
+        <a href="/download/index.html"><div class="sidemenu_link">Download</div></a>
+        <a href="/iconmaker/index.html"><div class="sidemenu_link">Icon Maker</div></a>
+        <a href="/walking/index.html"><div class="sidemenu_link">Walking</div></a>
     `;
-    return html;
 }
 
 function buildHamburger() {
@@ -74,7 +73,7 @@ function buildHamburger() {
             <aside id="side_menu">
                 <div id="side_header"></div>
                 <div id="side_links">
-                    `+ getNavLinks() +`
+                    ${getNavLinks()}
                 </div>
             </aside>
         </section>
@@ -231,16 +230,16 @@ function getLineUrl() {
     return url;
 }
 
-var isSupportedLocalStorage;
+let isSupportedLocalStorage;
 function initIsSupportedLocalStorage() {
     isSupportedLocalStorage = storageAvailable('localStorage');
 }
 
 function storageAvailable(type) {
-    var storage;
+    let storage;
     try {
         storage = window[type];
-        var x = '__storage_test__';
+        let x = '__storage_test__';
         storage.setItem(x, x);
         storage.removeItem(x);
         return true;
