@@ -53,7 +53,7 @@ h2::before {
 
 code {
     background-color: #313131 !important;
-    font-family: 'Noto Sans Mono', 'Noto Sans JP';
+    font-family: 'Noto Sans Mono', 'Noto Sans JP', monospace;
     font-size: 0.9em;
 }
 
