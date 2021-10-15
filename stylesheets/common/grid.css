@@ -1,9 +1,35 @@
+:root {
+    --header-height: 6em;
+    --navigation-height: 1em;
+    --footer-height: 6em;
+    --main-margin: 2em;
+    --window-bkg-color: rgba(159, 212, 51, 0.2);
+}
+
+@media screen and (max-width:800px) {
+    :root {
+        --header-height: 4em;
+        --navigation-height: 0;
+        --footer-height: 3em;
+        --main-margin: 0;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 .grid {
     background: #fafff8;
     margin: 0;
     min-height: 100%;
     display: grid;
     grid-template-areas: "h" "n" "m" "f";
+    grid-template-rows:
+        var(--header-height),
+        var(--navigation-height),
+        auto,
+        var(--footer-height);
     grid-template-columns: 1fr;
     transition: .5s;
 }
@@ -20,11 +46,12 @@
 
 main {
     grid-area: m;
-    font-family: "Noto Sans JP";
-    padding: 1em;
+    font-family: "Noto Sans JP", sans-serif;
     text-align: left;
     line-height: 1.8;
     letter-spacing: 0.5px;
+    padding: 0;
+    margin: var(--main-margin);
 }
 
 #wide_nav {
@@ -35,24 +62,17 @@ main {
     max-width: 1000px;
 }
 
-@media screen and (min-width:800px) {
-    .grid{
-        grid-template-rows: 6em 3em auto 6em; /* タテ方向のセルの長さを単位[Fr](Fraction)で定める */
-    }
-
-    main{
-        margin: 2em;
-    }
+.grid{
+    grid-template-rows: 6em 3em auto 6em;
 }
+
 @media screen and (max-width:800px) {
     .grid{
         grid-template-rows: 4em 0 auto 3em; /* タテ方向のセルの長さを単位[Fr](Fraction)で定める */
     }
 
     main {
-        padding: 0;
         text-align: center;
-        margin: 0.5em;
     }
 
     #wide_nav {
@@ -63,10 +83,3 @@ main {
 .grid footer{
     grid-area: f;
 }
-/*body{*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    min-height: 6em;*/
-/*}*/
-
-

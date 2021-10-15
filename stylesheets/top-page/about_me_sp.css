@@ -3,7 +3,6 @@
         padding: 70px 50px 50px 50px;
         margin: 1em;
         grid-area: about_me;
-        background-color: rgba(220, 255, 148, 0.67);
         border-radius: 33px;
         text-align: left;
     }
@@ -66,7 +65,6 @@
         padding: 60px 20px 20px 20px;
         margin: 0.5em;
         grid-area: about_me;
-        background-color: rgba(220, 255, 148, 0.67);
         border-radius: 22px;
         text-align: center;
     }

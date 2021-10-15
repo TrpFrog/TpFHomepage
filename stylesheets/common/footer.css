@@ -11,7 +11,7 @@ footer{
     background: #163600;
     justify-content: space-between;
     width: 100%;
-    height: 6em;
+    height: var(--footer-height);
 }
 
 
@@ -32,18 +32,15 @@ footer #footer_wrapper #share{
     align-items: center;
 }
 
-@media screen and (min-width:550px){
-    footer #footer_wrapper #share{
-        display: flex;
-    }
+footer #footer_wrapper #share{
+    display: flex;
 }
-@media screen and (max-width:550px){
+
+@media screen and (max-width:800px){
     footer {
-        height: 3em;
         text-align: center;
     }
     footer #footer_wrapper {
-        height: 3em;
         text-align: center;
     }
     footer #footer_wrapper #share{
@@ -55,14 +52,10 @@ footer #footer_wrapper #share{
     }
 }
 
-footer #footer_wrapper #share .shareButton{
+footer #footer_wrapper #share .shareButton {
     margin-left: 0.8em;
 }
 
 footer #footer_wrapper #share {
     margin-right: 25px;
 }
-
-/*footer #footer_wrapper #share .shareButton:hover{*/
-/*    filter: drop-shadow(0em 0.1em 0.3em rgba(255, 255, 255, 0.74));*/
-/*}*/

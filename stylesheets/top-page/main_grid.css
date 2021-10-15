@@ -2,14 +2,8 @@
 @import "main_grid_sp.css";
 
 .main_window {
-    background-color: rgba(220, 255, 148, 0.67);
+    background-color: var(--window-bkg-color);
     transition: .5s;
-}
-
-@media (prefers-color-scheme: dark){
-    .main_window {
-        background-color: rgba(50, 75, 0, 0.67);
-    }
 }
 
 #store_links{

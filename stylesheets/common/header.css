@@ -5,7 +5,7 @@ header{
     background: #66a928d3;
     justify-content: space-between;
     width: 100%;
-    height: 6em;
+    height: var(--header-height);
     -webkit-filter: drop-shadow(0em 0.1em 0.3em rgba(0,0,0,0.4));
     filter: drop-shadow(0em 0.1em 0.3em rgba(0,0,0,0.4));
     z-index: 99;
@@ -149,11 +149,6 @@ nav li + li {
 }
 
 @media screen and (max-width:800px) {
-    header{
-        z-index: 99;
-        height: 4em;
-    }
-
     #header_wrapper nav ul{
         display: none;
     }
@@ -169,20 +164,10 @@ nav li + li {
 
     #header_wrapper h1:after {
         display: none;
-        /* content:'';
-        display: inline-block;
-        width:1.7em;
-        height:1.7em;
-        background-image: url('../images/icons/trpfrog.png');
-        background-size: contain;
-        background-repeat: no-repeat;
-        vertical-align: middle;
-        margin-left: 0.3em; */
     }
 
     #header_wrapper{
         text-align: center;
-        /* display: block; */
     }
 
     #header_wrapper h1{

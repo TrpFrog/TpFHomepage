@@ -20,14 +20,8 @@
 }
 
 #about_me {
-    background-color: rgba(220, 255, 148, 0.67);
+    background: var(--window-bkg-color);
     transition: .5s;
-}
-
-@media (prefers-color-scheme: dark){
-    #about_me {
-        background-color: rgba(50, 75, 0, 0.67);
-    }
 }
 
 @media screen and (min-width:1000px) {
