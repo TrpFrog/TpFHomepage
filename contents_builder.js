@@ -95,7 +95,7 @@ function buildWideNavigationBar() {
 function buildHeader() {
     let html = `
         <div id="header_wrapper">
-                <h1><a href="https://trpfrog.net">つまみネット</a></h1>
+                <h1><a href="/">つまみネット</a></h1>
                 <div id="tweet_search">
                     <form onsubmit="search_tweet();return false;">
                         <input type="text" placeholder="過去ツイサーチ" id="tweet_search_box">
@@ -104,8 +104,8 @@ function buildHeader() {
                 </div>
                 <nav>
                     <ul>
-                        <li><a href="https://trpfrog.net/index.html" class="headerButton">home</a></li>
-                        <li><a href="https://trpfrog.net/icon_gallery/index.html" class="headerButton">icons</a></li>
+                        <li><a href="/index.html" class="headerButton">home</a></li>
+                        <li><a href="/notes/index.html" class="headerButton">notes</a></li>
                         <li><a href="https://trpfrog.hateblo.jp" class="headerButton">blog</a></li>
                     </ul>
                 </nav>
