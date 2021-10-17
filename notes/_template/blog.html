@@ -22,8 +22,29 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/monokai-sublime.min.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
         <script>hljs.highlightAll();</script>
-
         <!---------------->
+        
+        <!--- MathJax --->
+        <script>
+        MathJax = {
+            chtml: {
+                matchFontHeight: false
+            },
+            tex: {
+              inlineMath: [['$', '$']]
+            }
+        };
+        </script>
+        <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+        </script>
+        <!--------------->
+        
+        <!--lite-youtube-->
+        <link rel="stylesheet" href="/library/lite-youtube-embed/src/lite-yt-embed.css">
+        <script src="/library/lite-youtube-embed/src/lite-yt-embed.js"></script>
+        <!---------------->
+        
         <meta charset="utf-8">
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:site" content="@TrpFrog">

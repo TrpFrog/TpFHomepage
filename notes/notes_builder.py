@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import os
+import sys
 import shutil
 import markdown
 from datetime import datetime
@@ -112,6 +113,10 @@ def build_blogpage(md: markdown.Markdown, folder_name: str):
         with open(f'{folder_name}/index.md', 'r') as f_md:
             content = md.convert(f_md.read())
             soup = BeautifulSoup(content, "html.parser")
+            for img in soup.find_all('img'):
+                img.parent['style'] = 'text-align: center;'
+            
+            content = str(soup)
             content = '\n'.join(content.split('\n')[1:])
             
             html = html.replace('$(title)', soup.find('h1').text)
@@ -132,9 +137,15 @@ if __name__ == '__main__':
 
     with open('./_template/list_fragment.html') as f:
         list_fragment = f.read()
+        
+    build_target = sys.argv
     
     build_toppage()
     for folder in folders:
         if os.path.isfile(folder) or folder.startswith('_'):
             continue
-        build_blogpage(md, folder)
+        if len(build_target) > 1:
+            if folder in build_target:
+                build_blogpage(md, folder)
+        else:
+            build_blogpage(md, folder)
