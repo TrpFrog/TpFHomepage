@@ -62,7 +62,7 @@ function getNavLinks() {
         <a href="/balloon/index.html"><div class="sidemenu_link">Balloon</div></a>
         <a href="/download/index.html"><div class="sidemenu_link">Download</div></a>
         <a href="/iconmaker/index.html"><div class="sidemenu_link">Icon Maker</div></a>
-        <a href="/walking/index.html"><div class="sidemenu_link">Environment</div></a>
+        <a href="/environment/index.html"><div class="sidemenu_link">Environment</div></a>
         <a href="/walking/index.html"><div class="sidemenu_link">Walking</div></a>
     `;
 }
