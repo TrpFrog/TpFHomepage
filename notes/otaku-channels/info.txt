@@ -1,0 +1,14 @@
+# Title
+Disnake + GitHub Actions で作るオタク鯖晒しサイト
+
+# Written on
+2021-12-16
+
+# Last updated on
+2021-12-16
+
+# Tags
+大学, 技術
+
+# Description
+変なオタク鯖のチャンネルを晒すサイトを作った

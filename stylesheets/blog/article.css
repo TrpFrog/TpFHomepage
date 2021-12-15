@@ -11,6 +11,7 @@ h2 {
 
 #main_wrapper {
     max-width: 1000px;
+    font-size: 1.1em;
 }
 
 h2.trpfrog::before {
