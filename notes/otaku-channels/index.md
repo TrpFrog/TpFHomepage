@@ -1,7 +1,5 @@
 # Disnake + GitHub Actions で作るオタク鯖晒しサイト
 
-**注意！** スマホで見ると崩れます(最悪) 今度直します……
-
 ![](thumbnail.webp)
 
 **何？これは**
