@@ -18,17 +18,16 @@
     height: 30px;
     padding: 8px 12px 0;
     cursor: pointer;
-    border: 0;
     border-radius: 5px;
     background: var(--link-button-color);
-    border-bottom: solid 4px var(--link-button-color-bottom);
+    box-shadow: 0 4px 0 var(--link-button-color-bottom);
 
     font-family: 'M PLUS Rounded 1c', sans-serif;
     text-align: center;
     font-weight: bold;
     color: var(--link-button-font-color);
     line-height: 1.5;
-    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
     text-decoration: none;
     vertical-align: middle;
 
@@ -36,10 +35,13 @@
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
+
+    margin-bottom: 6px;
+    margin-top: 2px;
 }
 
 .linkButton + .linkButton {
-    margin-left: 5px;
+    margin-left: 4px;
 }
 
 .linkButton:hover {
@@ -47,8 +49,8 @@
 }
 
 .linkButton:active {
-    -webkit-transform: translateY(1px);
+    -webkit-transform: translateY(2px);
     transform: translateY(2px);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 0 var(--link-button-color-bottom);
     border-bottom: none;
 }
