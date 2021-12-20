@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+    
+    <head>
+        <meta name="robots" content="noindex">
+        <script type="text/javascript" src="/contents_builder.js"></script>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <!-- StyleSheet -->
+        <style>
+            @import "/stylesheets/common/grid.css";
+            @import "/stylesheets/common/header.css";
+            @import "/stylesheets/common/footer.css";
+            @import "/stylesheets/common/h2icon.css";
+            @import "/stylesheets/common/page_elements.css";
+            @import "/stylesheets/common/linkbutton.css";
+            @import "/stylesheets/common/media.css";
+            @import "/stylesheets/blog/blogtag.css";
+            @import "/stylesheets/blog/article.css";
+        </style>
+        
+        <!--- Highlight.js --->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/monokai-sublime.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script>
+        <!---------------->
+        
+        <!--- MathJax --->
+        <script>
+        MathJax = {
+            chtml: {
+                matchFontHeight: false
+            },
+            tex: {
+              inlineMath: [['$', '$']]
+            }
+        };
+        </script>
+        <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+        </script>
+        <!--------------->
+        
+        <!--lite-youtube-->
+        <link rel="stylesheet" href="/library/lite-youtube-embed/src/lite-yt-embed.css">
+        <script src="/library/lite-youtube-embed/src/lite-yt-embed.js"></script>
+        <!---------------->
+        
+        <meta charset="utf-8">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@TrpFrog">
+        <meta property="og:url" content="https://trpfrog.net">
+        <meta property="og:title" content="雑記「メモ帳みたいなページを作った」 - つまみネット">
+        <meta property="og:description" content="Pythonで作る静的サイトジェネレータ</>">
+        <meta property="og:image" content="https://trpfrog.net/notes/about-notes/thumbnail.webp">
+        <title>雑記「メモ帳みたいなページを作った」 - つまみネット</title>
+    </head>
+    
+    <body>
+        <div class="grid">
+            <header></header>
+            <main>
+                <div id="main_wrapper">
+                    <div id="title">
+                        <h1>メモ帳みたいなページを作った</h1>
+                        <p>
+                            <span style="display: inline-block;">2021年09月27日</span>
+                            <span style="display: inline-block;">(更新: 2021年09月27日)</span><br>
+                            <b>Tags: </b> <span class="article_tag">技術</span><span class="article_tag">つまみネット</span>
+                        </p>
+                        <p>
+                            <a href="../index.html" class="linkButton">記事一覧</a>
+                            <script>
+                                let tweet_link = '<a href="' + getTwitterUrl() + '" class="linkButton" style="margin-left: 5px">記事をツイート</a>';
+                                document.write(tweet_link);
+                            </script>
+                            <a href="https://github.com/TrpFrog/trpfrog-net/tree/master/notes/about-notes/index.md" class="linkButton">修正を提案</a>
+                        </p>
+                    </div>
+                    <div class="main_window">
+                        <p>ここのことです。</p>
+<h2>なんで作ったの</h2>
+<p>雑な長文投げる場所が欲しかった (つまみログが巨大文章を投下する場所みたいになってしまったので)</p>
+<h2>仕組み</h2>
+<p>実はこのページ、Hugoとかみたいに <strong>Markdown</strong> 書けばOKであとは<strong>勝手にスクリプトがHTMLに変換</strong>してくれるのです！いちいち長いテンプレはっつけてページ作るのは大変ですからね。それと<strong>記事一覧ページ</strong>も吐いてくれるのでとっても便利！</p>
+<p>いや Hugo でいいじゃんとか思ったけどテンプレ作る方法を調べるのがめんどくさかった……(は？) まあ自作ならなんでも機能詰め込めますからね！<strong>ガハハ</strong></p>
+<p>「Python のスクリプトでmdファイルをHTMLに変換、自作のテンプレHTMLに貼り付ける」というのを <strong>Cloudflare Pages</strong> にやらせています。</p>
+<p style="text-align: center;"><img alt="build_config" src="build_config.webp"/></p>
+<p>ライブラリのインストールとかもやりたいのでシェルスクリプトも使います。</p>
+<p><strong>Cloudflare Pages のデフォルトが Python 2.7 なので</strong>無理やり 3.7 を呼び覚まして (本当はもっと良い方法ありそうだけど) Markdown -&gt; HTML の変換をやる Python のプログラムを動かしています。</p>
+<h2>大変だったとこ</h2>
+<p>Cloudflare Pages が新しいサービスすぎたのか、あと Python 動かしたいぜ！みたいな変な人がいない (普通はHugoとか使うので) ので3.7で動かす方法を探るのが一番大変でした。うにうに</p>
+<p style="text-align: center;"><img alt="errors" src="errors.webp"/></p>
+<p>数多の失敗</p>
+<p>あとタグ機能をつけるのがコード書くだけなんだけどなかなかめんどくさくて泣いてしまいました。頑張ったので記事一覧ページで遊んでみてね</p>
+<h2>今後の展望</h2>
+<ul>
+<li>記事一覧ページにサムネ載っけられるようにしたい</li>
+<li>コードブロックが載らないのをなんとかしたい</li>
+</ul>
+<p>おわり</p>
+                    </div>
+                    <div class="main_window" style="background-color: transparent; margin: 0; padding: 0 20px;">
+                        <p>
+                            <a href="../index.html" class="linkButton">記事一覧</a>
+                            <script>
+                                document.write(tweet_link);
+                            </script>
+                            <a href="https://github.com/TrpFrog/trpfrog-net/tree/master/notes/about-notes/index.md" class="linkButton">修正を提案</a>
+                        </p>
+                    </div>
+                </div>
+            </main>
+            <footer></footer>
+        </div>
+    </body>
+</html>

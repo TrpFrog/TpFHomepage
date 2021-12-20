@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+    <head>
+        <meta name="robots" content="noindex">
+        <script type="text/javascript" src="/contents_builder.js"></script>
+        <script type="text/javascript" src="tag_button.js"></script>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <!-- StyleSheet -->
+        <style>
+            @import "/stylesheets/common/grid.css";
+            @import "/stylesheets/common/header.css";
+            @import "/stylesheets/common/footer.css";
+            @import "/stylesheets/common/h2icon.css";
+            @import "/stylesheets/common/page_elements.css";
+            @import "/stylesheets/common/linkbutton.css";
+            @import "/stylesheets/common/media.css";
+            @import "/stylesheets/blog/bloglist.css";
+            @import "/stylesheets/blog/blogtag.css";
+    
+            body {
+                margin: 0;
+                background: #f9fff6;
+                text-align: center;
+            }
+    
+            h3 {
+                margin-top: 2em;
+            }
+    
+            #main_wrapper {
+                max-width: 1000px;
+            }
+    
+            p.images {
+                text-align: center;
+            }
+    
+            img {
+                max-width: 90%;
+            }
+        </style>
+
+        <!---------------->
+        <meta charset="utf-8">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@TrpFrog">
+        <meta property="og:url" content="https://trpfrog.net">
+        <meta property="og:title" content="つまみネット">
+        <meta property="og:description" content="さかなになりたいね">
+        <meta property="og:image" content="https://trpfrog.net/images/TwitterCard.png">
+        <title>雑記 - つまみネット</title>
+    </head>
+    
+    <body>
+        <div class="grid">
+            <header></header>
+            <main>
+                <div id="main_wrapper">
+                    <div id="title">
+                        <h1>Random notes</h1>
+                        <p>
+                            ブログに書くほどでもないやつ
+                        </p>
+                        <p>
+                            <i class="fas fa-tags tag-selector-icon"></i> <span class="tag_button tag_btn_うどん" onclick="showTag('うどん')">うどん</span><span class="tag_button tag_btn_つまみネット" onclick="showTag('つまみネット')">つまみネット</span><span class="tag_button tag_btn_オタク" onclick="showTag('オタク')">オタク</span><span class="tag_button tag_btn_大学" onclick="showTag('大学')">大学</span><span class="tag_button tag_btn_徒歩" onclick="showTag('徒歩')">徒歩</span><span class="tag_button tag_btn_技術" onclick="showTag('技術')">技術</span><span class="tag_button tag_btn_日記" onclick="showTag('日記')">日記</span><span class="tag_button tag_btn_月報" onclick="showTag('月報')">月報</span>
+                        </p>
+                    </div>
+                    <div class="main_window blog_window tag_大学 tag_技術">
+    <h2 class="trpfrog article-title">
+        <a href="./otaku-channels/index.html">Disnake + GitHub Actions で作るオタク鯖晒しサイト</a> 
+        <script>
+            const firstPublished    = 1639580400000 === 1639926000000;
+            const updatedRecently   = new Date().getTime() - 1639926000000 < 1000 * 60 * 60 * 24 * 7;
+            const publishedRecently = new Date().getTime() - 1639580400000 < 1000 * 60 * 60 * 24 * 7;
+            if(firstPublished && publishedRecently) {
+                document.write('<span class="item-label">NEW</span>');
+            } else if(updatedRecently) {
+                document.write('<span class="item-label">UPDATED</span>');
+            } 
+        </script>
+    </h2>
+    <p class="written-date">
+        <b>
+            2021年12月16日
+            <script>
+                if('2021年12月16日' !== '2021年12月20日') {
+                    document.write('<br>更新: 2021年12月20日');
+                }
+            </script>
+        </b>
+    </p>
+    <p>
+        <i class="fas fa-tags tag-icon"></i> <span class="article_tag">大学</span><span class="article_tag">技術</span>
+    </p>
+    <p class="article-description">
+        変なオタク鯖のチャンネルを晒すサイトを作った
+    </p>
+</div>
+<div class="main_window blog_window tag_日記">
+    <h2 class="trpfrog article-title">
+        <a href="./birthday-21/index.html">つまみさんの誕生日2021</a> 
+        <script>
+            const firstPublished    = 1634396400000 === 1634396400000;
+            const updatedRecently   = new Date().getTime() - 1634396400000 < 1000 * 60 * 60 * 24 * 7;
+            const publishedRecently = new Date().getTime() - 1634396400000 < 1000 * 60 * 60 * 24 * 7;
+            if(firstPublished && publishedRecently) {
+                document.write('<span class="item-label">NEW</span>');
+            } else if(updatedRecently) {
+                document.write('<span class="item-label">UPDATED</span>');
+            } 
+        </script>
+    </h2>
+    <p class="written-date">
+        <b>
+            2021年10月17日
+            <script>
+                if('2021年10月17日' !== '2021年10月17日') {
+                    document.write('<br>更新: 2021年10月17日');
+                }
+            </script>
+        </b>
+    </p>
+    <p>
+        <i class="fas fa-tags tag-icon"></i> <span class="article_tag">日記</span>
+    </p>
+    <p class="article-description">
+        誕プレ紹介記事
+    </p>
+</div>
+<div class="main_window blog_window tag_徒歩">
+    <h2 class="trpfrog article-title">
+        <a href="./yomiuri-tunnel/index.html">よみうりランドの新しいトンネルを見に行く</a> 
+        <script>
+            const firstPublished    = 1634223600000 === 1634223600000;
+            const updatedRecently   = new Date().getTime() - 1634223600000 < 1000 * 60 * 60 * 24 * 7;
+            const publishedRecently = new Date().getTime() - 1634223600000 < 1000 * 60 * 60 * 24 * 7;
+            if(firstPublished && publishedRecently) {
+                document.write('<span class="item-label">NEW</span>');
+            } else if(updatedRecently) {
+                document.write('<span class="item-label">UPDATED</span>');
+            } 
+        </script>
+    </h2>
+    <p class="written-date">
+        <b>
+            2021年10月15日
+            <script>
+                if('2021年10月15日' !== '2021年10月15日') {
+                    document.write('<br>更新: 2021年10月15日');
+                }
+            </script>
+        </b>
+    </p>
+    <p>
+        <i class="fas fa-tags tag-icon"></i> <span class="article_tag">徒歩</span>
+    </p>
+    <p class="article-description">
+        よみうりランドのありえんヘアピンカーブが消滅した代わりにトンネルができたと聞いて歩いてきました。
+    </p>
+</div>
+<div class="main_window blog_window tag_技術">
+    <h2 class="trpfrog article-title">
+        <a href="./line-bot/index.html">おうちMac+PythonでLINE botを作る</a> 
+        <script>
+            const firstPublished    = 1633964400000 === 1633964400000;
+            const updatedRecently   = new Date().getTime() - 1633964400000 < 1000 * 60 * 60 * 24 * 7;
+            const publishedRecently = new Date().getTime() - 1633964400000 < 1000 * 60 * 60 * 24 * 7;
+            if(firstPublished && publishedRecently) {
+                document.write('<span class="item-label">NEW</span>');
+            } else if(updatedRecently) {
+                document.write('<span class="item-label">UPDATED</span>');
+            } 
+        </script>
+    </h2>
+    <p class="written-date">
+        <b>
+            2021年10月12日
+            <script>
+                if('2021年10月12日' !== '2021年10月12日') {
+                    document.write('<br>更新: 2021年10月12日');
+                }
+            </script>
+        </b>
+    </p>
+    <p>
+        <i class="fas fa-tags tag-icon"></i> <span class="article_tag">技術</span>
+    </p>
+    <p class="article-description">
+        オウム返しするまでのメモ
+    </p>
+</div>
+<div class="main_window blog_window tag_月報 tag_オタク">
+    <h2 class="trpfrog article-title">
+        <a href="./report-2109/index.html">2021年9月まとめ</a> 
+        <script>
+            const firstPublished    = 1633273200000 === 1633273200000;
+            const updatedRecently   = new Date().getTime() - 1633273200000 < 1000 * 60 * 60 * 24 * 7;
+            const publishedRecently = new Date().getTime() - 1633273200000 < 1000 * 60 * 60 * 24 * 7;
+            if(firstPublished && publishedRecently) {
+                document.write('<span class="item-label">NEW</span>');
+            } else if(updatedRecently) {
+                document.write('<span class="item-label">UPDATED</span>');
+            } 
+        </script>
+    </h2>
+    <p class="written-date">
+        <b>
+            2021年10月04日
+            <script>
+                if('2021年10月04日' !== '2021年10月04日') {
+                    document.write('<br>更新: 2021年10月04日');
+                }
+            </script>
+        </b>
+    </p>
+    <p>
+        <i class="fas fa-tags tag-icon"></i> <span class="article_tag">月報</span><span class="article_tag">オタク</span>
+    </p>
+    <p class="article-description">
+        夏休みまとめ
+    </p>
+</div>
+<div class="main_window blog_window tag_大学">
+    <h2 class="trpfrog article-title">
+        <a href="./univ-works-2021/index.html">授業で作ったやつまとめ (2021)</a> 
+        <script>
+            const firstPublished    = 1632841200000 === 1632841200000;
+            const updatedRecently   = new Date().getTime() - 1632841200000 < 1000 * 60 * 60 * 24 * 7;
+            const publishedRecently = new Date().getTime() - 1632841200000 < 1000 * 60 * 60 * 24 * 7;
+            if(firstPublished && publishedRecently) {
+                document.write('<span class="item-label">NEW</span>');
+            } else if(updatedRecently) {
+                document.write('<span class="item-label">UPDATED</span>');
+            } 
+        </script>
+    </h2>
+    <p class="written-date">
+        <b>
+            2021年09月29日
+            <script>
+                if('2021年09月29日' !== '2021年09月29日') {
+                    document.write('<br>更新: 2021年09月29日');
+                }
+            </script>
+        </b>
+    </p>
+    <p>
+        <i class="fas fa-tags tag-icon"></i> <span class="article_tag">大学</span>
+    </p>
+    <p class="article-description">
+        2021年に作ったやつまとめ
+    </p>
+</div>
+<div class="main_window blog_window tag_大学 tag_技術">
+    <h2 class="trpfrog article-title">
+        <a href="./timetable-page/index.html">時間割作るやつを作った</a> 
+        <script>
+            const firstPublished    = 1632841200000 === 1632841200000;
+            const updatedRecently   = new Date().getTime() - 1632841200000 < 1000 * 60 * 60 * 24 * 7;
+            const publishedRecently = new Date().getTime() - 1632841200000 < 1000 * 60 * 60 * 24 * 7;
+            if(firstPublished && publishedRecently) {
+                document.write('<span class="item-label">NEW</span>');
+            } else if(updatedRecently) {
+                document.write('<span class="item-label">UPDATED</span>');
+            } 
+        </script>
+    </h2>
+    <p class="written-date">
+        <b>
+            2021年09月29日
+            <script>
+                if('2021年09月29日' !== '2021年09月29日') {
+                    document.write('<br>更新: 2021年09月29日');
+                }
+            </script>
+        </b>
+    </p>
+    <p>
+        <i class="fas fa-tags tag-icon"></i> <span class="article_tag">大学</span><span class="article_tag">技術</span>
+    </p>
+    <p class="article-description">
+        ホームページに設定すると便利！
+    </p>
+</div>
+<div class="main_window blog_window tag_徒歩 tag_オタク tag_うどん">
+    <h2 class="trpfrog article-title">
+        <a href="./nagayama-haruhino/index.html">永山からはるひ野まで歩いた</a> 
+        <script>
+            const firstPublished    = 1632668400000 === 1632668400000;
+            const updatedRecently   = new Date().getTime() - 1632668400000 < 1000 * 60 * 60 * 24 * 7;
+            const publishedRecently = new Date().getTime() - 1632668400000 < 1000 * 60 * 60 * 24 * 7;
+            if(firstPublished && publishedRecently) {
+                document.write('<span class="item-label">NEW</span>');
+            } else if(updatedRecently) {
+                document.write('<span class="item-label">UPDATED</span>');
+            } 
+        </script>
+    </h2>
+    <p class="written-date">
+        <b>
+            2021年09月27日
+            <script>
+                if('2021年09月27日' !== '2021年09月27日') {
+                    document.write('<br>更新: 2021年09月27日');
+                }
+            </script>
+        </b>
+    </p>
+    <p>
+        <i class="fas fa-tags tag-icon"></i> <span class="article_tag">徒歩</span><span class="article_tag">オタク</span><span class="article_tag">うどん</span>
+    </p>
+    <p class="article-description">
+        新百合ヶ丘まで歩こうとしたけど無理だった
+    </p>
+</div>
+<div class="main_window blog_window tag_技術 tag_つまみネット">
+    <h2 class="trpfrog article-title">
+        <a href="./about-notes/index.html">メモ帳みたいなページを作った</a> 
+        <script>
+            const firstPublished    = 1632668400000 === 1632668400000;
+            const updatedRecently   = new Date().getTime() - 1632668400000 < 1000 * 60 * 60 * 24 * 7;
+            const publishedRecently = new Date().getTime() - 1632668400000 < 1000 * 60 * 60 * 24 * 7;
+            if(firstPublished && publishedRecently) {
+                document.write('<span class="item-label">NEW</span>');
+            } else if(updatedRecently) {
+                document.write('<span class="item-label">UPDATED</span>');
+            } 
+        </script>
+    </h2>
+    <p class="written-date">
+        <b>
+            2021年09月27日
+            <script>
+                if('2021年09月27日' !== '2021年09月27日') {
+                    document.write('<br>更新: 2021年09月27日');
+                }
+            </script>
+        </b>
+    </p>
+    <p>
+        <i class="fas fa-tags tag-icon"></i> <span class="article_tag">技術</span><span class="article_tag">つまみネット</span>
+    </p>
+    <p class="article-description">
+        Pythonで作る静的サイトジェネレータ
+    </p>
+</div>
+<div class="main_window blog_window tag_大学">
+    <h2 class="trpfrog article-title">
+        <a href="./univ-works-2019/index.html">授業で作ったやつまとめ (2019)</a> 
+        <script>
+            const firstPublished    = 1590332400000 === 1632841200000;
+            const updatedRecently   = new Date().getTime() - 1632841200000 < 1000 * 60 * 60 * 24 * 7;
+            const publishedRecently = new Date().getTime() - 1590332400000 < 1000 * 60 * 60 * 24 * 7;
+            if(firstPublished && publishedRecently) {
+                document.write('<span class="item-label">NEW</span>');
+            } else if(updatedRecently) {
+                document.write('<span class="item-label">UPDATED</span>');
+            } 
+        </script>
+    </h2>
+    <p class="written-date">
+        <b>
+            2020年05月25日
+            <script>
+                if('2020年05月25日' !== '2021年09月29日') {
+                    document.write('<br>更新: 2021年09月29日');
+                }
+            </script>
+        </b>
+    </p>
+    <p>
+        <i class="fas fa-tags tag-icon"></i> <span class="article_tag">大学</span>
+    </p>
+    <p class="article-description">
+        Worksがしょぼすぎだったのでお引越し
+    </p>
+</div>
+
+                </div>
+            </main>
+            <footer></footer>
+        </div>
+    </body>
+
+</html>
+    

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+    
+    <head>
+        <meta name="robots" content="noindex">
+        <script type="text/javascript" src="/contents_builder.js"></script>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <!-- StyleSheet -->
+        <style>
+            @import "/stylesheets/common/grid.css";
+            @import "/stylesheets/common/header.css";
+            @import "/stylesheets/common/footer.css";
+            @import "/stylesheets/common/h2icon.css";
+            @import "/stylesheets/common/page_elements.css";
+            @import "/stylesheets/common/linkbutton.css";
+            @import "/stylesheets/common/media.css";
+            @import "/stylesheets/blog/blogtag.css";
+            @import "/stylesheets/blog/article.css";
+        </style>
+        
+        <!--- Highlight.js --->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/monokai-sublime.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script>
+        <!---------------->
+        
+        <!--- MathJax --->
+        <script>
+        MathJax = {
+            chtml: {
+                matchFontHeight: false
+            },
+            tex: {
+              inlineMath: [['$', '$']]
+            }
+        };
+        </script>
+        <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+        </script>
+        <!--------------->
+        
+        <!--lite-youtube-->
+        <link rel="stylesheet" href="/library/lite-youtube-embed/src/lite-yt-embed.css">
+        <script src="/library/lite-youtube-embed/src/lite-yt-embed.js"></script>
+        <!---------------->
+        
+        <meta charset="utf-8">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@TrpFrog">
+        <meta property="og:url" content="https://trpfrog.net">
+        <meta property="og:title" content="雑記「$(title)」 - つまみネット">
+        <meta property="og:description" content="$(description)</>">
+        <meta property="og:image" content="https://trpfrog.net/notes/$(folder_name)/thumbnail.webp">
+        <title>雑記「$(title)」 - つまみネット</title>
+    </head>
+    
+    <body>
+        <div class="grid">
+            <header></header>
+            <main>
+                <div id="main_wrapper">
+                    <div id="title">
+                        <h1>$(title)</h1>
+                        <p>
+                            <span style="display: inline-block;">$(written_date)</span>
+                            <span style="display: inline-block;">(更新: $(last_modified))</span><br>
+                            <b>Tags: </b> $(tags)
+                        </p>
+                        <p>
+                            <a href="../index.html" class="linkButton">記事一覧</a>
+                            <script>
+                                let tweet_link = '<a href="' + getTwitterUrl() + '" class="linkButton" style="margin-left: 5px">記事をツイート</a>';
+                                document.write(tweet_link);
+                            </script>
+                            <a href="https://github.com/TrpFrog/trpfrog-net/tree/master/notes/$(folder_name)/index.md" class="linkButton">修正を提案</a>
+                        </p>
+                    </div>
+                    <div class="main_window">
+                        $(content)
+                    </div>
+                    <div class="main_window" style="background-color: transparent; margin: 0; padding: 0 20px;">
+                        <p>
+                            <a href="../index.html" class="linkButton">記事一覧</a>
+                            <script>
+                                document.write(tweet_link);
+                            </script>
+                            <a href="https://github.com/TrpFrog/trpfrog-net/tree/master/notes/$(folder_name)/index.md" class="linkButton">修正を提案</a>
+                        </p>
+                    </div>
+                </div>
+            </main>
+            <footer></footer>
+        </div>
+    </body>
+</html>

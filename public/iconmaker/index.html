@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta name="robots" content="noindex">
+    <script type="text/javascript" src="../contents_builder.js"></script>
+    <script type="text/javascript" src="iconmaker.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!-- StyleSheet -->
+    <style>
+        @import "../stylesheets/common/grid.css";
+        @import "../stylesheets/common/header.css";
+        @import "../stylesheets/common/footer.css";
+        @import "../stylesheets/common/h2icon.css";
+        @import "../stylesheets/common/page_elements.css";
+        @import "../stylesheets/common/media.css";
+        @import "iconmakerbtn.css";
+
+        span {
+            display: inline-block;
+        }
+    </style>
+    <script>
+        onload = function () {
+            let canvas = document.getElementById('canv-result');
+            canvas.width = ICON_SIZE;
+            canvas.height = ICON_SIZE;
+        }
+    </script>
+    <!---------------->
+    <meta charset="utf-8">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@TrpFrog">
+    <meta property="og:url" content="https://trpfrog.net/iconmaker">
+    <meta property="og:title" content="つまみアイコンメーカー">
+    <meta property="og:description" content="画像をアップロードしてつまみアイコンを作ろう！">
+    <meta property="og:image" content="https://trpfrog.net/iconmaker/TwitterCardIconmaker.png">
+    <title>つまみアイコンメーカー - つまみネット</title>
+</head>
+
+<body>
+    <div class="grid">
+        <header></header>
+        <main>
+            <div id="main_wrapper">
+                <div id="title">
+                    <h1 width="100%">アイコンメーカー</h1>
+                    <p>
+                        <span>画像を</span><span>アップロード</span><span>して</span><span>
+                            つまみ</span><span>アイコン</span><span>を作ろう！</span>
+                    </p>
+                    <p>
+                        <span>作成した</span><span>アイコンは</span><span>SNS等の</span><span>アイコンに</span><span>使うことが</span><span>できます。</span>
+                    </p>
+                </div>
+                <div class="main_window">
+                    <h2 class="trpfrog">画像の選択</h2>
+                    <p>
+                        アイコンにしたい画像を選択してください。
+                    </p>
+                    <div id="preview"></div> <!-- アンカーリンク位置調整用、ウンコードやめろ -->
+                    <p>
+                        <input type="file" onchange="upload(this.files, 'canv-result')">
+                    </p>
+                </div>
+                <div class="main_window">
+                    <h2 class="trpfrog">プレビュー</h2>
+                    <p>
+                        位置を調整していい感じのところで描画を押してください。
+                    </p>
+                    <p>
+                    <div class="content">
+                        <canvas class="richimage" id="canv-result" style="width: 100%; max-width: 500px;"></canvas>
+                    </div>
+                    </p>
+                    <p>
+                    <div class="ctrl-btn-grid">
+                        <button type="button" class="ctrl-btn plus-btn"
+                            onclick="scaleImage(1.05,'canv-result')">+</button>
+                        <button type="button" class="ctrl-btn minus-btn"
+                            onclick="scaleImage(1/1.05,'canv-result')">-</button>
+                        <button type="button" class="ctrl-btn left-btn"
+                            onclick="moveImage(-5,0,'canv-result')">←</button>
+                        <button type="button" class="ctrl-btn down-btn"
+                            onclick="moveImage(0,5,'canv-result')">↓</button>
+                        <button type="button" class="ctrl-btn up-btn" onclick="moveImage(0,-5,'canv-result')">↑</button>
+                        <button type="button" class="ctrl-btn right-btn"
+                            onclick="moveImage(5,0,'canv-result')">→</button>
+                        <button type="button" class="ctrl-btn rotateleft-btn"
+                            onclick="rotateImage(-5,'canv-result')">←R</button>
+                        <button type="button" class="ctrl-btn rotateright-btn"
+                            onclick="rotateImage(5,'canv-result')">R→</button>
+                        <button type="button" class="ctrl-btn apply-btn" onclick="writeImage('canv-result')">描画</button>
+                    </div>
+                    </p>
+                </div>
+                <div class="main_window" id="result">
+                    <h2 class="trpfrog">生成した画像</h2>
+                    <p>
+                        PCの方は右クリック、スマートフォンの方は長押しで保存できます。
+                    </p>
+                    <p>
+                        <img class="richimage" id="resultimage" src="../trpfrog_icons/つまみ.png"
+                            style="width:100%; max-width: 500px;">
+                        <img src="mask.png" style="display: none;">
+                    </p>
+                    <p>
+                        <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + '://platform.twitter.com/widgets.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'twitter-wjs');</script>
+                        <a href="https://twitter.com/intent/tweet?text=%23%E3%81%A4%E3%81%BE%E3%81%BF%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3%E3%83%A1%E3%83%BC%E3%82%AB%E3%83%BC%20%E3%81%A7%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3%E3%82%92%E4%BD%9C%E6%88%90%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F%EF%BC%81&url=https%3A%2F%2Ftrpfrog.net%2Ficonmaker%2F"
+                            class="twitter-share-button">Tweet</a>
+                    </p>
+                    <p>
+                        (画像付きツイートで共有するのが無理だったので、一旦画像を保存してからこのボタンで共有して欲しいです〜(ごめんね))
+                    </p>
+                </div>
+
+                <div class="main_window">
+                    <h2 class="trpfrog">ご利用条件・免責事項</h2>
+                    <p>
+                        当サービスは第三者の権利を侵害したり、
+                        公序良俗や法律に反するような用途にはご利用いただけません。
+                        また、当サービスを使用したことにより発生したいかなる損害に対しても、
+                        当サイトは一切の責任を負いません。
+                    </p>
+                </div>
+            </div>
+        </main>
+        <footer></footer>
+    </div>
+</body>
+
+</html>
