@@ -20,7 +20,7 @@ function imageList(){
     let html = '';
     html += '  <div style=\"padding: 15px; margin-left:'+margin+'px; margin-right:'+margin+'px; text-align: center\">';
     for(let i=0; i<MAX; i++){
-        html += '   <a href=\"image_viewer.html?'+i+'\"><img src=\"images/'+i+'.png\" height=\"'+imageSize+'px\"></a>';
+        html += '   <a href='+i+'\"image_viewer.html?\"><img src=\"images/'+i+'.png\" height=\"'+imageSize+'px\"></a>';
     }
     html += '  </div>'
     document.getElementById('image_list').insertAdjacentHTML('beforeend', html);

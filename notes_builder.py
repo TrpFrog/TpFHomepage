@@ -16,7 +16,7 @@ def read_info(folder_name: str):
     written_on: datetime
     last_modified: datetime
     filter_func = lambda s: not s.lstrip().startswith('# ') and s.strip() != ''
-    with open(f'{folder_name}/info.txt', 'r') as f:
+    with open(f'public/notes/{folder_name}/info.txt', 'r') as f:
         l = f.readlines()
         l = list(filter(filter_func, l))
         title = l[0].strip()
@@ -31,19 +31,19 @@ def build_toppage():
     fragments = []
     all_tags_set = set()
 
-    for folder in os.listdir('.'):
-        if os.path.isfile(folder) or folder.startswith('_'):
+    for folder in os.listdir('public/notes'):
+        if os.path.isfile('public/notes/' + folder) or folder.startswith('_'):
             continue
 
-        title, description, tags, written_on, last_modified = read_info(folder) 
+        title, description, tags, written_on, last_modified = read_info(folder)
 
         fragment = list_fragment
         fragment = fragment.replace('$(icon)', 'trpfrog')
 
         # Date
-        fragment = fragment.replace('$(written_date)', datetime.strftime(written_on, '%Y年%m月%d日'))  
+        fragment = fragment.replace('$(written_date)', datetime.strftime(written_on, '%Y年%m月%d日'))
         fragment = fragment.replace('$(last_modified)', datetime.strftime(last_modified, '%Y年%m月%d日'))
-        fragment = fragment.replace('$(written_unixtime)', datetime.strftime(written_on, '%s000'))  
+        fragment = fragment.replace('$(written_unixtime)', datetime.strftime(written_on, '%s000'))
         fragment = fragment.replace('$(last_modified_unixtime)', datetime.strftime(last_modified, '%s000'))
 
         # Tags
@@ -78,26 +78,26 @@ def build_toppage():
 
     for t in all_tags:
         tag_list_html += f'<span class="tag_button tag_btn_{t}" onclick="showTag(\'{t}\')">{t}</span>'
-    
+
     html = ''
     for written_on, fragment in fragments:
         html += fragment + '\n'
-        
-    with open('index.html', 'w') as f:
+
+    with open('public/notes/index.html', 'w') as f:
         f.write(list_template.replace('$(content)', html).replace('$(tags)', tag_list_html))
 
 
 def build_blogpage(md: markdown.Markdown, folder_name: str):
     html = blog_template
 
-    if not os.path.exists(f'./{folder_name}/thumbnail.webp'):
-        shutil.copyfile("./default_thumbnail.webp", f"./{folder_name}/thumbnail.webp")
+    if not os.path.exists(f'public/notes/{folder_name}/thumbnail.webp'):
+        shutil.copyfile("public/notes/default_thumbnail.webp", f"public/notes/{folder_name}/thumbnail.webp")
 
-    with open(f'{folder_name}/index.html', 'w') as f:
-        title, description, tags, written_on, last_modified = read_info(folder_name) 
+    with open(f'public/notes/{folder_name}/index.html', 'w') as f:
+        title, description, tags, written_on, last_modified = read_info(folder_name)
 
         # Date
-        html = html.replace('$(written_date)', datetime.strftime(written_on, '%Y年%m月%d日'))  
+        html = html.replace('$(written_date)', datetime.strftime(written_on, '%Y年%m月%d日'))
         html = html.replace('$(last_modified)', datetime.strftime(last_modified, '%Y年%m月%d日'))
 
         html = html.replace('$(folder_name)', folder_name)
@@ -110,39 +110,39 @@ def build_blogpage(md: markdown.Markdown, folder_name: str):
         html = html.replace('$(tags)', tag_str)
 
         # Contents
-        with open(f'{folder_name}/index.md', 'r') as f_md:
+        with open(f'public/notes/{folder_name}/index.md', 'r') as f_md:
             content = md.convert(f_md.read())
             soup = BeautifulSoup(content, "html.parser")
             for img in soup.find_all('img'):
                 img.parent['style'] = 'text-align: center;'
-            
+
             content = str(soup)
             content = '\n'.join(content.split('\n')[1:])
-            
+
             html = html.replace('$(title)', soup.find('h1').text)
             html = html.replace('$(content)', content)
-            
+
             f.write(html)
 
 
 if __name__ == '__main__':
-    folders = os.listdir('.')
+    folders = os.listdir('public/notes')
     md = markdown.Markdown(extensions=['fenced_code'])
-    
-    with open('./_template/blog.html') as f:
+
+    with open('blog-template/blog.html') as f:
         blog_template = f.read()
-    
-    with open('./_template/list.html') as f:
+
+    with open('blog-template/list.html') as f:
         list_template = f.read()
 
-    with open('./_template/list_fragment.html') as f:
+    with open('blog-template/list_fragment.html') as f:
         list_fragment = f.read()
-        
+
     build_target = sys.argv
-    
+
     build_toppage()
     for folder in folders:
-        if os.path.isfile(folder) or folder.startswith('_'):
+        if os.path.isfile('public/notes/' + folder) or folder.startswith('_'):
             continue
         if len(build_target) > 1:
             if folder in build_target:
