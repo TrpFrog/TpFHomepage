@@ -214,7 +214,7 @@ function hideMenu() {
 
 function getTwitterUrl() {
     let url = "https://twitter.com/intent/tweet?";
-    url += "text=" + document.title + "&";
+    url += "text=" + encodeURIComponent(document.title) + "&";
     url += "url=" + location.href;
     return url;
 }
