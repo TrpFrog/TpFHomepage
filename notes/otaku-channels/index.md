@@ -332,7 +332,9 @@ jobs:
 
 ### 6. 完成！
 
-という感じで無事 [https://trpfrog.github.io/otaku-channels/](https://trpfrog.github.io/otaku-channels/) でサイトを公開することができました。正しく動いていれば明日以降も更新され続けると思われます。(なにせ記事を書いた今完成したため……(は？))
+~~という感じで無事 https://trpfrog.github.io/otaku-channels/ でサイトを公開することができました。正しく動いていれば明日以降も更新され続けると思われます。(なにせ記事を書いた今完成したため……(は？))~~
+
+**12/20追記:** ちゃんと毎日更新されていました！が、諸事情により GitHub Pages での公開をやめました。詳しくは記事の最後に追記したのでお読みください。新URLはこちらです: [otaku-discord.trpfrog.net](otaku-discord.trpfrog.net)
 
 ![](otaku-channels.webp)
 
@@ -359,4 +361,71 @@ bleachはMozillaが作っているらしいです。
 
 今回は毎日GitHub ActionsにDiscord APIでオタクサーバを訪問させてチャンネルを晒すサイトを作りました。皆さんも**チャンネル乱立オタクがいて困った時**はやってみてください。
 
-次回は19日のmarbleさんの記事です。後でリンクを貼ります。17, 18が空いているので僕みたいに急に書きたくなった人がいたら書きましょう！さようなら
+~~次回は19日のmarbleさんの記事です。後でリンクを貼ります。17, 18が空いているので僕みたいに急に書きたくなった人がいたら書きましょう！~~
+
+次回は17日のごっちさんの記事「**猫でもわかるファイルサーバ構築**」です。
+
+[https://gotti.dev/post/uecadvent2021_fileserver/](https://gotti.dev/post/uecadvent2021_fileserver/)
+
+18日もBさんの記事で埋まったみたいですし、UEC 2 Advent Calendar の後半は全部埋まったみたいです。**すごい**
+
+それでは、さようなら
+
+
+
+## 12月20日 追記: やっぱりGitHub Pagesはやめた
+
+この記事で紹介した方法には一つだけ、**非常に大きな問題点**がありました。それはGitHubの**Contributions**に影響が出ることです。**草が自動で生え続けます。**
+
+草が生えると嬉しいですが、自分は何もしていないのに草が生えるのはそれはそれで結構しんどいです。**チート感マシマシ**です。そこで外部のホスティングサービスを使ってみることにしました。
+
+まずはこのつまみネットでも使っている **Cloudflare Pages** です。**ビルド時間がバカ長い**という欠点がありますが、サイトアクセスは速いし私も使い慣れているので良さそうです。
+
+しかし、こちらはこちらで問題がありました。Cloudflare Pages では Python の最新バージョンが **3.7** なのです。実は今回使っている**disnakeの必須要件が Python 3.8 以上**なので、無理です。他のところにしましょう。
+
+そこで今回は Vercel を使うことにします。なんと最近 Python **3.9** が使えるようになった？みたいなのでバージョン問題はクリアです。早速設定します。
+
+![](vercel.webp)
+
+Vercel と GitHub を連携してはいはい設定を進めると上のような画面に出ます。
+
+- BUILD COMMAND に channels.js を吐くPythonコマンドを入れ、
+- OUTPUT DIRECTORY にHTMLファイルなどのある pages フォルダを指定し、
+- INSTALL COMMAND にdisnakeなどをインストールするコマンドを入れ、
+- Environment Variables にTokenなどを入れて
+
+Deployを押すとデプロイが始まります。するとなんとこれだけでうまくデプロイされました。**簡単すぎ！**
+
+次に定期実行の設定をします。定期的なデプロイ自体は (おそらく) Vercel単体ではできないのでGitHub Actionsを使います。
+
+![](deploy-hook.webp)
+
+まずはVercelの設定から git → **Deploy Hooks** に入ると「**叩くと勝手にデプロイが始まるリンク**」が手に入るのでそれをもらいます。
+
+次に GitHub Actions の自動デプロイに使った `main.yml` を次のように書き換えます。
+
+```yaml
+name: Deploy website
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    - cron: '0 3 * * *'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    	# ここで Deploy Hook を叩く
+      - run: curl -X POST ${{ secrets.DEPLOY_HOOK }}
+```
+
+Deploy Hook は知られるとまずいので、先にも書いたように Actions Secret を使うと良いでしょう。
+
+これでGitHubに草を生やさずに定期デプロイされるウェブサイトを作ることができました！ちなみに gh-pages ブランチを消去したら過去の草も消えてくれました。めでたしめでたし
+
+[GitHub上にコードを載せている](https://github.com/TrpFrog/otaku-channels)ので似たようなお悩みを抱えている方はぜひやってみてください♪ それではまた次回の記事でお会いしましょう！さようなら
