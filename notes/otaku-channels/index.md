@@ -334,7 +334,7 @@ jobs:
 
 ~~という感じで無事 https://trpfrog.github.io/otaku-channels/ でサイトを公開することができました。正しく動いていれば明日以降も更新され続けると思われます。(なにせ記事を書いた今完成したため……(は？))~~
 
-**12/20追記:** ちゃんと毎日更新されていました！が、諸事情により GitHub Pages での公開をやめました。詳しくは記事の最後に追記したのでお読みください。新URLはこちらです: [otaku-discord.trpfrog.net](otaku-discord.trpfrog.net)
+**12/20追記:** ちゃんと毎日更新されていました！が、諸事情により GitHub Pages での公開をやめました。詳しくは記事の最後に追記したのでお読みください。新URLはこちらです: [otaku-discord.trpfrog.net](https://otaku-discord.trpfrog.net)
 
 ![](otaku-channels.webp)
 
