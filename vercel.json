@@ -1,0 +1,8 @@
+{
+  "redirects": [
+    {
+      "source": "/medipro-game",
+      "destination": "https://trpfrog.github.io/medipro-game/"
+    }
+  ]
+}
