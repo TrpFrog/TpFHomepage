@@ -16,7 +16,7 @@ def read_info(folder_name: str):
     written_on: datetime
     last_modified: datetime
     filter_func = lambda s: not s.lstrip().startswith('# ') and s.strip() != ''
-    with open(f'public/notes/{folder_name}/info.txt', 'r') as f:
+    with open(f'../public/notes/{folder_name}/info.txt', 'r') as f:
         l = f.readlines()
         l = list(filter(filter_func, l))
         title = l[0].strip()
@@ -31,8 +31,8 @@ def build_toppage():
     fragments = []
     all_tags_set = set()
 
-    for folder in os.listdir('public/notes'):
-        if os.path.isfile('public/notes/' + folder) or folder.startswith('_'):
+    for folder in os.listdir('../public/notes'):
+        if os.path.isfile('../public/notes/' + folder) or folder.startswith('_'):
             continue
 
         title, description, tags, written_on, last_modified = read_info(folder)
@@ -83,17 +83,17 @@ def build_toppage():
     for written_on, fragment in fragments:
         html += fragment + '\n'
 
-    with open('public/notes/index.html', 'w') as f:
+    with open('../public/notes/index.html', 'w') as f:
         f.write(list_template.replace('$(content)', html).replace('$(tags)', tag_list_html))
 
 
 def build_blogpage(md: markdown.Markdown, folder_name: str):
     html = blog_template
 
-    if not os.path.exists(f'public/notes/{folder_name}/thumbnail.webp'):
-        shutil.copyfile("public/notes/default_thumbnail.webp", f"public/notes/{folder_name}/thumbnail.webp")
+    if not os.path.exists(f'../public/notes/{folder_name}/thumbnail.webp'):
+        shutil.copyfile("../public/notes/default_thumbnail.webp", f"../public/notes/{folder_name}/thumbnail.webp")
 
-    with open(f'public/notes/{folder_name}/index.html', 'w') as f:
+    with open(f'../public/notes/{folder_name}/index.html', 'w') as f:
         title, description, tags, written_on, last_modified = read_info(folder_name)
 
         # Date
@@ -110,7 +110,7 @@ def build_blogpage(md: markdown.Markdown, folder_name: str):
         html = html.replace('$(tags)', tag_str)
 
         # Contents
-        with open(f'public/notes/{folder_name}/index.md', 'r') as f_md:
+        with open(f'../public/notes/{folder_name}/index.md', 'r') as f_md:
             content = md.convert(f_md.read())
             soup = BeautifulSoup(content, "html.parser")
             for img in soup.find_all('img'):
@@ -126,7 +126,7 @@ def build_blogpage(md: markdown.Markdown, folder_name: str):
 
 
 if __name__ == '__main__':
-    folders = os.listdir('public/notes')
+    folders = os.listdir('../public/notes')
     md = markdown.Markdown(extensions=['fenced_code'])
 
     with open('blog-template/blog.html') as f:
@@ -142,7 +142,7 @@ if __name__ == '__main__':
 
     build_toppage()
     for folder in folders:
-        if os.path.isfile('public/notes/' + folder) or folder.startswith('_'):
+        if os.path.isfile('../public/notes/' + folder) or folder.startswith('_'):
             continue
         if len(build_target) > 1:
             if folder in build_target:
