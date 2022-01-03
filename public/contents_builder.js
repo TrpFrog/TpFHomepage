@@ -96,12 +96,9 @@ function buildWideNavigationBar() {
 function buildHeader() {
     let html = `
         <div id="header_wrapper">
-                <h1><a href="/">つまみネット</a></h1>
-                <div id="tweet_search">
-                    <form onsubmit="search_tweet();return false;">
-                        <input type="text" placeholder="過去ツイサーチ" id="tweet_search_box">
-                        <input type="submit" value="検索" class="twibutton">
-                    </form>
+                <h1><a href="/">旧つまみネット</a></h1>
+                <div id="tweet_search" style="font-weight: bold">
+                    新つまみネットは <a href="https://trpfrog.net/">[ こちら ]</a> 
                 </div>
                 <nav>
                     <ul>
